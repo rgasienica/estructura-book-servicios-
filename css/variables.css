@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;600&display=swap');
+
+:root {
+  /* Paleta "Pirineo vivido" — guía Habitat & Decor */
+  --verde-bosque:   #2D3A2E;
+  --beige-caldera:  #C8B09C;
+  --blanco-roto:    #F7F4EF;
+  --marron-cuero:   #5C3D2E;
+  --dorado-apagado: #B8955C;
+  --azul-nieve:     #D6E4E5;
+  --blanco:         #FFFFFF;
+
+  /* Texto sobre fondos oscuros */
+  --text-light:     #F7F4EF;
+  --text-light-soft: rgba(247,244,239,0.75);
+
+  /* Tipografía */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', Arial, sans-serif;
+
+  /* Tamaños (px base en diseño 1920×1080) */
+  --t-hero:    80px;
+  --t-display: 64px;
+  --t-title:   48px;
+  --t-section: 38px;
+  --t-card:    26px;
+  --t-body:    18px;
+  --t-small:   15px;
+  --t-tiny:    12px;
+
+  /* Espaciado */
+  --gap-xs:  8px;
+  --gap-sm: 16px;
+  --gap-md: 32px;
+  --gap-lg: 56px;
+  --gap-xl: 80px;
+
+  /* Slide padding estándar */
+  --pad-x: 96px;
+  --pad-y: 72px;
+}

@@ -1,0 +1,85 @@
+/* =============================================
+   PRINT — PDF export / impresión A4 horizontal
+   Ctrl+P en Chrome → "Sin márgenes" → "Paisaje"
+   ============================================= */
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  html, body {
+    width: 297mm;
+    height: 210mm;
+    overflow: visible;
+    background: white;
+  }
+
+  /* Ocultar controles de navegación */
+  .slide-controls,
+  .progress-bar,
+  .fullscreen-btn {
+    display: none !important;
+  }
+
+  /* Restablecer el wrapper */
+  .slide-wrapper {
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  /* Cada slide ocupa una página A4 horizontal */
+  .slide-stage {
+    transform: none !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    overflow: visible;
+    position: relative;
+  }
+
+  .slide {
+    position: relative !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    page-break-after: always;
+    break-after: page;
+    display: flex !important;
+    overflow: hidden;
+  }
+
+  /* Ajustar tamaños de fuente para A4 */
+  :root {
+    --t-hero:    48px;
+    --t-display: 40px;
+    --t-title:   32px;
+    --t-section: 26px;
+    --t-card:    20px;
+    --t-body:    14px;
+    --t-small:   12px;
+    --t-tiny:    10px;
+
+    --pad-x: 56px;
+    --pad-y: 48px;
+    --gap-lg: 36px;
+  }
+
+  /* Ajustes específicos de slides para A4 */
+  .s6-step__photo { height: 160px; }
+  .s5-grid { gap: 12px; }
+  .s5-card { padding: 20px 18px; }
+  .s13-grid { gap: 12px; }
+  .s13-card { padding: 18px 16px; }
+  .s15-grid { gap: 16px; }
+  .s15-card { padding: 24px 20px; }
+  .s17-ctas { gap: 14px; }
+
+  .metric-big { font-size: 44px; }
+  .s18-logo__letter { width: 56px; height: 56px; font-size: 26px; }
+}
