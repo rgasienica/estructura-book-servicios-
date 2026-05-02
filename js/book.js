@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const TOTAL = 18;
+  const TOTAL = 19;
   let current = 1;
   let isAnimating = false;
   let touchStartX = 0;
@@ -86,6 +86,9 @@
 
   function next() { goTo(current + 1, 'next'); }
   function prev() { goTo(current - 1, 'prev'); }
+
+  // Expuesto globalmente para los onclick del slide de menú
+  window.goTo = goTo;
 
   // ── Actualizar UI ─────────────────────────
 

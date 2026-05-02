@@ -270,6 +270,14 @@ html, body {
 .cta-btn--outline-light { background: transparent; color: var(--blanco-roto); border-color: rgba(247,244,239,0.6); }
 .cta-btn--outline-dark { background: transparent; color: var(--marron-cuero); border-color: var(--marron-cuero); }
 
+/* Imagen real de slide: llena el contenedor con recorte */
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Placeholders de fotografía */
 .photo-ph {
   background: linear-gradient(135deg, #e4d5c8 0%, #cbb8aa 100%);

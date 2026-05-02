@@ -29,9 +29,7 @@
   position: relative;
 }
 
-.s1-logo {
-  margin-bottom: 40px;
-}
+.s1-logo { margin-bottom: 40px; }
 
 .s1-logo__mark {
   display: flex;
@@ -49,43 +47,43 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--dorado-apagado);
 }
 
 .s1-logo__name {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
   color: var(--blanco-roto);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   line-height: 1.3;
 }
 
 .s1-logo__name span {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.35em;
-  color: rgba(247,244,239,0.6);
+  color: rgba(242,239,236,0.55);
   font-weight: 400;
   margin-top: 2px;
 }
 
 .s1-claim {
   font-family: var(--font-display);
-  font-size: 52px;
+  font-size: 58px;
   font-weight: 700;
   color: var(--blanco-roto);
-  line-height: 1.15;
+  line-height: 1.1;
   margin-bottom: 24px;
 }
 
 .s1-subclaim {
   font-family: var(--font-body);
   font-size: var(--t-small);
-  color: rgba(247,244,239,0.65);
+  color: rgba(242,239,236,0.6);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -102,10 +100,10 @@
 
 .s1-bottom span {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(247,244,239,0.5);
+  color: rgba(242,239,236,0.45);
 }
 
 .s1-gold-line {
@@ -118,10 +116,126 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 2 — MANIFIESTO
+   SLIDE 2 — ÍNDICE / PARA QUIÉN
    ───────────────────────────────────────────── */
 
 .slide-2 {
+  background: var(--blanco-roto);
+  display: flex;
+  flex-direction: column;
+  padding: 56px var(--pad-x) 52px;
+  gap: 40px;
+}
+
+.s2m-header { text-align: center; }
+
+.s2m-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-tiny);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dorado-apagado);
+  margin-bottom: 10px;
+}
+
+.s2m-title {
+  font-family: var(--font-display);
+  font-size: 62px;
+  font-weight: 700;
+  color: var(--verde-bosque);
+  line-height: 1.05;
+  margin-bottom: 10px;
+}
+
+.s2m-sub {
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  color: var(--marron-cuero);
+}
+
+.s2m-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.s2m-card {
+  border-radius: 6px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.s2m-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+}
+
+.s2m-card--pro { background: var(--verde-bosque); }
+.s2m-card--neg { background: #3C3C3C; }
+.s2m-card--hog { background: var(--c-linen); }
+
+.s2m-card__num {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.s2m-card--pro .s2m-card__num,
+.s2m-card--neg .s2m-card__num { color: var(--dorado-apagado); }
+.s2m-card--hog .s2m-card__num { color: var(--verde-bosque); opacity: 0.65; }
+
+.s2m-card__icon { font-size: 40px; line-height: 1; margin: 4px 0; }
+
+.s2m-card__title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.s2m-card--pro .s2m-card__title,
+.s2m-card--neg .s2m-card__title { color: var(--blanco-roto); }
+.s2m-card--hog .s2m-card__title { color: var(--verde-bosque); }
+
+.s2m-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--t-small);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.s2m-card--pro .s2m-card__desc,
+.s2m-card--neg .s2m-card__desc { color: rgba(242,239,236,0.7); }
+.s2m-card--hog .s2m-card__desc { color: var(--c-ink); opacity: 0.78; }
+
+.s2m-card__cta {
+  font-family: var(--font-body);
+  font-size: var(--t-small);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding-top: 10px;
+  border-top: 1px solid;
+}
+
+.s2m-card--pro .s2m-card__cta,
+.s2m-card--neg .s2m-card__cta { color: var(--dorado-apagado); border-color: rgba(178,134,34,0.3); }
+.s2m-card--hog .s2m-card__cta { color: var(--verde-bosque); border-color: rgba(45,58,46,0.25); }
+
+
+/* ─────────────────────────────────────────────
+   SLIDE 3 — MANIFIESTO
+   ───────────────────────────────────────────── */
+
+.slide-3 {
   background: var(--blanco-roto);
   display: flex;
 }
@@ -138,9 +252,9 @@
 }
 
 .s2-accent__year {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--t-body);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--dorado-apagado);
   letter-spacing: 0.25em;
   writing-mode: vertical-rl;
@@ -151,7 +265,7 @@
 .s2-accent__line {
   width: 2px;
   flex: 1;
-  background: rgba(247,244,239,0.2);
+  background: rgba(242,239,236,0.2);
   max-height: 200px;
 }
 
@@ -161,7 +275,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(247,244,239,0.5);
+  color: rgba(242,239,236,0.5);
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
@@ -186,19 +300,18 @@
 
 .s2-text {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 400;
   color: var(--verde-bosque);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .s2-text p { margin-bottom: 20px; }
 .s2-text p:last-child { margin-bottom: 0; }
 
 .s2-text .s2-emphasis {
-  font-size: 32px;
-  color: var(--marron-cuero);
-  font-style: normal;
+  font-size: 34px;
+  color: var(--c-ink);
   font-weight: 700;
 }
 
@@ -217,7 +330,7 @@
 
 .s2-signature__text {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -227,10 +340,10 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 3 — QUIÉNES SOMOS
+   SLIDE 4 — QUIÉNES SOMOS
    ───────────────────────────────────────────── */
 
-.slide-3 {
+.slide-4 {
   background: var(--blanco-roto);
   display: flex;
 }
@@ -238,6 +351,7 @@
 .s3-photo {
   flex: 0 0 48%;
   position: relative;
+  overflow: hidden;
 }
 
 .s3-content {
@@ -263,7 +377,7 @@
   font-size: var(--t-section);
   font-weight: 700;
   color: var(--verde-bosque);
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: 8px;
 }
 
@@ -271,9 +385,8 @@
   font-family: var(--font-body);
   font-size: var(--t-body);
   color: var(--marron-cuero);
-  line-height: 1.65;
-  margin-bottom: 32px;
-  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 28px;
 }
 
 .s3-map-row {
@@ -315,10 +428,10 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 4 — TALLER & TIENDA
+   SLIDE 5 — TALLER & TIENDA
    ───────────────────────────────────────────── */
 
-.slide-4 {
+.slide-5 {
   background: var(--blanco-roto);
   display: flex;
   flex-direction: column;
@@ -339,8 +452,8 @@
   overflow: hidden;
 }
 
-.s4-photo-a { grid-column: 1; grid-row: 1; }
-.s4-photo-b { grid-column: 2; grid-row: 1; }
+.s4-photo-a { grid-column: 1; grid-row: 1; overflow: hidden; }
+.s4-photo-b { grid-column: 2; grid-row: 1; overflow: hidden; }
 
 .s4-info {
   grid-column: 3;
@@ -355,7 +468,7 @@
 
 .s4-info-title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--blanco-roto);
   margin-bottom: 4px;
@@ -365,7 +478,7 @@
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  color: rgba(247,244,239,0.85);
+  color: rgba(242,239,236,0.85);
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.55;
@@ -378,16 +491,14 @@
   margin-top: 2px;
 }
 
-.s4-cta-row {
-  margin-top: 16px;
-}
+.s4-cta-row { margin-top: 16px; }
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 5 — QUÉ HACEMOS
+   SLIDE 6 — QUÉ HACEMOS
    ───────────────────────────────────────────── */
 
-.slide-5 {
+.slide-6 {
   background: var(--verde-bosque);
   display: flex;
   flex-direction: column;
@@ -416,8 +527,8 @@
 }
 
 .s5-card {
-  background: rgba(247, 244, 239, 0.06);
-  border: 1px solid rgba(247, 244, 239, 0.15);
+  background: rgba(242,239,236,0.06);
+  border: 1px solid rgba(242,239,236,0.14);
   border-radius: 6px;
   padding: 32px 28px;
   display: flex;
@@ -426,7 +537,7 @@
   transition: background 0.25s;
 }
 
-.s5-card:hover { background: rgba(247, 244, 239, 0.12); }
+.s5-card:hover { background: rgba(242,239,236,0.11); }
 
 .s5-card__icon { font-size: 36px; line-height: 1; }
 
@@ -441,7 +552,7 @@
 .s5-card__desc {
   font-family: var(--font-body);
   font-size: 14px;
-  color: rgba(247, 244, 239, 0.65);
+  color: rgba(242,239,236,0.65);
   line-height: 1.55;
 }
 
@@ -453,7 +564,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--dorado-apagado);
-  border: 1px solid rgba(184,149,92,0.4);
+  border: 1px solid rgba(178,134,34,0.4);
   padding: 3px 10px;
   border-radius: 12px;
   width: fit-content;
@@ -461,10 +572,10 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 6 — NUESTRO PROCESO
+   SLIDE 7 — NUESTRO PROCESO
    ───────────────────────────────────────────── */
 
-.slide-6 {
+.slide-7 {
   background: var(--blanco-roto);
   display: flex;
   flex-direction: column;
@@ -525,7 +636,7 @@
 
 .s6-step__title {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--blanco-roto);
 }
@@ -533,18 +644,16 @@
 .s6-step__desc {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(247,244,239,0.7);
+  color: rgba(242,239,236,0.7);
   line-height: 1.5;
 }
 
 
 /* ─────────────────────────────────────────────
-   SLIDES 7·8·9 — PERFILES (layout compartido)
+   SLIDES 8·9·10 — PERFILES (layout compartido)
    ───────────────────────────────────────────── */
 
-.slide-perfil {
-  display: flex;
-}
+.slide-perfil { display: flex; }
 
 .sp-content {
   flex: 1;
@@ -556,9 +665,7 @@
 
 .sp-photo {
   flex: 0 0 42%;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  overflow: hidden;
 }
 
 .sp-profile-tag {
@@ -576,19 +683,18 @@
 
 .sp-title {
   font-family: var(--font-display);
-  font-size: 44px;
+  font-size: 46px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   margin-bottom: 8px;
 }
 
 .sp-subtitle {
   font-family: var(--font-display);
-  font-style: italic;
   font-size: 22px;
   line-height: 1.4;
   margin-bottom: 28px;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .sp-list {
@@ -616,39 +722,38 @@
   color: var(--dorado-apagado);
 }
 
-/* Slide 7 — Perfil 1: Profesionales → fondo beige */
-.slide-7 { background: var(--beige-caldera); }
-.slide-7 .sp-title     { color: var(--verde-bosque); }
-.slide-7 .sp-subtitle  { color: var(--marron-cuero); }
-.slide-7 .sp-profile-tag { color: var(--verde-bosque); border-color: var(--verde-bosque); }
-.slide-7 .sp-list li   { color: var(--marron-cuero); }
+/* Slide 8 — Perfil Profesionales → fondo verde oscuro */
+.slide-8 { background: var(--verde-bosque); }
+.slide-8 .sp-title     { color: var(--blanco-roto); }
+.slide-8 .sp-subtitle  { color: rgba(242,239,236,0.8); }
+.slide-8 .sp-profile-tag { color: var(--dorado-apagado); border-color: rgba(178,134,34,0.5); }
+.slide-8 .sp-list li   { color: rgba(242,239,236,0.85); }
 
-/* Slide 8 — Perfil 2: Negocios → fondo azul nieve */
-.slide-8 { background: var(--azul-nieve); }
-.slide-8 .sp-title     { color: var(--verde-bosque); }
-.slide-8 .sp-subtitle  { color: var(--marron-cuero); }
-.slide-8 .sp-profile-tag { color: var(--verde-bosque); border-color: var(--verde-bosque); }
-.slide-8 .sp-list li   { color: var(--marron-cuero); }
-
-/* Slide 9 — Perfil 3: Hogar → fondo blanco roto */
-.slide-9 { background: var(--blanco-roto); }
+/* Slide 9 — Perfil Negocios → fondo lino */
+.slide-9 { background: var(--c-linen); }
 .slide-9 .sp-title     { color: var(--verde-bosque); }
-.slide-9 .sp-subtitle  { color: var(--marron-cuero); }
-.slide-9 .sp-profile-tag { color: var(--marron-cuero); border-color: var(--marron-cuero); }
-.slide-9 .sp-list li   { color: var(--marron-cuero); }
+.slide-9 .sp-subtitle  { color: var(--c-ink); }
+.slide-9 .sp-profile-tag { color: var(--verde-bosque); border-color: rgba(45,58,46,0.45); }
+.slide-9 .sp-list li   { color: var(--c-ink); }
+
+/* Slide 10 — Perfil Hogar → fondo blanco roto */
+.slide-10 { background: var(--blanco-roto); }
+.slide-10 .sp-title    { color: var(--verde-bosque); }
+.slide-10 .sp-subtitle { color: var(--marron-cuero); }
+.slide-10 .sp-profile-tag { color: var(--marron-cuero); border-color: var(--c-linen); }
+.slide-10 .sp-list li  { color: var(--marron-cuero); }
 
 
 /* ─────────────────────────────────────────────
-   SLIDES 10·11·12 — CASOS DE ÉXITO (layout compartido)
+   SLIDES 11·12·13 — CASOS DE ÉXITO (layout compartido)
    ───────────────────────────────────────────── */
 
-.slide-caso {
-  display: flex;
-}
+.slide-caso { display: flex; }
 
 .sc-photo {
   flex: 0 0 52%;
   position: relative;
+  overflow: hidden;
 }
 
 .sc-ficha {
@@ -719,7 +824,7 @@
 
 .sc-metric__val {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
   color: var(--dorado-apagado);
   line-height: 1;
@@ -734,8 +839,7 @@
 
 .sc-quote {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6;
   border-left: 3px solid var(--dorado-apagado);
   padding-left: 20px;
@@ -748,33 +852,36 @@
   opacity: 0.65;
 }
 
-/* Slide 10 — Caso Profesional → beige */
-.slide-10 { background: var(--beige-caldera); }
-.slide-10 .sc-title { color: var(--verde-bosque); }
-.slide-10 .sc-section-text { color: var(--marron-cuero); }
-.slide-10 .sc-meta { color: var(--marron-cuero); }
-.slide-10 .sc-quote { color: var(--marron-cuero); }
+/* Slide 11 — Caso Profesional → fondo verde oscuro */
+.slide-11 { background: var(--verde-bosque); }
+.slide-11 .sc-title        { color: var(--blanco-roto); }
+.slide-11 .sc-section-text { color: rgba(242,239,236,0.85); }
+.slide-11 .sc-meta         { color: rgba(242,239,236,0.65); opacity: 1; }
+.slide-11 .sc-quote        { color: rgba(242,239,236,0.9); }
+.slide-11 .sc-author       { color: rgba(242,239,236,0.55); opacity: 1; }
 
-/* Slide 11 — Caso Negocio → azul nieve */
-.slide-11 { background: var(--azul-nieve); }
-.slide-11 .sc-title { color: var(--verde-bosque); }
-.slide-11 .sc-section-text { color: var(--marron-cuero); }
-.slide-11 .sc-meta { color: var(--marron-cuero); }
-.slide-11 .sc-quote { color: var(--marron-cuero); }
+/* Slide 12 — Caso Negocios → fondo lino */
+.slide-12 { background: var(--c-linen); }
+.slide-12 .sc-title        { color: var(--verde-bosque); }
+.slide-12 .sc-section-text { color: var(--c-ink); }
+.slide-12 .sc-meta         { color: var(--marron-cuero); }
+.slide-12 .sc-quote        { color: var(--verde-bosque); }
+.slide-12 .sc-author       { color: var(--marron-cuero); }
 
-/* Slide 12 — Caso Hogar → blanco roto */
-.slide-12 { background: var(--blanco-roto); }
-.slide-12 .sc-title { color: var(--verde-bosque); }
-.slide-12 .sc-section-text { color: var(--marron-cuero); }
-.slide-12 .sc-meta { color: var(--marron-cuero); }
-.slide-12 .sc-quote { color: var(--marron-cuero); }
+/* Slide 13 — Caso Hogar → fondo blanco roto */
+.slide-13 { background: var(--blanco-roto); }
+.slide-13 .sc-title        { color: var(--verde-bosque); }
+.slide-13 .sc-section-text { color: var(--c-ink); }
+.slide-13 .sc-meta         { color: var(--marron-cuero); }
+.slide-13 .sc-quote        { color: var(--verde-bosque); }
+.slide-13 .sc-author       { color: var(--marron-cuero); }
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 13 — TEJIDOS Y MATERIALES
+   SLIDE 14 — TEJIDOS Y MATERIALES
    ───────────────────────────────────────────── */
 
-.slide-13 {
+.slide-14 {
   background: var(--verde-bosque);
   display: flex;
   flex-direction: column;
@@ -799,8 +906,8 @@
 }
 
 .s13-card {
-  background: rgba(247, 244, 239, 0.07);
-  border: 1px solid rgba(247, 244, 239, 0.14);
+  background: rgba(242,239,236,0.07);
+  border: 1px solid rgba(242,239,236,0.13);
   border-radius: 6px;
   padding: 28px 26px;
   display: flex;
@@ -812,7 +919,7 @@
 
 .s13-card__name {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--blanco-roto);
 }
@@ -820,7 +927,7 @@
 .s13-card__desc {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(247,244,239,0.65);
+  color: rgba(242,239,236,0.65);
   line-height: 1.5;
 }
 
@@ -836,10 +943,10 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 14 — CLIENTES Y ZONA
+   SLIDE 15 — CLIENTES Y ZONA
    ───────────────────────────────────────────── */
 
-.slide-14 {
+.slide-15 {
   background: var(--blanco-roto);
   display: flex;
 }
@@ -897,8 +1004,9 @@
   color: var(--marron-cuero);
   padding: 10px 16px;
   border-radius: 4px;
-  background: rgba(92,61,46,0.06);
+  background: rgba(45,58,46,0.05);
   border-left: 3px solid transparent;
+  transition: border-color 0.2s;
 }
 
 .s14-zone:hover { border-left-color: var(--dorado-apagado); }
@@ -913,11 +1021,13 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 15 — TESTIMONIOS
+   SLIDE 16 — TESTIMONIOS
    ───────────────────────────────────────────── */
 
-.slide-15 {
-  background: var(--verde-bosque);
+.slide-16 {
+  background:
+    linear-gradient(rgba(45,58,46,0.93), rgba(45,58,46,0.93)),
+    url('../images/pirineos.jpg') center / cover;
   display: flex;
   flex-direction: column;
   padding: 60px var(--pad-x) 52px;
@@ -940,8 +1050,8 @@
 }
 
 .s15-card {
-  background: rgba(247,244,239,0.06);
-  border: 1px solid rgba(247,244,239,0.14);
+  background: rgba(242,239,236,0.06);
+  border: 1px solid rgba(242,239,236,0.14);
   border-radius: 6px;
   padding: 40px 32px;
   display: flex;
@@ -959,9 +1069,8 @@
 
 .s15-text {
   font-family: var(--font-display);
-  font-style: italic;
   font-size: 19px;
-  color: rgba(247,244,239,0.9);
+  color: rgba(242,239,236,0.9);
   line-height: 1.65;
   flex: 1;
 }
@@ -971,7 +1080,7 @@
   flex-direction: column;
   gap: 4px;
   padding-top: 16px;
-  border-top: 1px solid rgba(247,244,239,0.15);
+  border-top: 1px solid rgba(242,239,236,0.15);
 }
 
 .s15-author__name {
@@ -984,7 +1093,7 @@
 .s15-author__role {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(247,244,239,0.55);
+  color: rgba(242,239,236,0.55);
 }
 
 .s15-author__profile {
@@ -999,11 +1108,13 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 16 — PROPUESTA DE VALOR
+   SLIDE 17 — PROPUESTA DE VALOR
    ───────────────────────────────────────────── */
 
-.slide-16 {
-  background: var(--beige-caldera);
+.slide-17 {
+  background:
+    linear-gradient(to right, rgba(237,232,226,0.97) 52%, rgba(237,232,226,0.6) 100%),
+    url('../images/hero_valle_pirineo.jpg') center / cover;
   display: flex;
   align-items: center;
   padding: var(--pad-y) var(--pad-x);
@@ -1020,15 +1131,14 @@
 
 .s16-headline {
   font-family: var(--font-display);
-  font-size: 56px;
+  font-size: 58px;
   font-weight: 700;
   color: var(--verde-bosque);
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .s16-headline em {
-  font-style: italic;
-  color: var(--marron-cuero);
+  color: var(--dorado-apagado);
 }
 
 .s16-body {
@@ -1050,7 +1160,7 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  background: rgba(45,58,46,0.08);
+  background: rgba(45,58,46,0.07);
   border-radius: 6px;
   padding: 22px 26px;
   border-left: 4px solid var(--dorado-apagado);
@@ -1076,10 +1186,10 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 17 — CONTACTO Y CTA
+   SLIDE 18 — CONTACTO Y CTA
    ───────────────────────────────────────────── */
 
-.slide-17 {
+.slide-18 {
   background: var(--verde-bosque);
   display: flex;
   flex-direction: column;
@@ -1104,8 +1214,8 @@
 }
 
 .s17-cta-card {
-  background: rgba(247,244,239,0.06);
-  border: 1px solid rgba(247,244,239,0.18);
+  background: rgba(242,239,236,0.06);
+  border: 1px solid rgba(242,239,236,0.17);
   border-radius: 6px;
   padding: 32px 28px;
   display: flex;
@@ -1114,13 +1224,13 @@
   transition: background 0.2s;
 }
 
-.s17-cta-card:hover { background: rgba(247,244,239,0.12); }
+.s17-cta-card:hover { background: rgba(242,239,236,0.11); }
 
 .s17-cta-card__icon { font-size: 28px; }
 
 .s17-cta-card__title {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--blanco-roto);
   line-height: 1.2;
@@ -1129,7 +1239,7 @@
 .s17-cta-card__desc {
   font-family: var(--font-body);
   font-size: 14px;
-  color: rgba(247,244,239,0.65);
+  color: rgba(242,239,236,0.65);
   line-height: 1.5;
   flex: 1;
 }
@@ -1139,7 +1249,7 @@
   font-size: 13px;
   font-weight: 600;
   color: var(--dorado-apagado);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 .s17-footer {
@@ -1147,7 +1257,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(247,244,239,0.12);
+  border-top: 1px solid rgba(242,239,236,0.12);
   padding-top: 28px;
 }
 
@@ -1162,7 +1272,7 @@
   gap: 12px;
   font-family: var(--font-body);
   font-size: var(--t-small);
-  color: rgba(247,244,239,0.8);
+  color: rgba(242,239,236,0.8);
 }
 
 .s17-info-item .icon {
@@ -1183,15 +1293,15 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(247,244,239,0.5);
+  color: rgba(242,239,236,0.5);
 }
 
 
 /* ─────────────────────────────────────────────
-   SLIDE 18 — CONTRAPORTADA
+   SLIDE 19 — CONTRAPORTADA
    ───────────────────────────────────────────── */
 
-.slide-18 {
+.slide-19 {
   background: var(--verde-bosque);
   display: flex;
   align-items: center;
@@ -1208,8 +1318,8 @@
   background-image:
     repeating-linear-gradient(
       45deg,
-      rgba(247,244,239,0.02) 0px,
-      rgba(247,244,239,0.02) 1px,
+      rgba(242,239,236,0.02) 0px,
+      rgba(242,239,236,0.02) 1px,
       transparent 1px,
       transparent 40px
     );
@@ -1246,15 +1356,15 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--dorado-apagado);
 }
 
 .s18-logo__name {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
   color: var(--blanco-roto);
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -1263,9 +1373,9 @@
 
 .s18-logo__name span {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.4em;
-  color: rgba(247,244,239,0.55);
+  color: rgba(242,239,236,0.5);
   font-weight: 400;
   margin-top: 4px;
 }
@@ -1273,15 +1383,15 @@
 .s18-rule {
   width: 1px;
   height: 80px;
-  background: rgba(184,149,92,0.5);
+  background: rgba(178,134,34,0.5);
 }
 
 .s18-claim {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 36px;
-  color: rgba(247,244,239,0.85);
-  letter-spacing: 0.02em;
+  font-size: 38px;
+  font-weight: 400;
+  color: rgba(242,239,236,0.85);
+  letter-spacing: 0.01em;
 }
 
 .s18-location {
@@ -1290,7 +1400,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(247,244,239,0.45);
+  color: rgba(242,239,236,0.45);
 }
 
 .s18-web {
@@ -1318,7 +1428,7 @@
 
 
 /* ─────────────────────────────────────────────
-   SLIDE HEADER compartido (titulares de sección)
+   SLIDE HEADERS compartidos
    ───────────────────────────────────────────── */
 
 .section-eyebrow {

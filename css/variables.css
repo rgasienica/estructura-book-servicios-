@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Paleta "Pirineo vivido" — guía Habitat & Decor */
-  --verde-bosque:   #2D3A2E;
-  --beige-caldera:  #C8B09C;
-  --blanco-roto:    #F7F4EF;
-  --marron-cuero:   #5C3D2E;
-  --dorado-apagado: #B8955C;
-  --azul-nieve:     #D6E4E5;
+  /* Paleta real Habitat & Decor */
+  --verde-bosque:   #2D3A2E;   /* fondos oscuros, secciones destacadas */
+  --blanco-roto:    #F2EFEC;   /* fondo principal */
+  --beige-caldera:  #EDE8E2;   /* fondo suave alternativo */
+  --c-linen:        #DFD3C8;   /* lino: bordes, fondos Negocios */
+  --azul-nieve:     #DFD3C8;   /* alias → linen (compatibilidad) */
+  --dorado-apagado: #B28622;   /* oro real: CTAs, iconos, acento */
+  --marron-cuero:   #6B6560;   /* texto secundario (gris cálido) */
+  --c-ink:          #3C3C3C;   /* texto principal */
   --blanco:         #FFFFFF;
 
   /* Texto sobre fondos oscuros */
-  --text-light:     #F7F4EF;
-  --text-light-soft: rgba(247,244,239,0.75);
+  --text-light:      #F2EFEC;
+  --text-light-soft: rgba(242,239,236,0.75);
 
   /* Tipografía */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', Arial, sans-serif;
+  --font-display: 'Dancing Script', cursive;
+  --font-body:    'Quicksand', sans-serif;
 
   /* Tamaños (px base en diseño 1920×1080) */
   --t-hero:    80px;
