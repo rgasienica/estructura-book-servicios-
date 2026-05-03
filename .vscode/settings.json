@@ -1,0 +1,12 @@
+{
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/.git/objects": true,
+        "**/.git/modules": true
+    },
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/.git/objects/**": true
+    }
+}
