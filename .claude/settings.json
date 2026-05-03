@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$raw = [Console]::In.ReadToEnd(); $d = $raw | ConvertFrom-Json; $fp = $d.tool_input.file_path; if ($fp -match 'css[/\\\\]|index\\.html') { [PSCustomObject]@{hookSpecificOutput=[PSCustomObject]@{hookEventName='PostToolUse';additionalContext='Archivo de estilo modificado. Ejecuta /habitat-style para verificar conformidad con la guia de marca Habitat & Decor antes de continuar.'}} | ConvertTo-Json -Compress }",
+            "timeout": 10,
+            "statusMessage": "Supervisor habitat-style activo..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -46,8 +46,8 @@ html, body {
   width: 100%; height: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.45s var(--ease-out),
+              transform 0.45s var(--ease-out);
   transform: translateX(80px);
 }
 
@@ -97,7 +97,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.28s var(--ease), border-color 0.28s var(--ease);
   backdrop-filter: blur(6px);
   line-height: 1;
 }
@@ -135,7 +135,7 @@ html, body {
 .progress-fill {
   height: 100%;
   background: var(--dorado-apagado);
-  transition: width 0.4s ease;
+  transition: width 0.4s var(--ease);
   border-radius: 0 3px 3px 0;
 }
 
@@ -160,7 +160,7 @@ html, body {
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(6px);
-  transition: background 0.2s;
+  transition: background 0.28s var(--ease);
   line-height: 1;
 }
 
@@ -253,20 +253,22 @@ html, body {
   justify-content: center;
   gap: 10px;
   padding: 16px 32px;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: var(--font-body);
   font-size: var(--t-small);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: opacity 0.2s, transform 0.15s;
+  transition: background 0.28s var(--ease), border-color 0.28s var(--ease), transform 0.28s var(--ease);
   width: fit-content;
 }
 
-.cta-btn:hover { opacity: 0.88; transform: translateY(-2px); }
-.cta-btn--gold { background: var(--dorado-apagado); color: #fff; border-color: var(--dorado-apagado); }
+.cta-btn:hover                { transform: translateY(-3px); }
+.cta-btn--gold                { background: var(--dorado-apagado); color: #fff; border-color: var(--dorado-apagado); }
+.cta-btn--gold:hover          { background: var(--c-gold-hover); border-color: var(--c-gold-hover); }
 .cta-btn--outline-light { background: transparent; color: var(--blanco-roto); border-color: rgba(247,244,239,0.6); }
 .cta-btn--outline-dark { background: transparent; color: var(--marron-cuero); border-color: var(--marron-cuero); }
 
@@ -330,10 +332,14 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: background 0.2s;
+  transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease), transform 0.35s var(--ease), border-color 0.35s var(--ease);
 }
 
-.service-card:hover { background: rgba(247, 244, 239, 0.15); }
+.service-card:hover {
+  background: rgba(247, 244, 239, 0.18);
+  transform: translateY(-4px);
+  border-color: rgba(178,134,34,0.4);
+}
 
 .service-icon {
   font-size: 32px;
@@ -411,3 +417,15 @@ html, body {
 
 .qr-ph__cell:nth-child(3n+2) { background: var(--marron-cuero); }
 .qr-ph__cell:nth-child(5n+1) { background: transparent; }
+
+/* =============================================
+   ACCESIBILIDAD MOTORA
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:  0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior:     auto   !important;
+  }
+}

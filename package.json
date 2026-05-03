@@ -1,0 +1,14 @@
+{
+  "name": "book-profesional-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Habitat & Decor Book Profesional 2026 — image tooling",
+  "scripts": {
+    "optimize": "node scripts/optimize-images.js",
+    "edit": "node scripts/edit-image.js"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.10.0",
+    "sharp": "^0.34.5"
+  }
+}

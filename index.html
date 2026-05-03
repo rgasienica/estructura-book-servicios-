@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="images/webp/hero-curtain.webp" type="image/webp">
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -29,7 +32,7 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-1 slide--active">
       <div class="s1-photo">
-        <img src="images/hero-curtain.jpg" alt="Cortinas a medida en salón de montaña" class="slide-img">
+        <img src="images/webp/hero-curtain.webp" alt="Cortinas a medida en salón de montaña" class="slide-img">
       </div>
 
       <div class="s1-content">
@@ -71,7 +74,7 @@
 
       <div class="s2m-cards">
 
-        <div class="s2m-card s2m-card--pro" onclick="window.goTo(8,'next')">
+        <div class="s2m-card s2m-card--pro" role="button" tabindex="0" onclick="window.goTo(8,'next')" onkeydown="if(event.key==='Enter'||event.key===' ')window.goTo(8,'next')">
           <div class="s2m-card__num">Perfil 01</div>
           <div class="s2m-card__icon">✦</div>
           <div class="s2m-card__title">Interioristas<br>&amp; Arquitectos</div>
@@ -79,7 +82,7 @@
           <div class="s2m-card__cta">Ver mi sección →</div>
         </div>
 
-        <div class="s2m-card s2m-card--neg" onclick="window.goTo(9,'next')">
+        <div class="s2m-card s2m-card--neg" role="button" tabindex="0" onclick="window.goTo(9,'next')" onkeydown="if(event.key==='Enter'||event.key===' ')window.goTo(9,'next')">
           <div class="s2m-card__num">Perfil 02</div>
           <div class="s2m-card__icon">🏔</div>
           <div class="s2m-card__title">Alojamientos<br>&amp; Restaurantes</div>
@@ -87,7 +90,7 @@
           <div class="s2m-card__cta">Ver mi sección →</div>
         </div>
 
-        <div class="s2m-card s2m-card--hog" onclick="window.goTo(10,'next')">
+        <div class="s2m-card s2m-card--hog" role="button" tabindex="0" onclick="window.goTo(10,'next')" onkeydown="if(event.key==='Enter'||event.key===' ')window.goTo(10,'next')">
           <div class="s2m-card__num">Perfil 03</div>
           <div class="s2m-card__icon">🏠</div>
           <div class="s2m-card__title">Tu hogar<br>en el Pirineo</div>
@@ -103,31 +106,15 @@
          SLIDE 03 · MANIFIESTO
          ════════════════════════════════════════ -->
     <section class="slide slide-3">
-      <div class="s2-accent">
-        <div class="s2-accent__label">Manifiesto</div>
-        <div class="s2-accent__line"></div>
-        <div class="s2-accent__year">2026</div>
+      <div class="s2-photo">
+        <img src="images/cortinas_lino_curvadas.jpg" alt="Cortinas de lino curvadas en un proyecto de Habitat &amp; Decor, Jaca" class="s2-photo__img" loading="lazy">
       </div>
 
-      <div class="s2-content">
-        <div class="s2-eyebrow">Quiénes somos · Por qué hacemos esto</div>
-
-        <div class="s2-text">
-          <p class="s2-emphasis">En el corazón del Pirineo Aragonés<br>diseñamos y fabricamos a mano los textiles<br>que convierten espacios en lugares.</p>
-          <p>No hacemos cortinas.<br>
-          Creamos la luz exacta que tu salón de montaña merece.</p>
-          <p>No tapizamos sofás.<br>
-          Devolvemos la vida a la pieza que heredaste<br>
-          y que merece otra generación de historias.</p>
-          <p>No somos una fábrica.<br>
-          Somos un taller en Jaca donde cada puntada<br>
-          la da alguien que conoce tu valle, tu clima,<br>
-          tu manera de vivir la montaña.</p>
-          <p>Para profesionales que necesitan un ejecutor de confianza.<br>
-          Para negocios que exigen resistencia sin sacrificar estilo.<br>
-          Para ti, que amas estas montañas tanto como nosotros.</p>
-        </div>
-
+      <div class="s2-panel">
+        <div class="s2-eyebrow">Manifiesto · 2026</div>
+        <div class="s2-divider"></div>
+        <div class="s2-title">Fabricamos lo que<br>otros solo prometen.</div>
+        <div class="s2-body">En Jaca, a mano, con tejidos que conocemos<br>y plazos que cumplimos.<br>Cada pieza lleva la firma del Pirineo.</div>
         <div class="s2-signature">
           <div class="s2-signature__line"></div>
           <div class="s2-signature__text">Habitat &amp; Decor · Jaca · Desde el diseño hasta la instalación</div>
@@ -141,7 +128,61 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-4">
       <div class="s3-photo">
-        <img src="images/exposicion_tienda.jpg" alt="Showroom y tienda Habitat & Decor en Jaca" class="slide-img">
+        <img src="images/webp/equipo_familia.webp" alt="El equipo de Habitat & Decor en Jaca, taller familiar de tapicería y decoración" class="slide-img" loading="lazy">
+        <div class="s3-contact-overlay">
+          <div class="s3-ci">
+            <div class="s3-ci__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="s3-ci__info">
+              <div class="s3-ci__label">Dirección</div>
+              <div class="s3-ci__value">Calle Domingo Miral, 1</div>
+              <div class="s3-ci__value">22700 Jaca, Huesca</div>
+            </div>
+          </div>
+          <div class="s3-ci-sep"></div>
+          <div class="s3-ci">
+            <div class="s3-ci__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="s3-ci__info">
+              <div class="s3-ci__label">Teléfono</div>
+              <div class="s3-ci__value">+34 974 288 787</div>
+              <div class="s3-ci__value">+34 630 908 883</div>
+            </div>
+          </div>
+          <div class="s3-ci-sep"></div>
+          <div class="s3-ci">
+            <div class="s3-ci__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="s3-ci__info">
+              <div class="s3-ci__label">Email</div>
+              <div class="s3-ci__value">tienda@habitatdecor.es</div>
+            </div>
+          </div>
+          <div class="s3-ci-sep"></div>
+          <div class="s3-ci">
+            <div class="s3-ci__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <div class="s3-ci__info">
+              <div class="s3-ci__label">Web</div>
+              <div class="s3-ci__value">habitatdecor.es</div>
+            </div>
+          </div>
+          <div class="s3-ci-sep"></div>
+          <div class="s3-ci">
+            <div class="s3-ci__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <div class="s3-ci__info">
+              <div class="s3-ci__label">Horario</div>
+              <div class="s3-ci__value">Lun–Sáb: 10:30–13:30</div>
+              <div class="s3-ci__value">17:00–20:00</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="s3-content">
@@ -153,22 +194,6 @@
         </div>
         <div class="s3-body">
           Conocemos el clima, la luz y la arquitectura de estas montañas. Por eso sabemos qué tejido aguanta el invierno en Ansó, qué cortina enmarca mejor las vistas al valle, y qué colores hacen que una casa de piedra respire.
-        </div>
-
-        <div class="s3-map-row">
-          <div class="s3-map">
-            <div class="map-ph" style="height:100%">
-              <div style="font-size:28px">🗺</div>
-              <div style="font-family:var(--font-body);font-size:12px;color:var(--marron-cuero);text-align:center;opacity:0.7">Zona de actuación:<br>Pirineo Aragonés</div>
-            </div>
-          </div>
-          <div class="s3-contact">
-            <div class="contact-line"><span class="icon">📍</span> C/ Domingo Miral, 1 · Jaca (Huesca)</div>
-            <div class="contact-line"><span class="icon">📞</span> +34 630 908 883</div>
-            <div class="contact-line"><span class="icon">✉</span> tienda@habitatdecor.es</div>
-            <div class="contact-line"><span class="icon">🌐</span> habitatdecor.es</div>
-            <div class="contact-line"><span class="icon">🕐</span> L–S · 10:30–13:30 / 17:00–20:00</div>
-          </div>
         </div>
       </div>
     </section>
@@ -185,10 +210,10 @@
 
       <div class="s4-grid">
         <div class="s4-photo-a">
-          <img src="images/mostrarios.jpg" alt="Muestras de tejidos y telas en el taller" class="slide-img">
+          <img src="images/webp/mostrarios.webp" alt="Muestras de tejidos y telas en el taller" class="slide-img" loading="lazy">
         </div>
         <div class="s4-photo-b">
-          <img src="images/showroom_cortinas.jpg" alt="Exposición de cortinas en tienda" class="slide-img">
+          <img src="images/webp/showroom_cortinas.webp" alt="Exposición de cortinas en tienda" class="slide-img" loading="lazy">
         </div>
 
         <div class="s4-info">
@@ -226,52 +251,88 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-6">
       <div class="s5-header">
-        <div class="section-eyebrow" style="color:rgba(242,239,236,0.6)">Servicios</div>
+        <div class="section-eyebrow">Servicios</div>
         <div class="s5-title">Qué hacemos</div>
         <div class="divider"></div>
       </div>
 
       <div class="s5-grid">
         <div class="s5-card">
-          <div class="s5-card__icon">🪟</div>
-          <div class="s5-card__title">Cortinas &amp; Estores</div>
-          <div class="s5-card__desc">A medida exacta. Tejidos técnicos, decorativos y blackout. Instalación incluida.</div>
-          <div class="s5-card__tag">Fabricación propia</div>
+          <img src="images/webp/showroom_cortinas.webp" alt="Showroom de cortinas en Habitat &amp; Decor, Jaca" class="s5-card__img" loading="lazy">
+          <div class="s5-card__overlay"></div>
+          <div class="s5-card__num">01</div>
+          <div class="s5-card__content">
+            <div class="s5-card__title">Cortinas &amp; Estores</div>
+            <div class="s5-card__body">
+              <div class="s5-card__desc">A medida exacta. Tejidos técnicos, decorativos y blackout. Instalación incluida.</div>
+              <div class="s5-card__tag">Fabricación propia</div>
+            </div>
+          </div>
         </div>
 
         <div class="s5-card">
-          <div class="s5-card__icon">🛋</div>
-          <div class="s5-card__title">Tapicería &amp; Sofás</div>
-          <div class="s5-card__desc">Tapizado, restauración y renovación de sofás, sillas, cabeceros y piezas heredadas.</div>
-          <div class="s5-card__tag">Taller propio</div>
+          <img src="images/webp/tapizado_sofa.webp" alt="Tapizado artesanal de sofás en el taller de Jaca" class="s5-card__img" loading="lazy">
+          <div class="s5-card__overlay"></div>
+          <div class="s5-card__num">02</div>
+          <div class="s5-card__content">
+            <div class="s5-card__title">Tapicería &amp; Sofás</div>
+            <div class="s5-card__body">
+              <div class="s5-card__desc">Tapizado, restauración y renovación de sofás, sillas, cabeceros y piezas heredadas.</div>
+              <div class="s5-card__tag">Taller propio</div>
+            </div>
+          </div>
         </div>
 
         <div class="s5-card">
-          <div class="s5-card__icon">🛏</div>
-          <div class="s5-card__title">Colchones</div>
-          <div class="s5-card__desc">Selección especializada para el clima de montaña. Asesoramiento personalizado.</div>
-          <div class="s5-card__tag">Asesoría incluida</div>
+          <img src="images/webp/Mostrario_tapiceria.webp" alt="Mostrario de tejidos y colchones en Habitat &amp; Decor" class="s5-card__img" loading="lazy">
+          <div class="s5-card__overlay"></div>
+          <div class="s5-card__num">03</div>
+          <div class="s5-card__content">
+            <div class="s5-card__title">Colchones</div>
+            <div class="s5-card__body">
+              <div class="s5-card__desc">Selección especializada para el clima de montaña. Asesoramiento personalizado.</div>
+              <div class="s5-card__tag">Asesoría incluida</div>
+            </div>
+          </div>
         </div>
 
         <div class="s5-card">
-          <div class="s5-card__icon">🪑</div>
-          <div class="s5-card__title">Muebles a Medida</div>
-          <div class="s5-card__desc">Diseño y fabricación de mobiliario a medida adaptado a cada espacio.</div>
-          <div class="s5-card__tag">Diseño exclusivo</div>
+          <img src="images/webp/collage_cada_detalle.webp" alt="Detalle de fabricación a medida de muebles auxiliares" class="s5-card__img" loading="lazy">
+          <div class="s5-card__overlay"></div>
+          <div class="s5-card__num">04</div>
+          <div class="s5-card__content">
+            <div class="s5-card__title">Muebles a Medida</div>
+            <div class="s5-card__body">
+              <div class="s5-card__desc">Diseño y fabricación de mobiliario a medida adaptado a cada espacio.</div>
+              <div class="s5-card__tag">Diseño exclusivo</div>
+            </div>
+          </div>
         </div>
 
         <div class="s5-card">
-          <div class="s5-card__icon">🎨</div>
-          <div class="s5-card__title">Decoración &amp; Diseño</div>
-          <div class="s5-card__desc">Asesoría de interiorismo, selección de tejidos, colores y estilos para tu espacio.</div>
-          <div class="s5-card__tag">Visita a domicilio</div>
+          <img src="images/webp/mostrarios.webp" alt="Selección de tejidos y asesoría de decoración en Habitat &amp; Decor" class="s5-card__img" loading="lazy">
+          <div class="s5-card__overlay"></div>
+          <div class="s5-card__num">05</div>
+          <div class="s5-card__content">
+            <div class="s5-card__title">Decoración &amp; Diseño</div>
+            <div class="s5-card__body">
+              <div class="s5-card__desc">Asesoría de interiorismo, selección de tejidos, colores y estilos para tu espacio.</div>
+              <div class="s5-card__tag">Visita a domicilio</div>
+            </div>
+          </div>
         </div>
 
         <div class="s5-card">
-          <div class="s5-card__icon">🚚</div>
-          <div class="s5-card__title">Transporte &amp; Instalación</div>
-          <div class="s5-card__desc">Nos desplazamos por todo el Pirineo. Instalación profesional y acabado perfecto.</div>
-          <div class="s5-card__tag">Pirineo completo</div>
+          <img src="images/webp/furgoneta_casa_rural.webp" alt="Furgoneta de Habitat &amp; Decor para instalación en todo el Pirineo" class="s5-card__img" loading="lazy">
+          <div class="s5-card__overlay"></div>
+          <div class="s5-card__num">06</div>
+          <div class="s5-card__content">
+            <div class="s5-card__title">Transporte &amp; Instalación</div>
+            <div class="s5-card__body">
+              <div class="s5-card__desc">Nos desplazamos por todo el Pirineo. Instalación profesional y acabado perfecto.</div>
+              <div class="s5-card__tag">Pirineo completo</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -290,7 +351,7 @@
       <div class="s6-steps">
         <div class="s6-step">
           <div class="s6-step__photo">
-            <img src="images/Mostrario_tapiceria.jpg" alt="Consulta y selección de materiales" class="slide-img">
+            <img src="images/webp/Mostrario_tapiceria.webp" alt="Consulta y selección de materiales" class="slide-img" loading="lazy">
           </div>
           <div class="s6-step__body">
             <div class="s6-step__num">01</div>
@@ -301,7 +362,7 @@
 
         <div class="s6-step">
           <div class="s6-step__photo">
-            <img src="images/collage_cada_detalle.jpg" alt="Diseño y selección de tejidos" class="slide-img">
+            <img src="images/webp/collage_cada_detalle.webp" alt="Diseño y selección de tejidos" class="slide-img" loading="lazy">
           </div>
           <div class="s6-step__body">
             <div class="s6-step__num">02</div>
@@ -312,7 +373,7 @@
 
         <div class="s6-step">
           <div class="s6-step__photo">
-            <img src="images/tapizado_sofa.jpg" alt="Fabricación artesanal en el taller de Jaca" class="slide-img">
+            <img src="images/webp/tapizado_sofa.webp" alt="Fabricación artesanal en el taller de Jaca" class="slide-img" loading="lazy">
           </div>
           <div class="s6-step__body">
             <div class="s6-step__num">03</div>
@@ -323,7 +384,7 @@
 
         <div class="s6-step">
           <div class="s6-step__photo">
-            <img src="images/furgoneta_casa_rural.jpg" alt="Instalación en domicilio del cliente" class="slide-img">
+            <img src="images/webp/furgoneta_casa_rural.webp" alt="Instalación en domicilio del cliente" class="slide-img" loading="lazy">
           </div>
           <div class="s6-step__body">
             <div class="s6-step__num">04</div>
@@ -355,7 +416,7 @@
         </ul>
 
         <div style="margin-top:8px;">
-          <p style="font-family:var(--font-display);font-size:22px;color:rgba(242,239,236,0.9);line-height:1.4;margin-bottom:28px;">
+          <p class="sp-quote">
             "Tú diseñas. Nosotros ejecutamos.<br>Tu cliente, encantado. Tu nombre, intacto."
           </p>
           <a href="mailto:tienda@habitatdecor.es?subject=Colaboración profesional" class="cta-btn cta-btn--outline-light">
@@ -365,7 +426,7 @@
       </div>
 
       <div class="sp-photo">
-        <img src="images/cortina_dormitorio_onda_perfecta.jpg" alt="Cortina onda perfecta en proyecto de interiorismo" class="slide-img">
+        <img src="images/webp/cortina_dormitorio_onda_perfecta.webp" alt="Cortina onda perfecta en proyecto de interiorismo" class="slide-img" loading="lazy">
       </div>
     </section>
 
@@ -390,7 +451,7 @@
         </ul>
 
         <div style="margin-top:8px;">
-          <p style="font-family:var(--font-display);font-size:22px;color:var(--verde-bosque);line-height:1.4;margin-bottom:28px;">
+          <p class="sp-quote">
             "Estética de montaña, resistencia de uso intensivo.<br>Equipamos tu espacio completo. Te despreocupas."
           </p>
           <a href="mailto:tienda@habitatdecor.es?subject=Auditoría textil negocio" class="cta-btn cta-btn--outline-dark">
@@ -400,7 +461,7 @@
       </div>
 
       <div class="sp-photo">
-        <img src="images/canfranc_negocios1.jpg" alt="Alojamiento en Canfranc equipado por Habitat & Decor" class="slide-img">
+        <img src="images/webp/canfranc_negocios1.webp" alt="Alojamiento en Canfranc equipado por Habitat & Decor" class="slide-img" loading="lazy">
       </div>
     </section>
 
@@ -424,7 +485,7 @@
         </ul>
 
         <div style="margin-top:8px;">
-          <p style="font-family:var(--font-display);font-size:20px;color:var(--verde-bosque);line-height:1.5;margin-bottom:28px;">
+          <p class="sp-quote">
             "Una cortina no es solo una cortina.<br>Es la luz de tu salón en otoño. Es el abrigo de tu ventana en enero."
           </p>
           <a href="https://wa.me/34630908883?text=Hola, me gustaría pedir una visita a domicilio" class="cta-btn cta-btn--outline-dark">
@@ -434,7 +495,7 @@
       </div>
 
       <div class="sp-photo">
-        <img src="images/dormitorio_casa_rural_v2.jpg" alt="Dormitorio de casa rural con cortinas a medida" class="slide-img">
+        <img src="images/webp/dormitorio_casa_rural_v2.webp" alt="Dormitorio de casa rural con cortinas a medida" class="slide-img" loading="lazy">
       </div>
     </section>
 
@@ -444,24 +505,24 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-11 slide-caso">
       <div class="sc-photo">
-        <img src="images/cortina_salon_biescas.jpg" alt="Proyecto integral con estudio de interiorismo en Biescas" class="slide-img">
+        <img src="images/webp/furgoneta_casa_rural.webp" alt="Furgoneta de Habitat & Decor en vivienda rural del Pirineo Aragonés" class="slide-img" loading="lazy">
       </div>
 
       <div class="sc-ficha">
         <div class="sc-label">Proyecto · Perfil Profesional</div>
-        <div class="sc-title">Reforma integral con Estudio de Interiorismo · Hecho</div>
-        <div class="sc-meta">Cliente: Estudio [Nombre] · Zaragoza<br>Ubicación: Vivienda privada en Hecho, Pirineo Aragonés</div>
+        <div class="sc-title">Reforma integral con Estudio de Interiorismo · Fanlo</div>
+        <div class="sc-meta">Cliente: Interiorista · Jaca<br>Ubicación: Vivienda rural en Fanlo, Pirineo Aragonés zona Ordesa</div>
 
         <div class="divider divider--light"></div>
 
         <div class="sc-section">
           <div class="sc-section-label">El desafío</div>
-          <div class="sc-section-text">Ejecutar el diseño textil completo de una reforma integral coordinando fabricación y plazos con el cronograma de la obra. El interiorista necesitaba un taller que respetara sus especificaciones sin interpretarlas.</div>
+          <div class="sc-section-text">Ejecutar el diseño textil de los complementos y equipamiento de muebles auxiliares de una reforma integral coordinando fabricación y plazos con el cronograma de la obra. El interiorista necesitaba un taller que respetara sus especificaciones sin interpretarlas y los plazos de ejecución.</div>
         </div>
 
         <div class="sc-section">
           <div class="sc-section-label">Nuestra solución</div>
-          <div class="sc-section-text">Fabricación a medida de cortinas, estores y tapizado de 3 sofás según especificaciones exactas. Comunicación directa taller–diseñador en cada fase. Entrega coordinada con el cierre de obra.</div>
+          <div class="sc-section-text">Fabricación a medida del sofá, complementos textiles exactos y mesa de madera desplegable. Comunicación directa taller–diseñador en cada fase y elección apoyada en los mostrarios del showroom. Entrega coordinada con el cierre de obra.</div>
         </div>
 
         <div class="sc-section">
@@ -476,16 +537,16 @@
               <div class="sc-metric__label">Proyectos<br>posteriores</div>
             </div>
             <div class="sc-metric">
-              <div class="sc-metric__val">0</div>
-              <div class="sc-metric__label">Incidencias<br>en obra</div>
+              <div class="sc-metric__val">1</div>
+              <div class="sc-metric__label">Incidencia<br>resuelta</div>
             </div>
           </div>
         </div>
 
         <div class="sc-quote">
-          "Por fin un taller que entiende lo que necesito sin tener que explicarlo dos veces."
+          "Colaboro con ellos. Han realizado varios trabajos de confección y tapizados para mis proyectos y responden rápido y bien. Muy buenos profesionales."
         </div>
-        <div class="sc-author">— Estudio [Nombre] · Interiorista · Zaragoza</div>
+        <div class="sc-author">— Interiorista · Jaca</div>
       </div>
     </section>
 
@@ -495,48 +556,30 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-12 slide-caso">
       <div class="sc-photo">
-        <img src="images/canfranc_negocios2.jpg" alt="Apartamentos turísticos equipados en Canfranc" class="slide-img">
+        <img src="images/webp/canfranc_negocios1.webp" alt="Bancos tapizados en terciopelo verde del restaurante del Hotel de Canfranc Estación" class="slide-img" loading="lazy">
       </div>
 
       <div class="sc-ficha">
-        <div class="sc-label">Proyecto · Perfil Negocio</div>
-        <div class="sc-title">Equipamiento completo · Apartamentos Canfranc</div>
-        <div class="sc-meta">Cliente: Apartamentos [Nombre] · Canfranc<br>Ubicación: Valle del Aragón · 6 apartamentos turísticos</div>
+        <div class="sc-label">Proyecto · Perfil Negocio · Hotel</div>
+        <div class="sc-title">Hotel Emblemático 5 Estrellas · Canfranc Estación</div>
+        <div class="sc-meta">Cliente: Hotel de alto standing · Canfranc Estación<br>Ubicación: Estación Internacional de Canfranc · Lugar histórico fronterizo</div>
 
         <div class="divider"></div>
 
         <div class="sc-section">
           <div class="sc-section-label">El desafío</div>
-          <div class="sc-section-text">Equipar 6 apartamentos con cortinas térmicas, sofás resistentes y cojines coordinados. Instalación sin interrumpir las reservas activas durante la temporada de esquí.</div>
+          <div class="sc-section-text">Retapizar en piel los bancos de madera fijos del restaurante del hotel, parte integral de su arquitectura. Encontrar el tejido original de máxima calidad para una reparación imperceptible. El restaurante no podía cerrar.</div>
         </div>
 
         <div class="sc-section">
           <div class="sc-section-label">Nuestra solución</div>
-          <div class="sc-section-text">Diseño coordinado por apartamento. Tejido térmico blackout para cortinas, tapicería anti-manchas para sofás. Instalación en 5 días entre reservas, sin cerrar ningún apartamento.</div>
-        </div>
-
-        <div class="sc-section">
-          <div class="sc-section-label">Resultados</div>
-          <div class="sc-metrics">
-            <div class="sc-metric">
-              <div class="sc-metric__val">4.8</div>
-              <div class="sc-metric__label">Valoración Google<br>(antes: 4.2)</div>
-            </div>
-            <div class="sc-metric">
-              <div class="sc-metric__val">2×</div>
-              <div class="sc-metric__label">Reservas<br>de invierno</div>
-            </div>
-            <div class="sc-metric">
-              <div class="sc-metric__val">40%</div>
-              <div class="sc-metric__label">Mejora<br>aislamiento</div>
-            </div>
-          </div>
+          <div class="sc-section-text">Varias visitas y coordinación con el equipo de mantenimiento del hotel para el despiece de los bancos y su traslado al taller de Jaca. Trabajo en horario acordado para reabrir el restaurante a las 11 de la mañana el mismo día.</div>
         </div>
 
         <div class="sc-quote">
-          "Mis huéspedes mencionan lo bonitos y cómodos que son los apartamentos. Duermo tranquilo sabiendo que los tejidos aguantan."
+          "Han realizado la tarea en el plazo y de forma muy satisfactoria las reparaciones oportunas. La colaboración ha sido fácil. Contamos con vuestro servicio para futuras actuaciones. Gracias."
         </div>
-        <div class="sc-author">— Propietario · Apartamentos [Nombre] · Canfranc</div>
+        <div class="sc-author">— Gerencia · Hotel Canfranc Estación</div>
       </div>
     </section>
 
@@ -546,36 +589,30 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-13 slide-caso">
       <div class="sc-photo">
-        <img src="images/cortinas_lino.jpg" alt="Cortinas de lino natural en casa de piedra en Ansó" class="slide-img">
+        <img src="images/webp/cortinas_lino.webp" alt="Cortinas de lino arqueadas en Casa la Rubia, edificio histórico de la Ciudadela de Jaca" class="slide-img" loading="lazy">
       </div>
 
       <div class="sc-ficha">
         <div class="sc-label">Proyecto · Perfil Hogar</div>
-        <div class="sc-title">Casa de piedra del siglo XIX · Ansó</div>
-        <div class="sc-meta">Cliente: Familia [Apellido] · Madrid<br>Ubicación: Casa de piedra reformada · Ansó, Valle de Hecho</div>
+        <div class="sc-title">Casa la Rubia · Edificio Histórico · Jaca</div>
+        <div class="sc-meta">Cliente: Particular segunda residencia · Castellón<br>Ubicación: Edificio histórico en la Ciudadela de Jaca · Valle del Aragón</div>
 
         <div class="divider"></div>
 
         <div class="sc-section">
           <div class="sc-section-label">El desafío</div>
-          <div class="sc-section-text">Vestir una casa de piedra del siglo XIX con textiles que respetaran la arquitectura original, maximizaran la luz natural y soportaran el invierno pirenaico sin perder calidez visual.</div>
+          <div class="sc-section-text">Vestir una casa de grandes ventanales en arco con vistas a la Ciudadela de Jaca y al Pirineo con textiles que respetaran la arquitectura original, maximizaran la luz natural y soportaran el fuerte sol de verano sin perder calidez visual.</div>
         </div>
 
         <div class="sc-section">
           <div class="sc-section-label">Nuestra solución</div>
-          <div class="sc-section-text">Visita a domicilio para entender la casa y la luz. Cortinas a medida en lino natural. Restauración de un sofá heredado de la abuela. Estores térmicos en la planta alta para el frío.</div>
+          <div class="sc-section-text">Visita a domicilio para entender la casa y la luz. Cortinas arqueadas a medida en lino natural estilo informal. Cortinas opacas en la espectacular balconada del dormitorio.</div>
         </div>
 
         <div class="sc-quote" style="margin-top:8px;">
-          "La casa respira. Las cortinas parecen haber estado siempre ahí. Y el sofá de mi abuela ha vuelto a la vida."
+          "Nos ayudaron con la solución del tipo de cortina que necesitábamos, después del encargo fueron rápidos con la confección y el montaje y una buena ejecución. Buena relación precio y servicio. ¡Resultado final de revista!"
         </div>
-        <div class="sc-author">— Familia [Apellido] · Madrid · Segunda residencia en Ansó</div>
-
-        <div style="margin-top:16px;padding:16px 20px;background:rgba(45,58,46,0.06);border-radius:4px;border-left:3px solid var(--dorado-apagado);">
-          <div style="font-family:var(--font-body);font-size:13px;color:var(--marron-cuero);font-style:italic;line-height:1.55;">
-            "Llamé a Habitat &amp; Decor porque son de aquí. Quería a alguien que entendiera esta casa, este valle, esta luz."
-          </div>
-        </div>
+        <div class="sc-author">— Particular segunda residencia · Castellón · Casa la Rubia · Jaca</div>
       </div>
     </section>
 
@@ -585,7 +622,7 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-14">
       <div class="s13-header">
-        <div class="section-eyebrow" style="color:rgba(242,239,236,0.6)">Materiales</div>
+        <div class="section-eyebrow section-eyebrow--light">Materiales</div>
         <div class="s13-title">Tejidos &amp; Materiales</div>
         <div class="divider"></div>
       </div>
@@ -707,7 +744,7 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-16">
       <div class="s15-header">
-        <div class="section-eyebrow" style="color:rgba(242,239,236,0.6)">Clientes</div>
+        <div class="section-eyebrow section-eyebrow--light">Clientes</div>
         <div class="s15-title">Lo que dicen de nosotros</div>
         <div class="divider"></div>
       </div>
@@ -757,7 +794,7 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-17">
       <div class="s16-left">
-        <div style="font-family:var(--font-body);font-size:var(--t-tiny);font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--dorado-apagado);margin-bottom:20px;">Por qué elegirnos</div>
+        <div class="section-eyebrow">Por qué elegirnos</div>
         <div class="s16-headline">
           Desde el diseño<br>hasta la instalación.<br><em>Todo hecho a mano<br>en Jaca.</em>
         </div>
@@ -800,7 +837,7 @@
          ════════════════════════════════════════ -->
     <section class="slide slide-18">
       <div class="s17-header">
-        <div class="section-eyebrow" style="color:rgba(242,239,236,0.6)">Hablemos</div>
+        <div class="section-eyebrow section-eyebrow--light">Hablemos</div>
         <div class="s17-title">Hablemos de tu proyecto</div>
         <div class="divider divider--light"></div>
       </div>

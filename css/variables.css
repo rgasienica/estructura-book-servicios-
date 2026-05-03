@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600&display=swap');
-
 :root {
-  /* Paleta real Habitat & Decor */
+  /* ── Paleta primaria Habitat & Decor ───────────── */
   --verde-bosque:   #2D3A2E;   /* fondos oscuros, secciones destacadas */
   --blanco-roto:    #F2EFEC;   /* fondo principal */
   --beige-caldera:  #EDE8E2;   /* fondo suave alternativo */
-  --c-linen:        #DFD3C8;   /* lino: bordes, fondos Negocios */
-  --azul-nieve:     #DFD3C8;   /* alias → linen (compatibilidad) */
+  --c-linen:        #DFD3C8;   /* lino: bordes, separadores */
+  --c-sand:         #D2BF81;   /* arena: acentos secundarios (solo elementos decorativos o texto grande) */
   --dorado-apagado: #B28622;   /* oro real: CTAs, iconos, acento */
   --marron-cuero:   #6B6560;   /* texto secundario (gris cálido) */
   --c-ink:          #3C3C3C;   /* texto principal */
   --blanco:         #FFFFFF;
+
+  /* ── Aliases canónicos (guía de estilo web) ──────
+     Usar --c-* en código nuevo; los nombres legacy se
+     mantienen para no romper slides existentes.       */
+  --c-bg:       var(--blanco-roto);
+  --c-gold:     var(--dorado-apagado);
+  --c-gold-dim: rgba(178,134,34,.13);  /* oro translúcido, hovers suaves */
+  --c-bg-soft:  var(--beige-caldera);
+  --c-ink-soft: var(--marron-cuero);
+  --c-white:    var(--blanco);
 
   /* Texto sobre fondos oscuros */
   --text-light:      #F2EFEC;
@@ -40,4 +48,11 @@
   /* Slide padding estándar */
   --pad-x: 96px;
   --pad-y: 72px;
+
+  /* Easings de marca web */
+  --ease:     cubic-bezier(.25, .46, .45, .94);
+  --ease-out: cubic-bezier(0, 0, .2, 1);
+
+  /* Token hover: oro oscurecido ~18% */
+  --c-gold-hover: #9a7318;
 }
