@@ -101,6 +101,6 @@ Si el usuario añade `--fix` como argumento (ej. `/habitat-style --fix`):
 - **Producto:** Book Profesional 2026 — brochure digital 19 slides, canvas 1920×1080px.
 - **Fuentes:** Dancing Script + Quicksand vía Google Fonts.
 - **CSS tokens:** `css/variables.css` — 48 tokens, fuente de verdad absoluta.
-- **Imágenes:** `/images/` — lazy-loaded excepto `hero-curtain.jpg`.
+- **Imágenes:** `assets/images/` — lazy-loaded excepto `hero-curtain.jpg`.
 - **Pendiente:** Testimonios con nombres placeholder (slides 11, 12, 13, 16), QR real en slide 18.
 - **Galería de imágenes de origen:** `D:\Documents\DECO\habitatdeco-galeria\`

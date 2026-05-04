@@ -9,7 +9,7 @@ Tienes acceso a dos herramientas en `scripts/`:
 
 ### 1. `optimize-images.js` — Optimización batch con Sharp
 Convierte JPG/PNG → WebP, redimensiona a max 1920px, calidad configurable.
-Output en `images/webp/`. Los originales no se tocan.
+Output en `assets/images/webp/`. Los originales no se tocan.
 
 ```powershell
 # Optimizar todas las imágenes (q85, max 1920px)
