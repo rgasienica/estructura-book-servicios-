@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(d:\\Documents\\DECO\\BOOK_PROFESIONAL_2026\\v2\\**)",
+      "Read(d:\\Documents\\DECO\\BOOK_PROFESIONAL_2026\\css\\**)",
+      "Read(d:\\Documents\\DECO\\BOOK_PROFESIONAL_2026\\assets\\**)"
+    ]
+  }
+}

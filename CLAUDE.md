@@ -21,12 +21,19 @@ python -m http.server 8000
 
 Navigation: Arrow keys / Space (next), Arrow left / Page Up (prev), **F** (fullscreen), Home/End (jump to first/last).
 
+## Image Tooling (Node)
+
+```powershell
+npm run optimize   # Batch-converts assets/images/*.jpg → assets/images/webp/*.webp (uses sharp)
+npm run edit       # AI image editing via Fal.ai FLUX — requires FAL_KEY env var
+```
+
 ## Architecture
 
 **Fixed 1920×1080 canvas scaled to viewport** — not a traditional responsive design. The entire `.slide-stage` is scaled via `transform: scale()` in `js/book.js` to fit any screen while maintaining pixel-perfect proportions.
 
 **File roles:**
-- `index.html` — All 19 slide HTML (924 lines, self-contained)
+- `index.html` — All 19 slide HTML (840 lines, self-contained)
 - `js/book.js` — Navigation, transitions, fullscreen, swipe, keyboard (212 lines)
 - `css/variables.css` — All design tokens (colors, fonts, spacing, motion)
 - `css/layout.css` — Stage layout, controls, nav buttons
@@ -39,6 +46,7 @@ One `.slide` has `.slide--active` at a time. `goTo(target, direction)` in `book.
 - Exit: `slide--exit-left` / `slide--exit-right` (translateX + fade, 0.45s)
 - `isAnimating` flag prevents overlapping transitions
 - `scaleStage()` recalculates scale on resize and fullscreen toggle
+- `window.goTo` is exposed globally — required by the `onclick="goTo(n,'next')"` handlers on the profile cards in slide 2
 
 **Global state:**
 ```js
@@ -49,16 +57,25 @@ let isAnimating = false;
 
 ## Design Tokens (variables.css)
 
-| Token | Value | Use |
+**Rule: use `--c-*` aliases in new code.** Legacy names (`--verde-bosque`, `--blanco-roto`, etc.) are kept only to avoid breaking existing slides.
+
+| Token (canonical) | Value | Use |
 |---|---|---|
-| `--verde-bosque` | `#2D3A2E` | Accents, dark elements |
-| `--blanco-roto` | `#F2EFEC` | Main background |
-| `--dorado-apagado` | `#B28622` | Brand gold, CTAs |
-| `--marron-cuero` | `#6B6560` | Secondary text |
-| `--font-display` | Dancing Script | Titles/hero |
+| `--c-bg` | `#F2EFEC` | Main background |
+| `--c-bg-soft` | `#EDE8E2` | Alternate soft background |
+| `--c-gold` | `#B28622` | Brand gold, CTAs |
+| `--c-gold-dim` | `rgba(178,134,34,.13)` | Soft gold hover backgrounds |
+| `--c-gold-hover` | `#9a7318` | Darkened gold on hover |
+| `--c-ink` | `#3C3C3C` | Main text |
+| `--c-ink-soft` | `#6B6560` | Secondary text |
+| `--c-linen` | `#DFD3C8` | Borders, dividers |
+| `--c-sand` | `#D2BF81` | Decorative accents only (not body text) |
+| `--font-display` | Dancing Script | Titles/hero (proxy for Rocking Horse, not on Google Fonts) |
 | `--font-body` | Quicksand 300–600 | All body text |
 
-All spacing (`--pad-x: 96px`, `--pad-y: 72px`) and typography (`--t-hero: 80px` → `--t-tiny: 12px`) are tokenized — edit tokens, not individual declarations.
+Spacing tokens: `--pad-x: 96px`, `--pad-y: 72px`, `--gap-xs/sm/md/lg/xl` (8/16/32/56/80px).
+Typography scale: `--t-hero: 80px` → `--t-tiny: 12px` (7 steps).
+Easing tokens: `--ease` (standard) and `--ease-out` (decelerate) — use these instead of raw cubic-bezier values.
 
 ## Slide Map
 
@@ -108,7 +125,7 @@ BOOK_PROFESIONAL_2026/
 │   └── reset-git.ps1                 # Fixes frozen git state (index.lock, etc.)
 │
 └── .claude/
-    ├── settings.json                 # Hooks: PostToolUse triggers habitat-style reminder
+    ├── settings.json                 # Hooks: PostToolUse on Write|Edit fires habitat-style reminder when CSS or index.html is modified
     ├── skills-lock.json              # Installed skills manifest
     ├── skills/book-frontend/         # book-frontend skill
     └── commands/
@@ -116,9 +133,11 @@ BOOK_PROFESIONAL_2026/
         └── image-tools.md            # /image-tools skill
 ```
 
-## Pending Work (SESION_SIGUIENTE.md)
+## Pending Work
+
+See [SESION_SIGUIENTE.md](SESION_SIGUIENTE.md) for the current task list (may be updated each session). Key outstanding items as of v2.2:
 
 - Replace placeholder names in testimonials (slides 11, 12, 13, 16)
-- Generate real QR code for habitatdecor.es → insert in slide 18
+- Generate real QR code for habitatdecor.es → save as `assets/images/qr-habitatdecor.svg`, replace `.qr-ph` in slide 19
 - Visual review of all 19 slides in browser
-- Image refinement gallery: `D:\Documents\DECO\habitatdeco-galeria\`
+- Image refinement gallery available at `D:\Documents\DECO\habitatdeco-galeria\imagenes_tv\`

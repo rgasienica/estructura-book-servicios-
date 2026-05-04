@@ -8,5 +8,11 @@
     "files.watcherExclude": {
         "**/node_modules/**": true,
         "**/.git/objects/**": true
+    },
+    "mcpServers": {
+        "playwright": {
+            "command": "npx",
+            "args": ["-y", "@playwright/mcp@latest", "--caps=vision"]
+        }
     }
 }

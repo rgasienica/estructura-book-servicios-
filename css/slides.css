@@ -8,7 +8,7 @@
    ───────────────────────────────────────────── */
 
 .slide-1 {
-  background: var(--verde-bosque);
+  background: var(--c-linen);
   display: flex;
 }
 
@@ -27,9 +27,15 @@
   justify-content: center;
   padding: var(--pad-y) var(--pad-x) var(--pad-y) 72px;
   position: relative;
+  background: linear-gradient(to bottom, transparent 57%, #0e0e0e 57%);
 }
 
-.s1-logo { margin-bottom: 40px; }
+.s1-logo {
+  position: absolute;
+  top: var(--pad-y);
+  left: 72px;
+  z-index: 2;
+}
 
 .s1-logo__mark {
   display: flex;
@@ -46,44 +52,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--dorado-apagado);
+  overflow: hidden;
+}
+
+.s1-logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .s1-logo__name {
-  font-family: var(--font-body);
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: 30px;
   font-weight: 600;
-  color: var(--blanco-roto);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  line-height: 1.3;
+  color: var(--c-gold);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
 }
 
 .s1-logo__name span {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.24em;
-  color: rgba(242,239,236,0.55);
+  color: var(--c-ink-soft);
   font-weight: 400;
   margin-top: 2px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
 }
 
 .s1-claim {
   font-family: var(--font-display);
-  font-size: 58px;
+  font-size: 48px;
   font-weight: 700;
-  color: var(--blanco-roto);
+  color: var(--c-ink);
   line-height: 1.1;
   margin-bottom: 24px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.5px var(--c-ink);
+  paint-order: stroke fill;
+}
+
+.s1-claim__gold {
+  color: var(--c-ink);
 }
 
 .s1-subclaim {
   font-family: var(--font-body);
   font-size: var(--t-small);
-  color: rgba(242,239,236,0.6);
+  color: rgba(242, 239, 236, 0.72);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -100,10 +118,10 @@
 
 .s1-bottom span {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(242,239,236,0.45);
+  color: rgba(242, 239, 236, 0.5);
 }
 
 .s1-gold-line {
@@ -185,7 +203,7 @@
 
 .s2m-card__num {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -322,7 +340,7 @@
 
 .s2-signature__text {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -388,7 +406,7 @@
 
 .s3-ci__label {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -398,7 +416,7 @@
 
 .s3-ci__value {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(242, 239, 236, 0.80);
   line-height: 1.45;
@@ -495,7 +513,7 @@
 
 .s4-info-title {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--blanco-roto);
   margin-bottom: 4px;
@@ -507,12 +525,12 @@
   gap: 14px;
   color: rgba(242,239,236,0.85);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 19px;
   line-height: 1.55;
 }
 
 .s4-info-item .icon {
-  font-size: 16px;
+  font-size: 20px;
   color: var(--dorado-apagado);
   flex-shrink: 0;
   margin-top: 2px;
@@ -632,7 +650,7 @@
 
 .s5-card__title {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 600;
   color: var(--blanco-roto);
   line-height: 1.1;
@@ -657,7 +675,7 @@
 
 .s5-card__desc {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 400;
   color: rgba(242, 239, 236, 0.82);
   line-height: 1.5;
@@ -666,7 +684,7 @@
 .s5-card__tag {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -692,15 +710,66 @@
    ───────────────────────────────────────────── */
 
 .slide-7 {
-  background: var(--blanco-roto);
+  background: #12100c;
   display: flex;
   flex-direction: column;
-  padding: 64px var(--pad-x) 56px;
+  padding: 48px var(--pad-x) 40px;
 }
 
 .s6-header {
   flex: 0 0 auto;
-  margin-bottom: 48px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.s6-main-title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 0 2px 48px rgba(178, 134, 34, 0.28);
+  margin-bottom: 22px;
+}
+
+.s6-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 auto 22px;
+}
+
+.s6-ornament__line {
+  display: block;
+  width: 96px;
+  height: 1px;
+}
+
+.s6-ornament__line:first-child {
+  background: linear-gradient(to left, var(--dorado-apagado), transparent);
+}
+
+.s6-ornament__line:last-child {
+  background: linear-gradient(to right, var(--dorado-apagado), transparent);
+}
+
+.s6-ornament__diamond {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--dorado-apagado);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(178, 134, 34, 0.6);
+}
+
+.s6-subtitle {
+  font-family: var(--font-body);
+  font-size: 21px;
+  color: rgba(242, 239, 236, 0.78);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 .s6-steps {
@@ -722,7 +791,7 @@
   position: absolute;
   right: -16px;
   top: 28px;
-  font-size: 20px;
+  font-size: 24px;
   color: var(--dorado-apagado);
   z-index: 1;
 }
@@ -752,14 +821,14 @@
 
 .s6-step__title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--blanco-roto);
 }
 
 .s6-step__desc {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 17px;
   color: rgba(242,239,236,0.7);
   line-height: 1.5;
 }
@@ -807,7 +876,7 @@
 
 .sp-subtitle {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1.4;
   margin-bottom: 28px;
   opacity: 0.8;
@@ -826,13 +895,13 @@
   align-items: flex-start;
   gap: 14px;
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 21px;
   line-height: 1.5;
 }
 
 .sp-list li::before {
   content: '◆';
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 5px;
   flex-shrink: 0;
   color: var(--dorado-apagado);
@@ -893,14 +962,14 @@
 
 .sc-title {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .sc-meta {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   opacity: 0.65;
   line-height: 1.5;
 }
@@ -913,7 +982,7 @@
 
 .sc-section-label {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -922,7 +991,7 @@
 
 .sc-section-text {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 19px;
   line-height: 1.6;
 }
 
@@ -948,14 +1017,14 @@
 
 .sc-metric__label {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0.65;
   line-height: 1.3;
 }
 
 .sc-quote {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 23px;
   line-height: 1.6;
   border-left: 3px solid var(--dorado-apagado);
   padding-left: 20px;
@@ -963,7 +1032,7 @@
 
 .sc-author {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 600;
   opacity: 0.65;
 }
@@ -1042,21 +1111,21 @@
 
 .s13-card__name {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--blanco-roto);
 }
 
 .s13-card__desc {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 17px;
   color: rgba(242,239,236,0.65);
   line-height: 1.5;
 }
 
 .s13-card__use {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1107,7 +1176,7 @@
 
 .s14-list-title {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--verde-bosque);
 }
@@ -1202,7 +1271,7 @@
 
 .s15-text {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 23px;
   color: rgba(242,239,236,0.9);
   line-height: 1.65;
   flex: 1;
@@ -1225,13 +1294,13 @@
 
 .s15-author__role {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 17px;
   color: rgba(242,239,236,0.55);
 }
 
 .s15-author__profile {
   display: inline-block;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1367,7 +1436,7 @@
 
 .s17-cta-card__title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--blanco-roto);
   line-height: 1.2;
@@ -1375,7 +1444,7 @@
 
 .s17-cta-card__desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   color: rgba(242,239,236,0.65);
   line-height: 1.5;
   flex: 1;
@@ -1383,7 +1452,7 @@
 
 .s17-cta-card__action {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--dorado-apagado);
   letter-spacing: 0.06em;
@@ -1413,7 +1482,7 @@
 }
 
 .s17-info-item .icon {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--dorado-apagado);
 }
 
@@ -1426,7 +1495,7 @@
 
 .s17-qr__label {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1500,7 +1569,7 @@
 
 .s18-logo__name {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--blanco-roto);
   letter-spacing: 0.25em;
@@ -1510,7 +1579,7 @@
 
 .s18-logo__name span {
   display: block;
-  font-size: 13px;
+  font-size: 17px;
   letter-spacing: 0.24em;
   color: rgba(242,239,236,0.5);
   font-weight: 400;
@@ -1602,10 +1671,10 @@
 /* Cita de perfil (slides 8·9·10) — sustituye inline styles */
 .sp-quote {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1.4;
   margin-bottom: 28px;
 }
 .slide-8  .sp-quote { color: rgba(242,239,236,0.9); }
 .slide-9  .sp-quote { color: var(--verde-bosque); }
-.slide-10 .sp-quote { color: var(--verde-bosque); font-size: 20px; line-height: 1.5; }
+.slide-10 .sp-quote { color: var(--verde-bosque); font-size: 24px; line-height: 1.5; }
