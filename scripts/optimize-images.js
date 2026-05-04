@@ -8,7 +8,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const IMAGES_DIR = path.join(__dirname, '..', 'images');
+const IMAGES_DIR = path.join(__dirname, '..', 'assets', 'images');
 const OUTPUT_DIR = path.join(IMAGES_DIR, 'webp');
 
 // Parsear args

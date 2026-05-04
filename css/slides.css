@@ -1153,7 +1153,7 @@
 .slide-16 {
   background:
     linear-gradient(rgba(45,58,46,0.93), rgba(45,58,46,0.93)),
-    url('../images/webp/pirineos.webp') center / cover;
+    url('../assets/images/webp/pirineos.webp') center / cover;
   display: flex;
   flex-direction: column;
   padding: 60px var(--pad-x) 52px;
@@ -1247,7 +1247,7 @@
 .slide-17 {
   background:
     linear-gradient(to right, rgba(237,232,226,0.97) 52%, rgba(237,232,226,0.6) 100%),
-    url('../images/webp/hero_valle_pirineo.webp') center / cover;
+    url('../assets/images/webp/hero_valle_pirineo.webp') center / cover;
   display: flex;
   align-items: center;
   padding: var(--pad-y) var(--pad-x);

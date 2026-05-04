@@ -17,7 +17,7 @@ const fs   = require('fs');
 const path = require('path');
 const https = require('https');
 
-const IMAGES_DIR = path.join(__dirname, '..', 'images');
+const IMAGES_DIR = path.join(__dirname, '..', 'assets', 'images');
 const args = process.argv.slice(2);
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

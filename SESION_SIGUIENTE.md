@@ -26,8 +26,8 @@ Reemplazar en el HTML:
 
 ### 3. QR real de habitatdecor.es
 - Generar en qr-code-generator.com o similar
-- Guardar como `images/qr-habitatdecor.svg` o `.png`
-- En `index.html` slide 19: reemplazar `.qr-ph` por `<img src="images/qr-habitatdecor.svg" …>`
+- Guardar como `assets/images/qr-habitatdecor.svg` o `.png`
+- En `index.html` slide 19: reemplazar `.qr-ph` por `<img src="assets/images/qr-habitatdecor.svg" …>`
 
 ### 4. Refinamiento de fotos (opcional)
 Galería completa en: `D:\Documents\DECO\habitatdeco-galeria\imagenes_tv\`

@@ -81,7 +81,12 @@ BOOK_PROFESIONAL_2026/
 ├── index.html                        # All 19 slides (single HTML file)
 ├── CLAUDE.md                         # This file
 ├── SESION_SIGUIENTE.md               # Pending tasks log
-├── guia-estilo-internet.md           # Brand style guide for web
+├── package.json                      # Node deps for image tooling (sharp, fal-ai)
+│
+├── assets/
+│   └── images/
+│       ├── *.jpg / *.jpeg            # Source images
+│       └── webp/                     # Optimized WebP versions (generated)
 │
 ├── css/
 │   ├── variables.css                 # Design tokens (colors, fonts, spacing)
@@ -89,32 +94,26 @@ BOOK_PROFESIONAL_2026/
 │   ├── slides.css                    # Per-slide styles (.s1-*, .s2-*, …)
 │   └── print.css                     # Print overrides
 │
+├── docs/
+│   └── guia-estilo-internet.md       # Brand style guide for web
+│
 ├── js/
 │   └── book.js                       # Navigation, scale, transitions, keyboard
 │
-├── images/
-│   ├── logo.jpeg
-│   ├── hero_valle_pirineo.jpg
-│   ├── hero-curtain.jpg
-│   ├── cortina_dormitorio_onda_perfecta.jpg
-│   ├── cortina_salon_biescas.jpg
-│   ├── cortinas_lino.jpg
-│   ├── dormitorio_casa_rural_v2.jpg
-│   ├── exposicion_tienda.jpg
-│   ├── furgoneta_casa_rural.jpg
-│   ├── mostrarios.jpg
-│   ├── Mostrario_tapiceria.jpg
-│   ├── showroom_cortinas.jpg
-│   ├── tapizado_sofa.jpg
-│   ├── collage_cada_detalle.jpg
-│   ├── pirineos.jpg
-│   ├── canfranc_negocios1.jpg
-│   └── canfranc_negocios2.jpg
+├── scripts/
+│   ├── optimize-images.js            # Batch JPG→WebP optimizer (node scripts/optimize-images.js)
+│   └── edit-image.js                 # AI image editing via Fal.ai FLUX (needs FAL_KEY)
+│
+├── tools/
+│   └── reset-git.ps1                 # Fixes frozen git state (index.lock, etc.)
 │
 └── .claude/
     ├── settings.json                 # Hooks: PostToolUse triggers habitat-style reminder
+    ├── skills-lock.json              # Installed skills manifest
+    ├── skills/book-frontend/         # book-frontend skill
     └── commands/
-        └── habitat-style.md          # /habitat-style skill (brand audit + --fix)
+        ├── habitat-style.md          # /habitat-style skill (brand audit + --fix)
+        └── image-tools.md            # /image-tools skill
 ```
 
 ## Pending Work (SESION_SIGUIENTE.md)
