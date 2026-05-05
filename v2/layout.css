@@ -11,7 +11,7 @@
 
 body {
   font-family: var(--font-body);
-  background: var(--c-bg);
+  background: #1C1916;
   color: var(--c-ink);
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -25,16 +25,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--c-bg);
+  background: #1C1916;
 }
 
+/* Canvas A4 landscape: 297/210 = 1.4143 → 1920/1.4143 ≈ 1358px */
 .slide-stage {
   position: relative;
   width: 1920px;
-  height: 1080px;
+  height: 1358px;
   background: var(--c-bg);
   overflow: hidden;
   transform-origin: center center;
+  border-radius: 3px;
+  box-shadow: 0 12px 80px rgba(0,0,0,0.6), 0 2px 12px rgba(0,0,0,0.3);
 }
 
 /* ════ SLIDES ════ */

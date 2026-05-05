@@ -1,21 +1,21 @@
-:root {
-  /* ── Paleta primaria Habitat & Decor ───────────── */
+﻿:root {
+  /* â”€â”€ Paleta primaria Habitat & Decor â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --verde-bosque:   #2D3A2E;   /* fondos oscuros, secciones destacadas */
   --blanco-roto:    #F2EFEC;   /* fondo principal */
   --beige-caldera:  #EDE8E2;   /* fondo suave alternativo */
   --c-linen:        #DFD3C8;   /* lino: bordes, separadores */
   --c-sand:         #D2BF81;   /* arena: acentos secundarios (solo elementos decorativos o texto grande) */
   --dorado-apagado: #B28622;   /* oro real: CTAs, iconos, acento */
-  --marron-cuero:   #6B6560;   /* texto secundario (gris cálido) */
+  --marron-cuero:   #6B6560;   /* texto secundario (gris cÃ¡lido) */
   --c-ink:          #3C3C3C;   /* texto principal */
   --blanco:         #FFFFFF;
 
-  /* ── Aliases canónicos (guía de estilo web) ──────
-     Usar --c-* en código nuevo; los nombres legacy se
+  /* â”€â”€ Aliases canÃ³nicos (guÃ­a de estilo web) â”€â”€â”€â”€â”€â”€
+     Usar --c-* en cÃ³digo nuevo; los nombres legacy se
      mantienen para no romper slides existentes.       */
   --c-bg:       var(--blanco-roto);
   --c-gold:     var(--dorado-apagado);
-  --c-gold-dim: rgba(178,134,34,.13);  /* oro translúcido, hovers suaves */
+  --c-gold-dim:       rgba(178,134,34,.14);  /* oro translÃºcido, hovers suaves */
   --c-bg-soft:  var(--beige-caldera);
   --c-ink-soft: var(--marron-cuero);
   --c-white:    var(--blanco);
@@ -24,11 +24,11 @@
   --text-light:      #F2EFEC;
   --text-light-soft: rgba(242,239,236,0.75);
 
-  /* Tipografía */
+  /* TipografÃ­a */
   --font-display: 'Dancing Script', cursive;
   --font-body:    'Quicksand', sans-serif;
 
-  /* Tamaños (px base en diseño 1920×1080) */
+  /* TamaÃ±os (px base en diseÃ±o 1920Ã—1080) */
   --t-hero:    80px;
   --t-display: 64px;
   --t-title:   48px;
@@ -45,7 +45,7 @@
   --gap-lg: 56px;
   --gap-xl: 80px;
 
-  /* Slide padding estándar */
+  /* Slide padding estÃ¡ndar */
   --pad-x: 96px;
   --pad-y: 72px;
 
@@ -56,3 +56,4 @@
   /* Token hover: oro oscurecido ~18% */
   --c-gold-hover: #9a7318;
 }
+

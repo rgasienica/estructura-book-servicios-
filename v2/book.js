@@ -67,7 +67,7 @@ function scaleStage() {
   const wrapperHeight = wrapper.clientHeight;
   
   const scaleX = wrapperWidth / 1920;
-  const scaleY = wrapperHeight / 1080;
+  const scaleY = wrapperHeight / 1358; /* A4 landscape */
   const scale = Math.min(scaleX, scaleY);
   
   stage.style.transform = `scale(${scale})`;
