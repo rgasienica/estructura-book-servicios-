@@ -15,7 +15,12 @@
     width: 297mm;
     height: 210mm;
     overflow: visible;
-    background: white;
+    background: white !important;
+  }
+
+  .slide-stage {
+    box-shadow: none !important;
+    border-radius: 0 !important;
   }
 
   /* Ocultar controles de navegación */

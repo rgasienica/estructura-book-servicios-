@@ -1,211 +1,164 @@
-/* =============================================
-   BOOK.JS — Navegación, escala, fullscreen, swipe
-   Habitat & Decor · Book Profesional 2026
-   ============================================= */
+/* ════════════════════════════════════════════════════════════
+   BOOK.JS — Navigation, Transitions, Keyboard, Fullscreen
+   Habitat & Decor Book Profesional 2026
+   ════════════════════════════════════════════════════════════ */
 
-(function () {
-  'use strict';
+// ════ CONFIGURACIÓN GLOBAL ════
+const TOTAL = 19;
+let current = 1;
+let isAnimating = false;
 
-  const TOTAL = 19;
-  let current = 1;
-  let isAnimating = false;
-  let touchStartX = 0;
-  let touchStartY = 0;
+// ════ ELEMENTOS DOM ════
+const slides = document.querySelectorAll('.slide');
+const progressFill = document.getElementById('progress-fill');
+const slideCurrent = document.getElementById('slide-current');
+const btnPrev = document.getElementById('btn-prev');
+const btnNext = document.getElementById('btn-next');
+const btnFullscreen = document.getElementById('btn-fullscreen');
+const stage = document.querySelector('.slide-stage');
 
-  // ── Elementos DOM ──────────────────────────
+// ════ NAVEGACIÓN ════
+function goTo(target, direction = 'next') {
+  if (isAnimating || target < 1 || target > TOTAL || target === current) return;
+  
+  isAnimating = true;
+  
+  const exitClass = direction === 'next' ? 'slide--exit-left' : 'slide--exit-right';
+  const currentSlide = slides[current - 1];
+  const nextSlide = slides[target - 1];
+  
+  // Salida
+  currentSlide.classList.add(exitClass);
+  
+  setTimeout(() => {
+    currentSlide.classList.remove('slide--active', exitClass);
+    nextSlide.classList.add('slide--active');
+    
+    current = target;
+    updateUI();
+    
+    setTimeout(() => {
+      isAnimating = false;
+    }, 450);
+  }, 450);
+}
 
-  const stage      = document.querySelector('.slide-stage');
-  const prevBtn    = document.getElementById('btn-prev');
-  const nextBtn    = document.getElementById('btn-next');
-  const counterEl  = document.getElementById('slide-current');
-  const progressEl = document.getElementById('progress-fill');
-  const fsBtn      = document.getElementById('btn-fullscreen');
+function updateUI() {
+  const progress = (current / TOTAL) * 100;
+  progressFill.style.width = `${progress}%`;
+  slideCurrent.textContent = current;
+  
+  btnPrev.disabled = current === 1;
+  btnNext.disabled = current === TOTAL;
+}
 
-  // ── Escalado del stage al viewport ──────────
+function next() {
+  if (current < TOTAL) goTo(current + 1, 'next');
+}
 
-  function scaleStage() {
-    if (!stage) return;
-    const scaleX = window.innerWidth  / 1920;
-    const scaleY = window.innerHeight / 1080;
-    const scale  = Math.min(scaleX, scaleY);
+function prev() {
+  if (current > 1) goTo(current - 1, 'prev');
+}
 
-    const scaledW = Math.round(1920 * scale);
-    const scaledH = Math.round(1080 * scale);
-    const offsetX = Math.round((window.innerWidth  - scaledW) / 2);
-    const offsetY = Math.round((window.innerHeight - scaledH) / 2);
+// ════ ESCALA DE VIEWPORT ════
+function scaleStage() {
+  const wrapper = document.querySelector('.slide-wrapper');
+  const wrapperWidth = wrapper.clientWidth;
+  const wrapperHeight = wrapper.clientHeight;
+  
+  const scaleX = wrapperWidth / 1920;
+  const scaleY = wrapperHeight / 1358; /* A4 landscape */
+  const scale = Math.min(scaleX, scaleY);
+  
+  stage.style.transform = `scale(${scale})`;
+}
 
-    stage.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
-  }
-
-  window.addEventListener('resize', scaleStage);
-  scaleStage();
-
-  // ── Navegación ────────────────────────────
-
-  function goTo(target, direction) {
-    if (isAnimating) return;
-    if (target < 1 || target > TOTAL) return;
-
-    const fromSlide = document.querySelector('.slide--active');
-    const toSlide   = document.querySelector(`.slide-${target}`);
-
-    if (!fromSlide || !toSlide || fromSlide === toSlide) return;
-
-    isAnimating = true;
-
-    // Dirección de la animación
-    const exitClass  = direction === 'next' ? 'slide--exit-left' : 'slide--exit-right';
-    const enterFrom  = direction === 'next' ? 80 : -80;
-
-    toSlide.style.transform = `translateX(${enterFrom}px)`;
-    toSlide.style.opacity   = '0';
-    toSlide.style.pointerEvents = 'none';
-
-    requestAnimationFrame(() => {
-      fromSlide.classList.remove('slide--active');
-      fromSlide.classList.add(exitClass);
-
-      toSlide.style.transition = 'opacity 0.45s cubic-bezier(0,0,.2,1), transform 0.45s cubic-bezier(0,0,.2,1)';
-      toSlide.style.transform  = 'translateX(0)';
-      toSlide.style.opacity    = '1';
-      toSlide.style.pointerEvents = 'auto';
-      toSlide.classList.add('slide--active');
-
-      current = target;
-      updateUI();
-
-      setTimeout(() => {
-        fromSlide.classList.remove(exitClass);
-        fromSlide.style.transform = '';
-        fromSlide.style.opacity   = '';
-        toSlide.style.transition  = '';
-        isAnimating = false;
-      }, 480);
+// ════ PANTALLA COMPLETA ════
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.error('Error al entrar en pantalla completa:', err);
     });
+  } else {
+    document.exitFullscreen();
   }
+}
 
-  function next() { goTo(current + 1, 'next'); }
-  function prev() { goTo(current - 1, 'prev'); }
-
-  // Expuesto globalmente para los onclick del slide de menú
-  window.goTo = goTo;
-
-  // ── Actualizar UI ─────────────────────────
-
-  function updateUI() {
-    if (counterEl)  counterEl.textContent = current;
-    if (progressEl) progressEl.style.width = ((current / TOTAL) * 100) + '%';
-    if (prevBtn)    prevBtn.disabled = current === 1;
-    if (nextBtn)    nextBtn.disabled = current === TOTAL;
+// ════ TECLADO ════
+document.addEventListener('keydown', (e) => {
+  if (isAnimating) return;
+  
+  switch(e.key) {
+    case 'ArrowRight':
+    case ' ':
+    case 'PageDown':
+      e.preventDefault();
+      next();
+      break;
+    case 'ArrowLeft':
+    case 'PageUp':
+      e.preventDefault();
+      prev();
+      break;
+    case 'Home':
+      e.preventDefault();
+      goTo(1, 'prev');
+      break;
+    case 'End':
+      e.preventDefault();
+      goTo(TOTAL, 'next');
+      break;
+    case 'f':
+    case 'F':
+      e.preventDefault();
+      toggleFullscreen();
+      break;
   }
+});
 
-  // ── Eventos de navegación ─────────────────
+// ════ EVENTOS DE BOTONES ════
+btnNext.addEventListener('click', next);
+btnPrev.addEventListener('click', prev);
+btnFullscreen.addEventListener('click', toggleFullscreen);
 
-  if (nextBtn) nextBtn.addEventListener('click', next);
-  if (prevBtn) prevBtn.addEventListener('click', prev);
+// ════ SWIPE (MÓVIL) ════
+let touchStartX = 0;
+let touchEndX = 0;
 
-  // Keyboard
-  document.addEventListener('keydown', (e) => {
-    switch (e.key) {
-      case 'ArrowRight':
-      case 'ArrowDown':
-      case 'PageDown':
-      case ' ':
-        e.preventDefault();
-        next();
-        break;
-      case 'ArrowLeft':
-      case 'ArrowUp':
-      case 'PageUp':
-        e.preventDefault();
-        prev();
-        break;
-      case 'f':
-      case 'F':
-        toggleFullscreen();
-        break;
-      case 'Escape':
-        // Handled by browser for fullscreen
-        break;
-      case 'Home':
-        e.preventDefault();
-        goTo(1, 'prev');
-        break;
-      case 'End':
-        e.preventDefault();
-        goTo(TOTAL, 'next');
-        break;
-    }
-  });
+stage.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
 
-  // Touch / Swipe
-  document.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
+stage.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
 
-  document.addEventListener('touchend', (e) => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    const dy = e.changedTouches[0].clientY - touchStartY;
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
-      dx < 0 ? next() : prev();
-    }
-  }, { passive: true });
-
-  // Click en zonas laterales del stage
-  if (stage) {
-    stage.addEventListener('click', (e) => {
-      // Ignorar si el click es sobre los controles
-      if (e.target.closest('.slide-controls') || e.target.closest('.fullscreen-btn')) return;
-
-      const rect = stage.getBoundingClientRect();
-      const relX = e.clientX - rect.left;
-      const third = rect.width / 3;
-
-      if (relX < third) {
-        prev();
-      } else if (relX > third * 2) {
-        next();
-      }
-    });
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const diff = touchStartX - touchEndX;
+  
+  if (Math.abs(diff) < swipeThreshold) return;
+  
+  if (diff > 0) {
+    next(); // Swipe izquierda = siguiente
+  } else {
+    prev(); // Swipe derecha = anterior
   }
+}
 
-  // ── Pantalla completa ─────────────────────
+// ════ RESIZE ════
+window.addEventListener('resize', scaleStage);
+window.addEventListener('fullscreenchange', scaleStage);
 
-  function toggleFullscreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
-    } else {
-      document.exitFullscreen().catch(() => {});
-    }
-  }
+// ════ INIT ════
+scaleStage();
+updateUI();
 
-  if (fsBtn) fsBtn.addEventListener('click', toggleFullscreen);
+// Inicializar primer slide como activo
+slides[0].classList.add('slide--active');
+slides[0].style.opacity = '1';
+slides[0].style.pointerEvents = 'auto';
 
-  document.addEventListener('fullscreenchange', () => {
-    if (fsBtn) {
-      fsBtn.textContent = document.fullscreenElement ? '✕' : '⛶';
-      fsBtn.title = document.fullscreenElement
-        ? 'Salir de pantalla completa (Esc)'
-        : 'Pantalla completa (F)';
-    }
-    // Re-escalar tras cambio de fullscreen
-    setTimeout(scaleStage, 100);
-  });
-
-  // ── Inicialización ────────────────────────
-
-  // Mostrar primer slide y corregir índices
-  const allSlides = document.querySelectorAll('.slide-stage .slide');
-  allSlides.forEach((s, i) => {
-    s.classList.remove('slide--active', 'slide--exit-left', 'slide--exit-right');
-    s.style.transform = '';
-    s.style.opacity   = '';
-    s.style.transition = '';
-    s.style.pointerEvents = i === 0 ? 'auto' : 'none';
-    if (i === 0) s.classList.add('slide--active');
-  });
-
-  updateUI();
-
-})();
+// ════ EXPORTAR goTo PARA ONCLICK ════
+window.goTo = goTo;

@@ -1,59 +1,55 @@
-﻿:root {
-  /* â”€â”€ Paleta primaria Habitat & Decor â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  --verde-bosque:   #2D3A2E;   /* fondos oscuros, secciones destacadas */
-  --blanco-roto:    #F2EFEC;   /* fondo principal */
-  --beige-caldera:  #EDE8E2;   /* fondo suave alternativo */
-  --c-linen:        #DFD3C8;   /* lino: bordes, separadores */
-  --c-sand:         #D2BF81;   /* arena: acentos secundarios (solo elementos decorativos o texto grande) */
-  --dorado-apagado: #B28622;   /* oro real: CTAs, iconos, acento */
-  --marron-cuero:   #6B6560;   /* texto secundario (gris cÃ¡lido) */
-  --c-ink:          #3C3C3C;   /* texto principal */
-  --blanco:         #FFFFFF;
+/* ════════════════════════════════════════════════════════════
+   VARIABLES.CSS — Design Tokens
+   Habitat & Decor Book Profesional 2026
+   ════════════════════════════════════════════════════════════ */
 
-  /* â”€â”€ Aliases canÃ³nicos (guÃ­a de estilo web) â”€â”€â”€â”€â”€â”€
-     Usar --c-* en cÃ³digo nuevo; los nombres legacy se
-     mantienen para no romper slides existentes.       */
-  --c-bg:       var(--blanco-roto);
-  --c-gold:     var(--dorado-apagado);
-  --c-gold-dim:       rgba(178,134,34,.14);  /* oro translÃºcido, hovers suaves */
-  --c-bg-soft:  var(--beige-caldera);
-  --c-ink-soft: var(--marron-cuero);
-  --c-white:    var(--blanco);
+:root {
+  /* ════ COLORES ════ */
+  --c-bg: #F2EFEC;
+  --c-bg-soft: #EDE8E2;
+  --c-gold: #B28622;
+  --c-gold-dim: rgba(178,134,34,.13);
+  --c-gold-hover: #9a7318;
+  --c-ink: #3C3C3C;
+  --c-ink-soft: #6B6560;
+  --c-linen: #DFD3C8;
+  --c-sand: #D2BF81;
+  --c-white: #FFFFFF;
 
-  /* Texto sobre fondos oscuros */
-  --text-light:      #F2EFEC;
-  --text-light-soft: rgba(242,239,236,0.75);
-
-  /* TipografÃ­a */
+  /* ════ TIPOGRAFÍA ════ */
   --font-display: 'Dancing Script', cursive;
-  --font-body:    'Quicksand', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
 
-  /* TamaÃ±os (px base en diseÃ±o 1920Ã—1080) */
-  --t-hero:    80px;
-  --t-display: 64px;
-  --t-title:   48px;
-  --t-section: 44px;
-  --t-card:    30px;
-  --t-body:    22px;
-  --t-small:   19px;
-  --t-tiny:    15px;
+  /* ════ ESCALA TIPOGRÁFICA ════ */
+  --t-hero: 80px;
+  --t-xl: 64px;
+  --t-lg: 48px;
+  --t-md: 32px;
+  --t-base: 20px;
+  --t-sm: 16px;
+  --t-xs: 14px;
+  --t-tiny: 12px;
 
-  /* Espaciado */
-  --gap-xs:  8px;
+  /* ════ ESPACIADO ════ */
+  --pad-x: 96px;
+  --pad-y: 72px;
+  --gap-xs: 8px;
   --gap-sm: 16px;
   --gap-md: 32px;
   --gap-lg: 56px;
   --gap-xl: 80px;
 
-  /* Slide padding estÃ¡ndar */
-  --pad-x: 96px;
-  --pad-y: 72px;
+  /* ════ EASING ════ */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
 
-  /* Easings de marca web */
-  --ease:     cubic-bezier(.25, .46, .45, .94);
-  --ease-out: cubic-bezier(0, 0, .2, 1);
+  /* ════ DURACIONES ════ */
+  --dur-fast: 0.2s;
+  --dur-normal: 0.35s;
+  --dur-slow: 0.45s;
 
-  /* Token hover: oro oscurecido ~18% */
-  --c-gold-hover: #9a7318;
+  /* ════ Z-INDEX ════ */
+  --z-progress: 1000;
+  --z-controls: 900;
+  --z-fullscreen: 900;
 }
-
