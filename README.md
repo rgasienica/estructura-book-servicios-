@@ -14,14 +14,20 @@ Este proyecto presenta una brochure interactiva de 21 slides optimizada para web
 
 ## Cómo ejecutar
 
-### Opción 1: Servidor local (recomendado para desarrollo)
+### Versión completa (21 slides)
 ```bash
 python -m http.server 8000
 ```
-Abre http://localhost:8000 en tu navegador.
+Abre http://localhost:8000/index.html
 
-### Opción 2: Abrir directamente
-Haz doble clic en `index.html` o arrastra al navegador.
+### Versión corta (11 slides)
+```bash
+python -m http.server 8000
+```
+Abre http://localhost:8000/index-corta.html
+
+### Abrir directamente
+Haz doble clic en `index.html` o `index-corta.html`.
 
 ### Navegación
 - **Flechas**: Anterior/Siguiente
