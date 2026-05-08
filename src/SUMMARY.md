@@ -1,0 +1,16 @@
+# Resumen
+
+- [Guía de Estilo](style-guide/index.md)
+  - [Colores](style-guide/colors.md)
+  - [Tipografía](style-guide/typography.md)
+  - [Componentes](style-guide/components.md)
+  - [Iconos](style-guide/icons.md)
+  - [Voz y Copia](style-guide/voice.md)
+  - [Imágenes](style-guide/images.md)
+  - [Layout](style-guide/layout.md)
+- [Tokens de Diseño](tokens/index.md)
+- [Templates](templates/index.md)
+  - [Sección Hero](templates/hero-section.md)
+  - [Sección Audiencias](templates/audiences-section.md)
+  - [Sección Servicios](templates/services-section.md)
+- [Snippets](snippets/index.md)

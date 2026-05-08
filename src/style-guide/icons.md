@@ -1,0 +1,3 @@
+# Iconos
+
+Mapa de iconos.

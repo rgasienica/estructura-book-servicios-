@@ -1,0 +1,268 @@
+/* ════════════════════════════════════════════════════════════════
+   HABITAT & DECOR — Design Tokens
+   ════════════════════════════════════════════════════════════════
+   Fuente: Gui_a_de_estilo.pdf + CSS de producción habitatdecor.es
+   Última actualización: 2026-05-05
+   
+   Uso:
+     <link rel="stylesheet" href="tokens.css">
+     ...
+     color: var(--c-ink);
+     background: var(--c-bg);
+   
+   Nunca hardcodear hex. Siempre referenciar por variable.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── COLORES ──────────────────────────────────────────── */
+
+  /* Paleta primaria oficial (PDF de marca) */
+  --c-ink:        #3C3C3C;     /* Texto principal */
+  --c-gold:       #B28622;     /* Acento, CTA, eyebrow */
+  --c-sand:       #D2BF81;     /* Acento secundario, bordes */
+  --c-linen:      #DFD3C8;     /* Separadores, fondos cálidos */
+  --c-bg:         #F2EFEC;     /* Fondo base */
+
+  /* Paleta extendida (derivados de producción) */
+  --c-ink-soft:   #6B6560;     /* Texto secundario */
+  --c-bg-soft:    #EDE8E2;     /* Fondo de sección alternativa */
+  --c-white:      #FFFFFF;     /* Cards, paneles */
+  --c-gold-dim:   rgba(178,134,34,.14);  /* Hover sutil */
+  --c-gold-dark:  #9A7318;     /* Hover de .btn-gold */
+
+  /* Estados */
+  --c-success:    #6B8E5A;     /* Verde apagado para confirmaciones (uso muy ocasional) */
+  --c-error:      #B85450;     /* Rojo apagado para errores de form (uso muy ocasional) */
+
+  /* WhatsApp (color oficial externo) */
+  --c-whatsapp:   #25D366;
+
+  /* ── TIPOGRAFÍA ───────────────────────────────────────── */
+
+  --f-display:    'Dancing Script', cursive;     /* proxy fiel de Rocking Horse */
+  --f-body:       'Quicksand', sans-serif;
+
+  /* Tamaños cuerpo (Quicksand) */
+  --fs-xs:        0.55rem;     /* iconos micro */
+  --fs-2xs:       0.57rem;     /* drop-panel-head */
+  --fs-3xs:       0.58rem;     /* drawer eyebrow */
+  --fs-sm:        0.63rem;     /* nav-link, btn-hablanos, btn-agendar */
+  --fs-base:      0.7rem;      /* botones .btn-gold y .btn-outline */
+  --fs-eyebrow-h: 0.68rem;     /* eyebrow hero */
+  --fs-eyebrow:   0.72rem;     /* eyebrow sección */
+  --fs-md:        0.82rem;     /* drop-item title, drawer-link-sm */
+  --fs-card:      0.88rem;     /* body card */
+  --fs-body:      0.92rem;     /* body principal */
+  --fs-card-t:    1.5rem;      /* t-card display */
+  --fs-logo:      1.55rem;     /* logo navbar display */
+  --fs-aud:       1.6rem;      /* aud-card h3 display */
+  --fs-drawer:    1.65rem;     /* drawer-link display */
+  --fs-section:   clamp(2.4rem, 3.8vw, 3.6rem);  /* t-section display */
+  --fs-hero:      clamp(3rem,  5.5vw, 5.8rem);   /* t-hero display */
+
+  /* Pesos */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+
+  /* Line-height */
+  --lh-tight:     1.08;
+  --lh-card:      1.25;
+  --lh-section:   1.15;
+  --lh-base:      1.6;
+  --lh-body:      1.8;
+
+  /* Letter-spacing */
+  --ls-eyebrow:   0.24em;       /* eyebrow estándar */
+  --ls-eyebrow-h: 0.22em;       /* eyebrow hero */
+  --ls-drop-eb:   0.18em;       /* drop-panel-head */
+  --ls-drawer-eb: 0.2em;        /* drawer eyebrow */
+  --ls-button:    0.05em;       /* botones */
+
+  /* ── ESPACIADO ────────────────────────────────────────── */
+
+  --sp-1:         0.4rem;
+  --sp-2:         0.8rem;
+  --sp-3:         1.2rem;
+  --sp-4:         1.6rem;
+  --sp-5:         2.4rem;
+  --sp-6:         4rem;
+  --sp-7:         6rem;
+  --sp-8:         8rem;
+
+  /* ── LAYOUT ───────────────────────────────────────────── */
+
+  --max:          1200px;       /* Ancho máximo de contenido */
+  --pad-x:        28px;         /* Padding lateral del wrap */
+  --nav-h:        72px;         /* Altura del header fijo */
+
+  /* ── FORMA ────────────────────────────────────────────── */
+
+  --r:            3px;          /* Radio global (cards, botones, inputs) */
+  --r-circle:     50%;          /* Iconos circulares */
+
+  /* ── SOMBRAS ──────────────────────────────────────────── */
+
+  --sh-sm:        0 2px 14px rgba(60,60,60,.08);
+  --sh-md:        0 6px 30px rgba(60,60,60,.11);
+
+  /* ── EASING Y TRANSICIONES ────────────────────────────── */
+
+  --ease:         cubic-bezier(.25,.46,.45,.94);
+  --ease-out:     cubic-bezier(0,0,.2,1);
+
+  --t-fast:       0.18s;
+  --t-base:       0.25s;
+  --t-slow:       0.4s;
+  --t-hero:       0.8s;
+
+  /* ── Z-INDEX ──────────────────────────────────────────── */
+
+  --z-base:       0;
+  --z-card:       1;
+  --z-sticky:     10;
+  --z-tooltip:    100;
+  --z-wa:         900;
+  --z-header:     1000;
+  --z-drawer:     1000;
+  --z-drop:       1100;
+  --z-modal:      9999;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RESET / BASE
+   ════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--f-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--c-ink);
+  background: var(--c-bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a   { color: inherit; text-decoration: none; }
+ul  { list-style: none; }
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   UTILIDADES DE LAYOUT
+   ════════════════════════════════════════════════════════════════ */
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-inline: var(--pad-x);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   TIPOGRAFÍA UTILITARIA
+   ════════════════════════════════════════════════════════════════ */
+
+.t-hero {
+  font-family: var(--f-display);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+  color: var(--c-ink);
+}
+
+.t-section {
+  font-family: var(--f-display);
+  font-size: var(--fs-section);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-section);
+  color: var(--c-ink);
+}
+
+.t-card {
+  font-family: var(--f-display);
+  font-size: var(--fs-card-t);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-card);
+  color: var(--c-ink);
+}
+
+.body-p {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--c-ink-soft);
+}
+
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+
+.rule {
+  width: 36px;
+  height: 1px;
+  background: var(--c-gold);
+  margin: 0.8rem 0 1.2rem;
+}
+.rule.center { margin-left: auto; margin-right: auto; }
+
+.accent { color: var(--c-gold); }
+
+/* ════════════════════════════════════════════════════════════════
+   BOTONES BASE
+   ════════════════════════════════════════════════════════════════ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.6rem;
+  font-family: var(--f-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-button);
+  text-transform: uppercase;
+  border-radius: var(--r);
+  border: 1px solid transparent;
+  transition:
+    background var(--t-base) var(--ease),
+    color var(--t-base) var(--ease),
+    border-color var(--t-base) var(--ease);
+  cursor: pointer;
+}
+
+.btn-gold {
+  background: var(--c-gold);
+  color: var(--c-white);
+  border-color: var(--c-gold);
+}
+.btn-gold:hover {
+  background: var(--c-gold-dark);
+  border-color: var(--c-gold-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--c-ink);
+  border-color: var(--c-ink);
+}
+.btn-outline:hover {
+  border-color: var(--c-gold);
+  color: var(--c-gold);
+}

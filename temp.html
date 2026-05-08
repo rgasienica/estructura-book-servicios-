@@ -1,0 +1,3125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Habitat & Decor — Taller y showroom de proyectos textiles integrales en Jaca: cortinas, tapicería, papel pintado y muebles a medida para profesionales, viviendas y negocios del Pirineo.">
+  <meta name="keywords" content="cortinas a medida, tapicería, interiorismo textil, papel pintado, Jaca, Pirineo, decoradores, arquitectos, hoteles">
+  <meta name="author" content="Habitat & Decor — Textil Deco Asociados, S.L.">
+
+  <title>Habitat & Decor | Proyectos Textiles Integrales · Jaca</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://habitatdecor.es/">
+  <meta property="og:title" content="Habitat & Decor | Proyectos Textiles Integrales · Jaca">
+  <meta property="og:description" content="Taller y showroom de proyectos textiles integrales en Jaca. Cortinas, tapicería, papel pintado y muebles a medida.">
+  <meta property="og:image" content="https://habitatdecor.es/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Habitat & Decor | Proyectos Textiles Integrales · Jaca">
+  <meta name="twitter:description" content="Taller y showroom de proyectos textiles integrales en Jaca.">
+  <meta name="twitter:image" content="https://habitatdecor.es/images/twitter-card.jpg">
+
+  <link rel="canonical" href="https://habitatdecor.es/">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!--
+    Guía de estilo:
+    · Rocking Horse (display/logo) → Dancing Script como sustituto fiel
+    · Quicksand (cuerpo y UI)
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="preload" as="image" href="images/hero-image.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"HomeGoodsStore",
+    "name":"Habitat & Decor","url":"https://habitatdecor.es",
+    "telephone":"+34974288787",
+    "address":{"@type":"PostalAddress","streetAddress":"Calle Domingo Miral, 1",
+      "addressLocality":"Jaca","addressRegion":"Aragón","postalCode":"22700","addressCountry":"ES"},
+    "geo":{"@type":"GeoCoordinates","latitude":42.5706797,"longitude":-0.5508041},
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:30","closes":"13:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"20:00"}
+    ],"priceRange":"€€"
+  }
+  </script>
+
+  <style>
+    /* ══════════════════════════════════════════
+       TOKENS — Guía de estilo oficial
+       Paleta: #F2EFEC · #DFD3C8 · #D2BF81 · #B28622 · #3C3C3C
+       Display: Dancing Script (Rocking Horse proxy)
+       Cuerpo:  Quicksand
+    ══════════════════════════════════════════ */
+    :root {
+      --c-bg:        #F2EFEC;
+      --c-bg-soft:   #EDE8E2;
+      --c-linen:     #DFD3C8;
+      --c-sand:      #D2BF81;
+      --c-gold:      #B28622;
+      --c-gold-dim:  rgba(178,134,34,.13);
+      --c-ink:       #3C3C3C;
+      --c-ink-soft:  #6B6560;
+      --c-white:     #FFFFFF;
+
+      --f-display: 'Dancing Script', cursive;
+      --f-body:    'Quicksand', sans-serif;
+
+      --ease:      cubic-bezier(.25,.46,.45,.94);
+      --ease-out:  cubic-bezier(0,0,.2,1);
+      --r:         3px;
+      --max:       1200px;
+      --nav-h:     72px;
+      --sh-sm:     0 2px 14px rgba(60,60,60,.08);
+      --sh-md:     0 6px 30px rgba(60,60,60,.11);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+
+    body {
+      font-family: var(--f-body);
+      background: var(--c-bg);
+      color: var(--c-ink);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    img { max-width:100%; height:auto; display:block; }
+    a   { color:inherit; text-decoration:none; }
+    ul  { list-style:none; }
+    button { cursor:pointer; border:none; background:none; font-family:inherit; }
+
+    /* ── Layout ── */
+    .wrap {
+      width:100%; max-width:var(--max);
+      margin:0 auto; padding:0 28px;
+    }
+
+    /* ── Eyebrow label ── */
+    .eyebrow {
+      font-size:.68rem; font-weight:600;
+      letter-spacing:.24em; text-transform:uppercase;
+      color:var(--c-gold);
+    }
+
+    /* ── Divisor ── */
+    .rule {
+      width:36px; height:1px;
+      background:var(--c-gold);
+      margin:.8rem 0 1.2rem;
+    }
+    .rule.center { margin-left:auto; margin-right:auto; }
+
+    /* ── Tipografía ── */
+    .t-hero {
+      font-family:var(--f-display);
+      font-size:clamp(3rem,5.5vw,5.8rem);
+      font-weight:400; line-height:1.08;
+      color:var(--c-ink);
+    }
+    .t-section {
+      font-family:var(--f-display);
+      font-size:clamp(2.4rem,3.8vw,3.6rem);
+      font-weight:400; line-height:1.15;
+      color:var(--c-ink);
+    }
+    .t-card {
+      font-family:var(--f-display);
+      font-size:1.5rem; font-weight:400;
+      line-height:1.25; color:var(--c-ink);
+    }
+    .body-p {
+      font-size:.92rem; font-weight:400;
+      line-height:1.8; color:var(--c-ink-soft);
+    }
+
+    /* ── Botones ── */
+    .btn {
+      display:inline-flex; align-items:center; gap:.5rem;
+      font-family:var(--f-body); font-size:.7rem;
+      font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+      padding:.82rem 2rem; border-radius:var(--r);
+      transition:background .28s var(--ease), color .28s,
+                 border-color .28s, box-shadow .28s;
+    }
+    .btn-gold {
+      background:var(--c-gold); color:var(--c-white);
+      box-shadow:0 2px 12px rgba(178,134,34,.28);
+    }
+    .btn-gold:hover { background:#9a7318; }
+    .btn-outline {
+      background:transparent; color:var(--c-ink);
+      border:1px solid var(--c-linen);
+    }
+    .btn-outline:hover { border-color:var(--c-gold); color:var(--c-gold); }
+
+    /* ══════════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════════ */
+        .site-header {
+      position:fixed; top:0; left:0; width:100%;
+      z-index:900; height:var(--nav-h);
+      display:flex; align-items:center; overflow:visible;
+      background:rgba(242,239,236,.96);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s, box-shadow .3s;
+    }
+    .site-header.scrolled {
+      border-color:var(--c-linen);
+      box-shadow:var(--sh-sm);
+    }
+    .header-inner {
+      display:flex; justify-content:space-between; align-items:center;
+      width:100%; max-width:var(--max); margin:0 auto; padding:0 28px; gap:8px;
+      overflow:visible;
+    }
+
+    /* ── Logo ── */
+    .site-logo {
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none; flex-shrink:0;
+    }
+    .logo-icon {
+      width:38px; height:38px; border-radius:50%;
+      overflow:hidden; flex-shrink:0;
+      border:1.5px solid var(--c-sand);
+    }
+    .logo-icon img {
+      width:100%; height:100%; object-fit:cover; display:block;
+    }
+    .logo-text {
+      font-family:var(--f-display); font-size:1.55rem;
+      font-weight:600; color:var(--c-gold); letter-spacing:.02em;
+      white-space:nowrap;
+    }
+
+    /* ── Nav principal ── */
+    .desktop-nav { display:flex; align-items:center; gap:2px; overflow:visible; }
+    .nav-sep { width:1px; height:14px; background:var(--c-linen); margin:0 3px; flex-shrink:0; }
+
+    .nav-drop {
+      position:relative;
+      overflow:visible;
+    }
+    .nav-drop-btn {
+      display:flex; align-items:center; gap:5px;
+      font-family:var(--f-body); font-size:.63rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--c-ink-soft); background:none; border:none;
+      padding:.5rem .85rem; border-radius:var(--r); cursor:pointer;
+      transition:color .22s, background .22s; white-space:nowrap;
+      position:relative;
+    }
+    .nav-drop-btn svg {
+      width:9px; height:9px; flex-shrink:0;
+      transition:transform .25s var(--ease);
+      stroke:currentColor;
+    }
+    .nav-drop-btn:hover,
+    .nav-drop-btn:focus,
+    .nav-drop-btn[aria-expanded="true"] {
+      color:var(--c-gold) !important;
+      background:var(--c-gold-dim) !important;
+    }
+    .nav-drop-btn:hover svg,
+    .nav-drop-btn[aria-expanded="true"] svg {
+      stroke:var(--c-gold);
+    }
+    .nav-drop-btn[aria-expanded="true"] svg { transform:rotate(180deg); }
+
+    /* Línea dorada bajo el botón activo */
+    .nav-drop-btn::after {
+      content:'';
+      position:absolute; bottom:-2px; left:.85rem; right:.85rem;
+      height:1px; background:var(--c-gold);
+      transform:scaleX(0);
+      transition:transform .25s var(--ease);
+    }
+    .nav-drop-btn:hover::after,
+    .nav-drop-btn[aria-expanded="true"]::after {
+      transform:scaleX(1);
+    }
+
+    /* ── Dropdown panel ── */
+    .drop-panel {
+      position:absolute; top:calc(100% + 10px); left:0;
+      background:var(--c-white); border:1px solid var(--c-linen);
+      border-radius:6px; box-shadow:0 10px 34px rgba(60,60,60,.13);
+      min-width:250px; z-index:9999;
+      opacity:0; visibility:hidden; transform:translateY(6px);
+      transition:opacity .22s var(--ease), transform .22s var(--ease), visibility 0s .22s;
+      pointer-events:none;
+    }
+    .drop-panel.open {
+      opacity:1; visibility:visible; transform:translateY(0);
+      transition:opacity .22s var(--ease), transform .22s var(--ease), visibility 0s;
+      pointer-events:auto;
+    }
+    .drop-panel-head {
+      padding:.65rem 1rem .5rem;
+      font-size:.57rem; font-weight:600; letter-spacing:.18em;
+      text-transform:uppercase; color:var(--c-gold);
+      border-bottom:1px solid var(--c-bg);
+    }
+    .drop-item {
+      display:flex; align-items:center; gap:.85rem;
+      padding:.75rem 1rem; border-bottom:1px solid var(--c-bg);
+      text-decoration:none; transition:background .18s;
+    }
+    .drop-item:last-child { border-bottom:none; }
+    .drop-item:hover { background:var(--c-bg-soft); }
+    .drop-item-ic {
+      width:32px; height:32px; border-radius:50%;
+      border:1px solid var(--c-linen); flex-shrink:0;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--c-gold);
+    }
+    .drop-item-ic svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; }
+    .drop-item-title {
+      display:block; font-size:.82rem; font-weight:600;
+      color:var(--c-ink); margin-bottom:.15rem;
+    }
+    .drop-item-sub {
+      display:block; font-size:.7rem; color:var(--c-ink-soft);
+      font-weight:400; line-height:1.35;
+    }
+
+    /* ── Botones nav derecha ── */
+    .nav-actions { display:flex; align-items:center; gap:.5rem; flex-shrink:0; }
+    .btn-hablanos {
+      font-family:var(--f-body); font-size:.63rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--c-gold); border:1px solid var(--c-sand);
+      background:transparent; border-radius:var(--r);
+      padding:.5rem 1.1rem; cursor:pointer; white-space:nowrap;
+      text-decoration:none;
+      transition:background .25s, color .25s, border-color .25s;
+    }
+    .btn-hablanos:hover { background:var(--c-gold); color:var(--c-white); border-color:var(--c-gold); }
+    .btn-agendar {
+      font-family:var(--f-body); font-size:.63rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--c-white); background:var(--c-gold);
+      border:1px solid var(--c-gold); border-radius:var(--r);
+      padding:.5rem 1.25rem; cursor:pointer; white-space:nowrap;
+      box-shadow:0 2px 10px rgba(178,134,34,.28);
+      transition:background .25s;
+    }
+    .btn-agendar:hover { background:#9a7318; border-color:#9a7318; }
+
+    /* ── Hamburger ── */
+    .nav-toggle {
+      display:none; flex-direction:column; gap:5px;
+      padding:8px; z-index:1100; background:none; border:none; cursor:pointer;
+    }
+    .nav-toggle span {
+      display:block; width:22px; height:1.5px;
+      background:var(--c-ink);
+      transition:transform .35s var(--ease), opacity .3s;
+    }
+    .nav-toggle.open span:nth-child(1){ transform:rotate(45deg) translate(4.5px,4.5px); }
+    .nav-toggle.open span:nth-child(2){ opacity:0; }
+    .nav-toggle.open span:nth-child(3){ transform:rotate(-45deg) translate(4.5px,-4.5px); }
+
+    /* ── Mobile drawer ── */
+    .mobile-drawer {
+      position:fixed; inset:0; background:var(--c-bg); z-index:1000;
+      display:flex; flex-direction:column;
+      justify-content:center; align-items:center; gap:0;
+      opacity:0; visibility:hidden; transform:translateX(100%);
+      transition:transform .42s var(--ease), opacity .42s, visibility 0s .42s;
+      padding:2rem;
+    }
+    .mobile-drawer.open {
+      opacity:1; visibility:visible; transform:translateX(0);
+      transition:transform .42s var(--ease), opacity .42s, visibility 0s;
+    }
+    .drawer-section { width:100%; margin-bottom:1.5rem; }
+    .drawer-section-label {
+      font-size:.58rem; font-weight:600; letter-spacing:.2em;
+      text-transform:uppercase; color:var(--c-gold);
+      margin-bottom:.6rem; display:block;
+    }
+    .drawer-link {
+      display:block; font-family:var(--f-display); font-size:1.65rem;
+      font-weight:400; color:var(--c-ink); transition:color .22s;
+      line-height:1.5;
+    }
+    .drawer-link:hover { color:var(--c-gold); }
+    .drawer-link-sm {
+      display:block; font-size:.82rem; font-weight:500;
+      color:var(--c-ink-soft); padding:.35rem 0;
+      transition:color .22s;
+    }
+    .drawer-link-sm:hover { color:var(--c-gold); }
+    .drawer-sep { height:1px; background:var(--c-linen); margin:1rem 0; }
+    .drawer-cta {
+      display:block; width:100%; text-align:center;
+      background:var(--c-gold); color:var(--c-white);
+      font-family:var(--f-body); font-size:.7rem; font-weight:600;
+      letter-spacing:.15em; text-transform:uppercase;
+      padding:.85rem; border-radius:var(--r); margin-top:.5rem;
+      box-shadow:0 2px 12px rgba(178,134,34,.28);
+    }
+
+    @media(max-width:1024px){
+      .desktop-nav { display:none; }
+      .btn-hablanos { display:none; }
+      .btn-agendar { display:none; }
+      .nav-toggle { display:flex; }
+    }
+
+    /* ══════════════════════════════════════════
+   HERO — corregido para pantallas estrechas
+══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  min-height: 88vh;
+  overflow: hidden;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--nav-h) + 56px) 64px 96px 28px;
+  position: relative;
+  z-index: 2;
+  background: var(--c-bg);
+}
+
+.hero-left::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 12%;
+  bottom: 12%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--c-linen), transparent);
+}
+
+.hero-tag {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-tag::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--c-gold);
+}
+
+.hero-h1 {
+  margin-bottom: 1.4rem;
+}
+
+.hero-h1 .accent {
+  color: var(--c-gold);
+}
+
+.hero-desc {
+  font-size: .97rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--c-ink-soft);
+  max-width: 460px;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+}
+
+.hero-right {
+  position: relative;
+  overflow: hidden;
+  background: var(--c-linen);
+}
+
+.hero-right img.hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 8s var(--ease);
+}
+
+.hero:hover .hero-right img.hero-main-img {
+  transform: scale(1.04);
+}
+
+.hero-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to right, rgba(242,239,236,.18) 0%, transparent 20%);
+  pointer-events: none;
+}
+
+.hero-project-tag {
+  position: absolute;
+  z-index: 4;
+  bottom: 2rem;
+  left: 1.5rem;
+  transform: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--f-body);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--c-white);
+  background: rgba(178,134,34,.88);
+  backdrop-filter: blur(4px);
+  padding: .65rem 1rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
+  pointer-events: none;
+}
+
+.hero-right:hover .hero-project-tag {
+  transform: translateY(-2px);
+}
+    /* Línea dorada decorativa lateral */
+    .hero-right::after {
+      content:'';
+      position:absolute; left:0; top:20%; bottom:20%; width:2px; z-index:3;
+      background:linear-gradient(to bottom,
+        transparent, var(--c-sand) 30%, var(--c-gold) 50%,
+        var(--c-sand) 70%, transparent
+      );
+    }
+
+    /* Barra inferior */
+    .hero-bar {
+      position:absolute; bottom:0; left:0; right:0; z-index:10;
+      background:rgba(242,239,236,.92);
+      backdrop-filter:blur(8px);
+      border-top:1px solid var(--c-linen);
+    }
+    .hero-bar-inner {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      max-width:var(--max); margin:0 auto; padding:0 28px;
+    }
+    .info-cell {
+      padding:1.1rem 0; display:flex; align-items:center; gap:.85rem;
+      border-right:1px solid var(--c-linen);
+    }
+    .info-cell:last-child { border-right:none; }
+    .info-cell + .info-cell { padding-left:2rem; }
+    .info-cell i { font-size:.85rem; color:var(--c-gold); flex-shrink:0; }
+    .info-cell strong {
+      display:block; font-size:.77rem; font-weight:600;
+      color:var(--c-ink); letter-spacing:.04em;
+    }
+    .info-cell span {
+      font-size:.69rem; color:var(--c-ink-soft); font-weight:400;
+    }
+
+    /* ══════════════════════════════════════════
+       AUDIENCIAS
+    ══════════════════════════════════════════ */
+    .audiences { padding:96px 0; background:var(--c-white); }
+
+    .section-head { margin-bottom:3rem; }
+    .section-head.center { text-align:center; }
+    .section-head.center .rule { margin-left:auto; margin-right:auto; }
+
+    .aud-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;
+    }
+    .aud-card {
+      background:var(--c-bg); border:1px solid var(--c-linen);
+      border-radius:8px; padding:2.5rem 2rem 2rem;
+      display:flex; flex-direction:column; gap:1rem;
+      text-decoration:none; color:inherit;
+      cursor:pointer; position:relative; overflow:hidden;
+      transition:box-shadow .35s var(--ease), transform .35s var(--ease),
+                 border-color .35s, background .35s;
+    }
+    .aud-card::after {
+      content:'';
+      position:absolute; inset:0;
+      background:var(--c-gold);
+      opacity:0;
+      transition:opacity .35s var(--ease);
+      pointer-events:none;
+    }
+    .aud-card:hover {
+      box-shadow:0 12px 40px rgba(60,60,60,.15);
+      transform:translateY(-6px);
+      border-color:var(--c-gold);
+      background:var(--c-white);
+    }
+    .aud-card:hover::after { opacity:.04; }
+    .aud-card.featured {
+      background:var(--c-white); border-color:var(--c-sand);
+      box-shadow:var(--sh-sm);
+    }
+    .aud-card:hover .aud-cta {
+      background:var(--c-gold); color:var(--c-white);
+      border-color:var(--c-gold);
+      transform:translateX(4px);
+    }
+    .aud-icon {
+      width:48px; height:48px; border:1px solid var(--c-sand);
+      border-radius:50%; display:flex; align-items:center;
+      justify-content:center; color:var(--c-gold); font-size:1rem;
+      transition:background .35s, border-color .35s;
+      position:relative; z-index:1;
+    }
+    .aud-card:hover .aud-icon {
+      background:var(--c-gold-dim); border-color:var(--c-gold);
+    }
+    .aud-card h3 {
+      font-family:var(--f-display); font-size:1.6rem; font-weight:400;
+      color:var(--c-ink); line-height:1.2;
+      position:relative; z-index:1;
+      transition:color .35s;
+    }
+    .aud-card:hover h3 { color:var(--c-ink); }
+    .aud-card p {
+      font-size:.88rem; font-weight:400; line-height:1.8;
+      color:var(--c-ink-soft); flex:1;
+      position:relative; z-index:1;
+    }
+    .aud-cta {
+      display:flex; align-items:center; justify-content:center; gap:.5rem;
+      font-family:var(--f-body); font-size:.68rem; font-weight:600;
+      letter-spacing:.16em; text-transform:uppercase;
+      padding:.75rem 1.5rem; border-radius:4px; margin-top:.5rem;
+      border:1px solid var(--c-linen); color:var(--c-gold);
+      background:transparent;
+      transition:background .35s, color .35s, border-color .35s, transform .35s;
+      position:relative; z-index:1;
+    }
+    .aud-cta i { font-size:.55rem; }
+
+    /* ══════════════════════════════════════════
+       SERVICIOS
+    ══════════════════════════════════════════ */
+    .services { padding:96px 0; background:var(--c-bg); }
+
+    .svc-grid {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .svc-item {
+      position:relative; overflow:hidden;
+      border-radius:8px;
+      min-height:300px;
+      display:flex; flex-direction:column;
+      cursor:default;
+      border:1px solid var(--c-linen);
+    }
+
+    /* Imagen siempre visible */
+    .svc-img {
+      position:absolute; inset:0;
+      background-size:cover; background-position:center;
+      transition:transform .7s var(--ease), opacity .45s var(--ease);
+      opacity:1;
+    }
+
+    /* Gradiente inferior permanente — para legibilidad del título */
+    .svc-img::after {
+      content:'';
+      position:absolute; inset:0;
+      background:linear-gradient(
+        to top,
+        rgba(30,25,20,.7) 0%,
+        rgba(30,25,20,.3) 45%,
+        transparent 75%
+      );
+    }
+
+    /* Número arriba */
+    .svc-num {
+      position:relative; z-index:3;
+      font-family:var(--f-display); font-size:2.8rem;
+      font-weight:400; color:rgba(255,255,255,.65); line-height:1;
+      padding:1.25rem 1.5rem 0;
+      transition:opacity .4s var(--ease);
+      display:block;
+      text-shadow:0 2px 8px rgba(0,0,0,.3);
+    }
+
+    /* Contenido inferior */
+    .svc-content {
+      position:relative; z-index:3;
+      margin-top:auto;
+      padding:1rem 1.5rem 1.5rem;
+      transition:opacity .4s var(--ease), transform .4s var(--ease);
+    }
+
+    .svc-item h4 {
+      font-family:var(--f-display); font-size:1.25rem;
+      font-weight:400; color:var(--c-white); line-height:1.2;
+      text-shadow:0 1px 6px rgba(0,0,0,.4);
+      transition:color .4s var(--ease);
+      margin-bottom:.3rem;
+    }
+    .svc-item > .svc-content p { display:none; }
+
+    .svc-hover p {
+      font-size:.87rem; font-weight:400; line-height:1.8;
+      color:var(--c-ink-soft) !important;
+      max-height:none !important;
+      overflow:visible !important;
+      opacity:1 !important;
+      flex:1;
+    }
+
+    /* Panel hover — fondo linen, texto completo */
+    .svc-hover {
+      position:absolute; inset:0; z-index:4;
+      background:var(--c-white);
+      padding:1.75rem;
+      display:flex; flex-direction:column; gap:.75rem;
+      opacity:0;
+      transition:opacity .38s var(--ease);
+      pointer-events:none;
+      border-radius:8px;
+    }
+    .svc-hover .svc-num-hover {
+      font-family:var(--f-display); font-size:2.2rem;
+      font-weight:400; color:var(--c-gold); line-height:1;
+      display:block;
+    }
+    .svc-hover h4 {
+      font-family:var(--f-display); font-size:1.3rem;
+      font-weight:400; color:var(--c-ink);
+    }
+    .svc-hover p {
+      font-size:.87rem; font-weight:400; line-height:1.8;
+      color:var(--c-ink-soft); flex:1;
+    }
+    .svc-hover-line {
+      width:28px; height:1px; background:var(--c-gold);
+    }
+
+    /* HOVER */
+    .svc-item:hover .svc-img { transform:scale(1.04); opacity:.35; }
+    .svc-item:hover .svc-hover {
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    /* ══════════════════════════════════════════
+       TALLER / SHOWROOM
+    ══════════════════════════════════════════ */
+    .split-sec { display:grid; grid-template-columns:1fr 1fr; }
+    .split-panel {
+      position:relative; min-height:500px; overflow:hidden;
+      display:flex; align-items:flex-end;
+    }
+    .sp-bg {
+      position:absolute; inset:0;
+      background-size:cover; background-position:center;
+      transition:transform .65s var(--ease);
+    }
+    .split-panel:hover .sp-bg { transform:scale(1.05); }
+    .sp-scrim {
+      position:absolute; inset:0;
+      background:linear-gradient(to top,
+        rgba(20,16,12,.88) 0%,
+        rgba(20,16,12,.55) 45%,
+        rgba(20,16,12,.15) 75%,
+        transparent 100%);
+    }
+    .sp-body {
+      position:relative; z-index:2; padding:2.5rem 2.75rem;
+    }
+    .sp-body .eyebrow { color:var(--c-sand); display:block; margin-bottom:.4rem; }
+    .sp-body h3 {
+      font-family:var(--f-display); font-size:2rem; font-weight:400;
+      color:var(--c-white); line-height:1.2; margin-bottom:.7rem;
+    }
+    .sp-body p {
+      font-size:.87rem; color:rgba(255,255,255,.72);
+      line-height:1.75; max-width:340px; margin-bottom:1.5rem;
+    }
+
+    /* ── Split panel versión clara (Cada detalle cuenta) ── */
+    .split-panel--light {
+      background:var(--c-bg);
+    }
+    .sp-scrim--light {
+      background:linear-gradient(to top,
+        rgba(242,239,236,.95) 0%,
+        rgba(242,239,236,.7) 40%,
+        rgba(242,239,236,.3) 70%,
+        transparent 100%);
+    }
+    .sp-body--light .eyebrow {
+      color:var(--c-gold) !important;
+    }
+    .sp-body--light h3 {
+      color:var(--c-ink) !important;
+    }
+    .sp-body--light p {
+      color:var(--c-ink-soft) !important;
+    }
+    .sp-body--light .btn-outline {
+      color:var(--c-ink);
+      border-color:var(--c-linen);
+    }
+    .sp-body--light .btn-outline:hover {
+      border-color:var(--c-gold);
+      color:var(--c-gold);
+    }
+
+    /* ══════════════════════════════════════════
+       PROYECTOS
+    ══════════════════════════════════════════ */
+    .projects { padding:96px 0; background:var(--c-white); }
+    .proj-head {
+      display:flex; justify-content:space-between;
+      align-items:flex-end; flex-wrap:wrap; gap:1rem;
+      margin-bottom:2.5rem;
+    }
+    .proj-grid {
+      display:grid;
+      grid-template-columns:1.25fr 1fr 1fr;
+      grid-template-rows:280px 280px 300px;
+      gap:10px;
+    }
+    .proj-item {
+      position:relative; overflow:hidden;
+      border-radius:4px; background:var(--c-linen);
+    }
+    .proj-item:first-child { grid-row:span 2; }
+    /* Fila 3: cortinas col 1, camping cols 2-3 */
+    .proj-item.proj-cortinas { grid-column:1; grid-row:3; }
+    .proj-item.proj-full    { grid-column:2 / span 2; grid-row:3; }
+    .proj-item img {
+      width:100%; height:100%; object-fit:cover;
+      transition:transform .55s var(--ease);
+    }
+    .proj-item:hover img { transform:scale(1.06); }
+    .proj-over {
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(60,60,60,.62) 0%, transparent 50%);
+      display:flex; align-items:flex-end; padding:1.5rem;
+      opacity:0; transition:opacity .32s;
+    }
+    .proj-item:hover .proj-over { opacity:1; }
+    .proj-over span {
+      display:block; font-size:.64rem; color:var(--c-sand);
+      letter-spacing:.12em; text-transform:uppercase; margin-bottom:.2rem;
+    }
+    .proj-over h4 {
+      font-family:var(--f-display); font-size:1.15rem;
+      font-weight:400; color:var(--c-white);
+    }
+
+    /* ── Proyectos — panel hover tipo Servicios ── */
+    .proj-hover {
+      position:absolute; inset:0; z-index:5;
+      background:var(--c-white);
+      padding:1.1rem 1.35rem 1.1rem;
+      display:flex; flex-direction:column; gap:.38rem;
+      opacity:0;
+      transition:opacity .38s var(--ease);
+      pointer-events:none;
+      border-radius:4px;
+      overflow:hidden;
+    }
+    .proj-item:hover .proj-hover {
+      opacity:1;
+      pointer-events:auto;
+    }
+    /* Imagen se desvanece en hover cuando hay panel */
+    .proj-item:has(.proj-hover):hover img {
+      opacity:.25;
+    }
+    .proj-hover-eyebrow {
+      font-size:.56rem; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase;
+      color:var(--c-gold); line-height:1;
+    }
+    .proj-hover-line {
+      width:28px; height:1px; background:var(--c-gold);
+      flex-shrink:0;
+    }
+    .proj-hover h4 {
+      font-family:var(--f-display); font-size:1.15rem;
+      font-weight:400; color:var(--c-ink);
+      line-height:1.15; margin:0;
+    }
+    /* Comilla integrada como pseudo — no ocupa línea propia */
+    .proj-hover p {
+      font-size:.79rem; font-weight:400; line-height:1.6;
+      color:var(--c-ink-soft); flex:1;
+      font-style:italic;
+      overflow:hidden;
+      display:-webkit-box;
+      -webkit-line-clamp:5;
+      -webkit-box-orient:vertical;
+      position:relative;
+    }
+    .proj-hover p::before {
+      content:'\201C';
+      font-family:var(--f-display);
+      font-size:1.6rem; line-height:.9;
+      color:var(--c-sand);
+      display:block; margin-bottom:.1rem;
+      font-style:normal;
+    }
+    /* Primer item (span 2 filas) — más líneas */
+    .proj-item:first-child .proj-hover p {
+      -webkit-line-clamp:7;
+    }
+    .proj-hover-author {
+      font-size:.6rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--c-gold); font-style:normal;
+      flex-shrink:0;
+    }
+    .proj-hover-stars {
+      display:flex; gap:3px; flex-shrink:0;
+    }
+    .proj-hover-stars i {
+      font-size:.65rem; color:var(--c-gold);
+    }
+    .proj-hover-stars i.empty {
+      color:var(--c-linen);
+    }
+
+    /* ══════════════════════════════════════════
+       CONTACTO
+    ══════════════════════════════════════════ */
+    .contact { padding:96px 0; background:var(--c-white); }
+    .contact-grid {
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:72px; align-items:start;
+    }
+    .c-block h2 {
+      font-family:var(--f-display);
+      font-size:clamp(1.8rem,2.8vw,2.6rem);
+      font-weight:400; line-height:1.2; color:var(--c-ink);
+      margin-bottom:.9rem;
+    }
+    .c-details { margin-top:2rem; display:flex; flex-direction:column; gap:1.2rem; }
+    .c-row { display:flex; align-items:flex-start; gap:.85rem; }
+    .c-row i { width:16px; color:var(--c-gold); font-size:.82rem; flex-shrink:0; margin-top:.18rem; }
+    .c-label {
+      display:block; font-size:.64rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--c-gold); margin-bottom:.2rem;
+    }
+    .c-row p { font-size:.88rem; color:var(--c-ink-soft); font-weight:400; line-height:1.65; }
+    .c-row a { color:var(--c-ink); transition:color .22s; }
+    .c-row a:hover { color:var(--c-gold); }
+    .map-frame {
+      margin-top:1.75rem; border-radius:4px; overflow:hidden;
+      border:1px solid var(--c-linen);
+    }
+
+    /* Formulario */
+    .c-form h3 {
+      font-family:var(--f-display); font-size:1.65rem;
+      font-weight:400; color:var(--c-ink); margin-bottom:1.75rem;
+    }
+    .form-notice {
+      display:none; padding:.9rem 1.1rem;
+      border-radius:var(--r); font-size:.85rem; margin-bottom:1.1rem; font-weight:500;
+    }
+    .form-notice.success {
+      background:rgba(90,160,80,.1); border:1px solid rgba(90,160,80,.4); color:#3a7a32;
+    }
+    .form-notice.error {
+      background:rgba(200,60,60,.08); border:1px solid rgba(200,60,60,.3); color:#a83030;
+    }
+    .form-notice.info {
+      background:var(--c-gold-dim); border:1px solid var(--c-sand); color:var(--c-gold);
+    }
+    .fg { margin-bottom:.9rem; }
+    .fg label {
+      display:block; font-size:.64rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--c-ink-soft); margin-bottom:.35rem;
+    }
+    .fg input, .fg select, .fg textarea {
+      width:100%; padding:.82rem 1rem;
+      background:var(--c-bg); border:1px solid var(--c-linen);
+      border-radius:var(--r); color:var(--c-ink);
+      font-family:var(--f-body); font-size:.9rem; font-weight:400;
+      transition:border-color .22s, box-shadow .22s;
+      -webkit-appearance:none; appearance:none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus {
+      outline:none; border-color:var(--c-gold);
+      box-shadow:0 0 0 3px rgba(178,134,34,.1);
+    }
+    .fg input::placeholder, .fg textarea::placeholder { color:var(--c-linen); }
+    .fg select {
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%23B28622' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 1rem center;
+      background-color:var(--c-bg); padding-right:2.5rem;
+    }
+    .fg select option { background:var(--c-bg); color:var(--c-ink); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    .site-footer {
+      background:var(--c-bg-soft);
+      border-top:1px solid var(--c-linen);
+      padding:60px 0 28px;
+    }
+    .footer-top {
+      display:grid; grid-template-columns:1.6fr 1fr 1fr;
+      gap:4rem; margin-bottom:3rem;
+    }
+    .footer-logo {
+      font-family:var(--f-display); font-size:1.65rem;
+      font-weight:600; color:var(--c-gold); display:block; margin-bottom:1rem;
+    }
+    .footer-brand p {
+      font-size:.85rem; font-weight:400; color:var(--c-ink-soft);
+      line-height:1.8; max-width:270px;
+    }
+    .f-social { display:flex; gap:.65rem; margin-top:1.5rem; }
+    .f-social a {
+      width:34px; height:34px; border-radius:50%;
+      border:1px solid var(--c-linen);
+      display:flex; align-items:center; justify-content:center;
+      font-size:.82rem; color:var(--c-ink-soft);
+      transition:border-color .22s, color .22s, background .22s;
+    }
+    .f-social a:hover { border-color:var(--c-gold); color:var(--c-gold); background:var(--c-gold-dim); }
+    .footer-col h5 {
+      font-size:.65rem; font-weight:600; letter-spacing:.2em;
+      text-transform:uppercase; color:var(--c-gold); margin-bottom:1.1rem;
+    }
+    .footer-col ul { display:flex; flex-direction:column; gap:.6rem; }
+    .footer-col a {
+      font-size:.85rem; font-weight:400; color:var(--c-ink-soft); transition:color .22s;
+    }
+    .footer-col a:hover { color:var(--c-ink); }
+    .footer-bottom {
+      border-top:1px solid var(--c-linen); padding-top:1.5rem;
+      display:flex; justify-content:space-between;
+      align-items:center; flex-wrap:wrap; gap:1rem;
+    }
+    .footer-bottom p { font-size:.76rem; color:var(--c-ink-soft); font-weight:400; }
+    .f-legal { display:flex; gap:1.5rem; }
+    .f-legal a { font-size:.73rem; color:var(--c-ink-soft); transition:color .22s; }
+    .f-legal a:hover { color:var(--c-ink); }
+
+    /* ══════════════════════════════════════════
+       PROCESO — Cómo trabajamos
+    ══════════════════════════════════════════ */
+    .proceso {
+      padding:96px 0;
+      position:relative;
+      overflow:hidden;
+      background:#1e1a16;
+    }
+    /* Imagen verde muy sutil sobre oscuro */
+    .proceso::before {
+      content:'';
+      position:absolute; inset:0;
+      background:url('images/proceso_verde.jpg') center/cover no-repeat;
+      opacity:.07;
+      z-index:0;
+    }
+    .proceso .wrap { position:relative; z-index:1; }
+
+    /* Cabecera en claro */
+    .proceso .section-head .eyebrow { color:var(--c-sand); }
+    .proceso .section-head .rule { background:var(--c-gold); }
+    .proceso .section-head h2 { color:var(--c-white); }
+    .proceso .section-head .body-p { color:rgba(242,239,236,.6); }
+
+    .proceso-grid {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      gap:1.5rem; margin-top:3rem;
+    }
+    .proceso-step {
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(178,134,34,.2);
+      border-radius:6px; padding:2.25rem 1.75rem 2rem;
+      display:flex; flex-direction:column; gap:.7rem;
+      position:relative; z-index:1;
+      transition:box-shadow .3s var(--ease), transform .3s var(--ease),
+                 border-color .3s, background .3s;
+    }
+    .proceso-step:hover {
+      background:rgba(255,255,255,.07);
+      box-shadow:0 8px 32px rgba(0,0,0,.35);
+      transform:translateY(-4px);
+      border-color:var(--c-gold);
+    }
+    /* Número grande dorado de fondo */
+    .proceso-num {
+      font-family:var(--f-display);
+      font-size:5.5rem;
+      font-weight:400;
+      color:rgba(178,134,34,.18);
+      line-height:1;
+      position:absolute; bottom:.5rem; right:1rem;
+      transition:color .3s;
+      pointer-events:none;
+    }
+    .proceso-step:hover .proceso-num { color:rgba(178,134,34,.35); }
+    .proceso-icon {
+      width:48px; height:48px;
+      border:1px solid rgba(178,134,34,.45); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--c-gold); font-size:.95rem;
+      background:rgba(178,134,34,.08);
+      transition:background .3s, border-color .3s;
+    }
+    .proceso-step:hover .proceso-icon {
+      background:rgba(178,134,34,.18);
+      border-color:var(--c-gold);
+    }
+    .proceso-step h4 {
+      font-family:var(--f-display); font-size:1.55rem;
+      font-weight:600; color:var(--c-gold);
+      line-height:1.2;
+      text-shadow:0 1px 8px rgba(178,134,34,.25);
+    }
+    .proceso-step p {
+      font-size:.87rem; font-weight:400; line-height:1.8;
+      color:rgba(242,239,236,.62);
+    }
+
+    @media(max-width:1024px){
+      .proceso-grid { grid-template-columns:1fr 1fr; }
+      .proceso-grid::before { display:none; }
+    }
+    @media(max-width:576px){
+      .proceso-grid { grid-template-columns:1fr; }
+      .proceso { padding:64px 0; }
+    }
+
+    /* ══════════════════════════════════════════
+       HERO — animaciones de entrada
+    ══════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(28px); }
+      to   { opacity:1; transform:none; }
+    }
+    @keyframes fadeIn {
+      from { opacity:0; }
+      to   { opacity:1; }
+    }
+    @keyframes slideInRight {
+      from { opacity:0; transform:translateX(32px); }
+      to   { opacity:1; transform:none; }
+    }
+
+    .hero-tag     { animation: fadeUp .7s var(--ease-out) .1s both; }
+    .hero-h1      { animation: fadeUp .8s var(--ease-out) .28s both; }
+    .hero-desc    { animation: fadeUp .7s var(--ease-out) .46s both; }
+    .hero-actions { animation: fadeUp .7s var(--ease-out) .6s both; }
+    .hero-bar     { animation: fadeIn .9s var(--ease-out) .75s both; }
+    .hero-right   { animation: slideInRight .9s var(--ease-out) .15s both; }
+
+    /* ══════════════════════════════════════════
+       BANDA DE ESTADÍSTICAS
+    ══════════════════════════════════════════ */
+    /* ── Banda impacto con imagen de fondo ── */
+    .stats-band {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      border-top: 1px solid var(--c-linen);
+      border-bottom: 1px solid var(--c-linen);
+    }
+    .stats-band-bg {
+      position: absolute; inset: 0;
+      background: url('images/banda-pirineo.jpg') center top/cover no-repeat;
+    }
+    /* Overlay muy suave — solo para legibilidad */
+    .stats-band-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(60,60,60,.08) 0%,
+        rgba(60,60,60,.28) 55%,
+        rgba(60,60,60,.08) 100%
+      );
+    }
+    .stats-grid {
+      position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .stat-item {
+      padding: 2.75rem 2rem;
+      text-align: center;
+      border-right: 1px solid rgba(178,134,34,.25);
+      transition: background .3s var(--ease), transform .3s var(--ease);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover {
+      background: rgba(242,239,236,.18);
+      transform: translateY(-3px);
+    }
+    .stat-num {
+      font-family: var(--f-display);
+      font-size: clamp(2.8rem, 4.5vw, 4rem);
+      font-weight: 400;
+      color: var(--c-sand);
+      line-height: 1;
+      display: block;
+      margin-bottom: .45rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,.3);
+    }
+    .stat-label {
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--c-white);
+      text-shadow: 0 1px 6px rgba(0,0,0,.4);
+    }
+    .stat-phrase {
+      font-family: var(--f-display);
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      font-weight: 400;
+      color: var(--c-white);
+      line-height: 1.2;
+      display: block;
+      margin-bottom: .45rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,.3);
+    }
+    .stat-phrase-sub {
+      font-size: .72rem;
+      font-weight: 400;
+      letter-spacing: .06em;
+      color: rgba(242,239,236,.82);
+      line-height: 1.55;
+      text-shadow: 0 1px 6px rgba(0,0,0,.35);
+    }
+
+    @media(max-width:768px){
+      .stats-grid { grid-template-columns: repeat(2,1fr); padding:0 18px; }
+      .stat-item { border-bottom: 1px solid rgba(178,134,34,.2); }
+      .stat-item:nth-child(2n){ border-right:none; }
+    }
+    @media(max-width:420px){
+      .stat-item { padding: 2rem 1rem; }
+    }
+
+    
+    /* ══════════════════════════════════════════
+       WHATSAPP FLOTANTE — index.html
+    ══════════════════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 800;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: .7rem 1.3rem .7rem .9rem;
+      font-family: var(--f-body);
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(37,211,102,.38);
+      transition: transform .25s var(--ease), box-shadow .25s;
+      animation: fadeUp .7s var(--ease-out) 1.2s both;
+    }
+    .wa-float:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 26px rgba(37,211,102,.46);
+    }
+    .wa-float i { font-size: 1.1rem; }
+    .wa-label { white-space: nowrap; }
+    @media(max-width:576px){
+      .wa-float {
+        bottom: 20px;
+        right: 16px;
+        padding: .65rem;
+        border-radius: 50%;
+      }
+      .wa-label { display: none; }
+    }
+
+    /* ══════════════════════════════════════════
+       MEJORAS SERVICIOS — hover número
+    ══════════════════════════════════════════ */
+    .svc-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .svc-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--c-gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .32s var(--ease);
+    }
+    .svc-item:hover::after { transform: scaleX(1); }
+
+    /* ══════════════════════════════════════════
+       TESTIMONIO — mejora visual
+    ══════════════════════════════════════════ */
+    .test-stars {
+      display: flex;
+      justify-content: center;
+      gap: .3rem;
+      margin-bottom: 1.5rem;
+    }
+    .test-stars i { color: var(--c-gold); font-size: .85rem; }
+
+    /* ══════════════════════════════════════════
+       REVEAL
+    ══════════════════════════════════════════ */
+    .reveal {
+      opacity:0; transform:translateY(22px);
+      transition:opacity .7s var(--ease-out), transform .7s var(--ease-out);
+    }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media(max-width:1024px){
+      .hero                { grid-template-columns:1fr; }
+      .hero-right          { display:none; }
+      .hero-left           { padding:calc(var(--nav-h)+50px) 28px 100px; }
+      .hero-left::after    { display:none; }
+      .aud-grid            { grid-template-columns:1fr; }
+      .svc-grid            { grid-template-columns:1fr 1fr; }
+      .split-sec           { grid-template-columns:1fr; }
+      .proj-grid           { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+      .proj-item:first-child { grid-row:span 1; height:260px; }
+      .proj-item           { height:220px; }
+      .contact-grid        { grid-template-columns:1fr; gap:50px; }
+      .footer-top          { grid-template-columns:1fr 1fr; gap:2.5rem; }
+    }
+    @media(max-width:768px){
+      :root                { --nav-h:60px; }
+      .desktop-nav,.nav-cta{ display:none; }
+      .nav-toggle          { display:flex; }
+      .svc-grid            { grid-template-columns:1fr; }
+      .hero-bar-inner      { grid-template-columns:1fr; }
+      .info-cell           { border-right:none; border-bottom:1px solid var(--c-linen); }
+      .info-cell:last-child{ border-bottom:none; }
+      .info-cell+.info-cell{ padding-left:0; }
+      .form-row            { grid-template-columns:1fr; }
+      .footer-top          { grid-template-columns:1fr; }
+      .proj-grid           { grid-template-columns:1fr; grid-template-rows:auto; }
+      .proj-item           { height:240px; }
+    }
+    @media(max-width:576px){
+      .wrap                { padding:0 18px; }
+      .audiences,.services,
+      .projects,.testimonial,
+      .contact             { padding:64px 0; }
+      .hero-actions        { flex-direction:column; }
+      .hero-actions .btn   { width:100%; justify-content:center; }
+      .aud-card            { padding:1.75rem 1.5rem; }
+    }
+      .footer-col a.current { color:var(--c-gold); font-weight:600; }
+    
+    /* ══════════════════════════════════════════
+       MOBILE OPTIMIZATION — Global fixes
+    ══════════════════════════════════════════ */
+
+    /* 1. Safe area insets — dispositivos con notch/Dynamic Island */
+    body {
+      padding-left:  env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    .site-header {
+      padding-left:  max(28px, env(safe-area-inset-left));
+      padding-right: max(28px, env(safe-area-inset-right));
+    }
+    .site-footer {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* 2. Touch targets mínimos 44px (Apple/Google HIG) */
+    .drawer-link     { min-height:44px; display:flex; align-items:center; }
+    .drawer-link-sm  { min-height:44px; display:flex; align-items:center; padding:.2rem 0; }
+    .drawer-cta      { min-height:44px; display:flex; align-items:center; justify-content:center; }
+
+    /* 3. Footer responsive */
+    @media(max-width:768px){
+      .footer-top      { grid-template-columns:1fr !important; text-align:center; }
+      .footer-socials  { justify-content:center; }
+      .footer-legal    { flex-direction:column; align-items:center; gap:.6rem; text-align:center; }
+      .footer-col a    { display:inline-block; }
+    }
+
+    /* 4. Prevenir zoom automático en iOS (inputs < 16px) */
+    @media(max-width:576px){
+      .fg input,
+      .fg select,
+      .fg textarea,
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* 5. prefers-reduced-motion */
+    @media(prefers-reduced-motion: reduce){
+      *, *::before, *::after {
+        animation-duration:   0.01ms !important;
+        transition-duration:  0.01ms !important;
+        scroll-behavior:      auto   !important;
+      }
+    }
+
+    </style>
+
+<style id="hd-cookie-styles">
+    /* ── Tokens (deben coincidir con el sitio) ── */
+    :root {
+      --ck-bg:        #F2EFEC;
+      --ck-bg-soft:   #EDE8E2;
+      --ck-linen:     #DFD3C8;
+      --ck-sand:      #D2BF81;
+      --ck-gold:      #B28622;
+      --ck-gold-dim:  rgba(178,134,34,.13);
+      --ck-ink:       #3C3C3C;
+      --ck-ink-soft:  #6B6560;
+      --ck-white:     #FFFFFF;
+      --ck-f-display: 'Dancing Script', cursive;
+      --ck-f-body:    'Quicksand', sans-serif;
+      --ck-ease:      cubic-bezier(.25,.46,.45,.94);
+      --ck-r:         4px;
+      --ck-sh:        0 8px 40px rgba(60,60,60,.18);
+    }
+
+    /* ── Overlay de fondo ── */
+    #hd-cookie-overlay {
+      position:fixed; inset:0; z-index:9000;
+      background:rgba(60,60,60,.45);
+      backdrop-filter:blur(3px);
+      display:flex; align-items:flex-end; justify-content:center;
+      padding:0 0 0 0;
+      opacity:0; visibility:hidden;
+      transition:opacity .4s var(--ck-ease), visibility 0s .4s;
+    }
+
+    #hd-cookie-overlay.visible {
+      opacity:1; visibility:visible;
+      transition:opacity .4s var(--ck-ease), visibility 0s;
+    }
+
+    /* ── Panel principal ── */
+    #hd-cookie-panel {
+      width:100%; max-width:860px;
+      background:var(--ck-white);
+      border-radius:12px 12px 0 0;
+      box-shadow:var(--ck-sh);
+      font-family:var(--ck-f-body);
+      overflow:hidden;
+      transform:translateY(24px);
+      transition:transform .4s var(--ck-ease);
+      max-height:92vh;
+      display:flex; flex-direction:column;
+    }
+
+    #hd-cookie-overlay.visible #hd-cookie-panel {
+      transform:translateY(0);
+    }
+
+    /* ── Cabecera del panel ── */
+    .ck-header {
+      background:var(--ck-bg-soft);
+      border-bottom:1px solid var(--ck-linen);
+      padding:1.25rem 1.75rem 0;
+      flex-shrink:0;
+    }
+
+    .ck-brand {
+      display:flex; align-items:center; gap:.65rem; margin-bottom:1rem;
+    }
+
+    .ck-logo {
+      font-family:var(--ck-f-display);
+      font-size:1.3rem; font-weight:600; color:var(--ck-gold);
+    }
+
+    .ck-brand-sep {
+      width:1px; height:18px; background:var(--ck-linen);
+    }
+
+    .ck-brand-tagline {
+      font-size:.68rem; font-weight:500; letter-spacing:.1em;
+      text-transform:uppercase; color:var(--ck-ink-soft);
+    }
+
+    /* ── Tabs ── */
+    .ck-tabs {
+      display:flex; gap:0; border-bottom:none;
+    }
+
+    .ck-tab {
+      font-family:var(--ck-f-body);
+      font-size:.75rem; font-weight:600;
+      letter-spacing:.1em; text-transform:uppercase;
+      padding:.7rem 1.4rem; border:none; background:transparent;
+      color:var(--ck-ink-soft); cursor:pointer;
+      border-bottom:2px solid transparent;
+      transition:color .22s, border-color .22s;
+    }
+
+    .ck-tab:hover { color:var(--ck-ink); }
+
+    .ck-tab.active {
+      color:var(--ck-gold);
+      border-bottom-color:var(--ck-gold);
+    }
+
+    /* ── Contenido scrollable ── */
+    .ck-body {
+      overflow-y:auto; flex:1; padding:1.5rem 1.75rem;
+    }
+
+    /* ── Paneles de tab ── */
+    .ck-pane { display:none; }
+    .ck-pane.active { display:block; }
+
+    /* Tab 1: Consentimiento */
+    .ck-intro-title {
+      font-family:var(--ck-f-display);
+      font-size:1.35rem; font-weight:400; color:var(--ck-ink);
+      margin-bottom:.65rem;
+    }
+
+    .ck-intro-text {
+      font-size:.88rem; font-weight:400; line-height:1.8;
+      color:var(--ck-ink-soft); margin-bottom:1.5rem;
+    }
+
+    /* Grid de toggles */
+    .ck-toggles {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      gap:1px; background:var(--ck-linen);
+      border:1px solid var(--ck-linen); border-radius:var(--ck-r);
+      overflow:hidden; margin-bottom:1.5rem;
+    }
+
+    .ck-toggle-cell {
+      background:var(--ck-bg); padding:1.1rem .75rem;
+      display:flex; flex-direction:column;
+      align-items:center; gap:.65rem;
+    }
+
+    .ck-toggle-label {
+      font-size:.72rem; font-weight:600; letter-spacing:.08em;
+      text-transform:uppercase; color:var(--ck-ink); text-align:center;
+    }
+
+    /* Switch toggle */
+    .ck-switch {
+      position:relative; width:48px; height:26px; flex-shrink:0;
+    }
+
+    .ck-switch input {
+      opacity:0; width:0; height:0; position:absolute;
+    }
+
+    .ck-switch-track {
+      position:absolute; inset:0; border-radius:13px;
+      background:var(--ck-linen); cursor:pointer;
+      transition:background .25s var(--ck-ease);
+    }
+
+    .ck-switch-track::before {
+      content:''; position:absolute;
+      width:20px; height:20px; border-radius:50%;
+      background:var(--ck-white);
+      left:3px; top:3px;
+      box-shadow:0 1px 4px rgba(0,0,0,.2);
+      transition:transform .25s var(--ck-ease);
+    }
+
+    .ck-switch input:checked + .ck-switch-track {
+      background:var(--ck-gold);
+    }
+
+    .ck-switch input:checked + .ck-switch-track::before {
+      transform:translateX(22px);
+    }
+
+    .ck-switch input:disabled + .ck-switch-track {
+      opacity:.55; cursor:not-allowed;
+    }
+
+    .ck-toggle-cell .ck-required-badge {
+      font-size:.6rem; font-weight:600; letter-spacing:.08em;
+      text-transform:uppercase; color:var(--ck-gold);
+      background:var(--ck-gold-dim); padding:.15rem .5rem;
+      border-radius:2px;
+    }
+
+    /* Tab 2: Detalles */
+    .ck-details-list {
+      display:flex; flex-direction:column; gap:1px;
+      border:1px solid var(--ck-linen); border-radius:var(--ck-r);
+      overflow:hidden;
+    }
+
+    .ck-detail-row {
+      background:var(--ck-bg);
+      border-bottom:1px solid var(--ck-linen);
+    }
+
+    .ck-detail-row:last-child { border-bottom:none; }
+
+    .ck-detail-header {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:.9rem 1.25rem; cursor:pointer;
+      transition:background .22s;
+    }
+
+    .ck-detail-header:hover { background:var(--ck-white); }
+
+    .ck-detail-header-left {
+      display:flex; align-items:center; gap:.75rem;
+    }
+
+    .ck-detail-name {
+      font-size:.82rem; font-weight:600; color:var(--ck-ink);
+      letter-spacing:.05em;
+    }
+
+    .ck-detail-count {
+      font-size:.7rem; color:var(--ck-ink-soft); font-weight:400;
+    }
+
+    .ck-detail-arrow {
+      font-size:.6rem; color:var(--ck-ink-soft);
+      transition:transform .25s var(--ck-ease);
+    }
+
+    .ck-detail-row.open .ck-detail-arrow {
+      transform:rotate(180deg);
+    }
+
+    .ck-detail-body {
+      display:none; padding:0 1.25rem 1rem;
+    }
+
+    .ck-detail-row.open .ck-detail-body { display:block; }
+
+    .ck-detail-desc {
+      font-size:.83rem; color:var(--ck-ink-soft); line-height:1.75;
+      margin-bottom:.85rem;
+    }
+
+    /* Mini tabla de cookies */
+    .ck-mini-table {
+      width:100%; border-collapse:collapse;
+      font-size:.78rem; border:1px solid var(--ck-linen);
+      border-radius:var(--ck-r); overflow:hidden;
+    }
+
+    .ck-mini-table th {
+      background:var(--ck-bg-soft); padding:.55rem .85rem;
+      text-align:left; font-size:.65rem; font-weight:600;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--ck-gold);
+      border-bottom:1px solid var(--ck-linen);
+    }
+
+    .ck-mini-table td {
+      padding:.55rem .85rem; color:var(--ck-ink-soft);
+      border-bottom:1px solid var(--ck-linen); vertical-align:top;
+    }
+
+    .ck-mini-table tr:last-child td { border-bottom:none; }
+    .ck-mini-table tr:nth-child(even) td { background:rgba(242,239,236,.5); }
+
+    /* Tab 3: Acerca de */
+    .ck-about-block { margin-bottom:1.5rem; }
+
+    .ck-about-block h4 {
+      font-family:var(--ck-f-display); font-size:1.1rem;
+      font-weight:400; color:var(--ck-ink); margin-bottom:.5rem;
+    }
+
+    .ck-about-block p {
+      font-size:.87rem; color:var(--ck-ink-soft); line-height:1.8;
+    }
+
+    .ck-about-block a { color:var(--ck-gold); text-decoration:none; }
+    .ck-about-block a:hover { text-decoration:underline; }
+
+    /* ── Footer de botones ── */
+    .ck-footer {
+      flex-shrink:0;
+      padding:1.1rem 1.75rem;
+      background:var(--ck-bg-soft);
+      border-top:1px solid var(--ck-linen);
+      display:flex; gap:.75rem; flex-wrap:wrap; align-items:center;
+      justify-content:flex-end;
+    }
+
+    .ck-btn {
+      font-family:var(--ck-f-body);
+      font-size:.7rem; font-weight:600;
+      letter-spacing:.15em; text-transform:uppercase;
+      padding:.72rem 1.5rem; border-radius:var(--ck-r);
+      cursor:pointer; transition:background .25s, color .25s, border-color .25s;
+      white-space:nowrap;
+    }
+
+    .ck-btn-deny {
+      background:transparent; color:var(--ck-ink-soft);
+      border:1px solid var(--ck-linen);
+    }
+    .ck-btn-deny:hover {
+      border-color:var(--ck-ink-soft); color:var(--ck-ink);
+    }
+
+    .ck-btn-selection {
+      background:transparent; color:var(--ck-gold);
+      border:1px solid var(--ck-gold);
+    }
+    .ck-btn-selection:hover {
+      background:var(--ck-gold-dim);
+    }
+
+    .ck-btn-accept {
+      background:var(--ck-gold); color:var(--ck-white);
+      border:1px solid var(--ck-gold);
+      box-shadow:0 2px 10px rgba(178,134,34,.3);
+    }
+    .ck-btn-accept:hover {
+      background:#9a7318;
+      box-shadow:0 4px 16px rgba(178,134,34,.4);
+    }
+
+    /* ── Barra de preferencias persistente (footer del sitio) ── */
+    #hd-cookie-manage-btn {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-family:var(--ck-f-body); font-size:.73rem; font-weight:500;
+      color:var(--ck-ink-soft); cursor:pointer;
+      background:none; border:none; padding:0;
+      transition:color .22s;
+    }
+    #hd-cookie-manage-btn:hover { color:var(--ck-gold); }
+    #hd-cookie-manage-btn i { font-size:.65rem; }
+
+    /* ── Toast de confirmación ── */
+    #hd-cookie-toast {
+      position:fixed; bottom:2rem; left:50%;
+      transform:translateX(-50%) translateY(20px);
+      background:var(--ck-ink); color:var(--ck-white);
+      font-family:var(--ck-f-body); font-size:.82rem; font-weight:500;
+      padding:.75rem 1.5rem; border-radius:30px;
+      display:flex; align-items:center; gap:.6rem;
+      opacity:0; pointer-events:none; z-index:9999;
+      transition:opacity .3s, transform .3s var(--ck-ease);
+      white-space:nowrap;
+    }
+    #hd-cookie-toast.show {
+      opacity:1; transform:translateX(-50%) translateY(0);
+    }
+    #hd-cookie-toast i { color:var(--ck-sand); }
+
+    /* ── Responsive ── */
+    @media(max-width:680px) {
+      .ck-toggles { grid-template-columns:1fr 1fr; }
+      .ck-footer   { justify-content:stretch; }
+      .ck-btn      { flex:1; text-align:center; justify-content:center; }
+    }
+
+    @media(max-width:420px) {
+      .ck-toggles { grid-template-columns:1fr 1fr; }
+      .ck-header  { padding:1rem 1rem 0; }
+      .ck-body    { padding:1.25rem 1rem; }
+      .ck-footer  { padding:.9rem 1rem; flex-direction:column; }
+      .ck-btn     { width:100%; }
+      .ck-tabs .ck-tab { font-size:.67rem; padding:.65rem .9rem; letter-spacing:.06em; }
+    }
+  
+    /* ══════════════════════════════════════════
+       MOBILE OPTIMIZATION — Global fixes
+    ══════════════════════════════════════════ */
+
+    /* 1. Safe area insets — notch / Dynamic Island */
+    body {
+      padding-left:  env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    .site-header {
+      padding-left:  max(28px, env(safe-area-inset-left));
+      padding-right: max(28px, env(safe-area-inset-right));
+    }
+    .site-footer {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* 2. Touch targets mínimos 44px (Apple/Google HIG) */
+    .drawer-link     { min-height:44px; display:flex; align-items:center; }
+    .drawer-link-sm  { min-height:44px; display:flex; align-items:center; padding:.2rem 0; }
+    .drawer-cta      { min-height:44px; display:flex; align-items:center; justify-content:center; }
+
+    /* 3. Footer responsive */
+    @media(max-width:768px){
+      .footer-top      { grid-template-columns:1fr !important; text-align:center; }
+      .footer-socials  { justify-content:center; }
+      .footer-legal    { flex-direction:column; align-items:center; gap:.6rem; text-align:center; }
+      .footer-col a    { display:inline-block; }
+    }
+
+    /* 4. Prevenir zoom automático en iOS (inputs < 16px) */
+    @media(max-width:576px){
+      .fg input,
+      .fg select,
+      .fg textarea,
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* 5. prefers-reduced-motion */
+    @media(prefers-reduced-motion: reduce){
+      *, *::before, *::after {
+        animation-duration:   0.01ms !important;
+        transition-duration:  0.01ms !important;
+        scroll-behavior:      auto   !important;
+      }
+    }
+
+    
+    /* ══════════════════════════════════════════
+       WHATSAPP FLOTANTE
+    ══════════════════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 800;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: .7rem 1.3rem .7rem .9rem;
+      font-family: var(--f-body, sans-serif);
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(37,211,102,.38);
+      transition: transform .25s ease, box-shadow .25s;
+    }
+    .wa-float:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 26px rgba(37,211,102,.46);
+    }
+    .wa-float i { font-size: 1.1rem; }
+    .wa-label { white-space: nowrap; }
+    @media(max-width:576px){
+      .wa-float {
+        bottom: 20px;
+        right: 16px;
+        padding: .65rem;
+        border-radius: 50%;
+      }
+      .wa-label { display: none; }
+    }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════
+     HEADER
+════════════════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="site-logo">
+      <div class="logo-icon">
+        <img src="images/logo-habitat-decor2.png"
+             alt="Habitat & Decor logo" width="38" height="38">
+      </div>
+      <span class="logo-text">Habitat &amp; Decor</span>
+    </a>
+
+    <!-- Nav escritorio -->
+    <nav class="desktop-nav" aria-label="Navegación principal">
+
+      <!-- ¿Nos necesitas? -->
+      <div class="nav-drop">
+        <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" id="btn-clientes">
+          ¿Nos necesitas?
+          <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5" stroke-linecap="round"><polyline points="1 1 5 5 9 1"/></svg>
+        </button>
+        <div class="drop-panel" id="panel-clientes" role="menu">
+          <div class="drop-panel-head">¿Quién eres?</div>
+          <a href="profesionales.html" class="drop-item">
+            <div class="drop-item-ic">
+              <svg viewBox="0 0 16 16"><path d="M8 2L14 6v8H2V6z"/><path d="M6 14V9h4v5"/></svg>
+            </div>
+            <div>
+              <span class="drop-item-title">Profesionales</span>
+              <span class="drop-item-sub">Decoradores, interioristas y arquitectos</span>
+            </div>
+          </a>
+          <a href="viviendas.html" class="drop-item">
+            <div class="drop-item-ic">
+              <svg viewBox="0 0 16 16"><rect x="2" y="6" width="12" height="8" rx="1"/><path d="M5 6V4Q8 1 11 4v2"/></svg>
+            </div>
+            <div>
+              <span class="drop-item-title">Particulares</span>
+              <span class="drop-item-sub">Viviendas y segundas residencias</span>
+            </div>
+          </a>
+          <a href="negocios.html" class="drop-item">
+            <div class="drop-item-ic">
+              <svg viewBox="0 0 16 16"><rect x="1" y="5" width="14" height="9" rx="1"/><path d="M4 5V3Q8 1 12 3v2"/><path d="M6 10h4M8 8v4"/></svg>
+            </div>
+            <div>
+              <span class="drop-item-title">Hoteles y negocios</span>
+              <span class="drop-item-sub">Alojamientos y empresas turísticas</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-sep"></div>
+
+      <!-- Nuestra especialidad -->
+      <div class="nav-drop">
+        <button class="nav-drop-btn" id="btn-svc" aria-expanded="false" aria-haspopup="true" style="color:var(--c-gold)">
+          Nuestra especialidad
+          <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5" stroke-linecap="round"><polyline points="1 1 5 5 9 1"/></svg>
+        </button>
+        <div class="drop-panel" id="panel-svc" role="menu">
+          <div class="drop-panel-head">Somos expertos en</div>
+          <a href="cortinas.html" class="drop-item" style="background:var(--c-bg-soft)">
+            <div class="drop-item-ic"><svg viewBox="0 0 16 16"><path d="M2 2Q8 7 14 2v12Q8 9 2 14Z"/></svg></div>
+            <div><span class="drop-item-title" style="color:var(--c-gold)">Cortinas y estores</span></div>
+          </a>
+          <a href="tapiceria.html" class="drop-item">
+            <div class="drop-item-ic"><svg viewBox="0 0 16 16"><rect x="2" y="5" width="12" height="7" rx="3"/><path d="M5 5Q5 2 8 2Q11 2 11 5"/></svg></div>
+            <div><span class="drop-item-title">Tapicería y sofás</span></div>
+          </a>
+          <a href="papel-pintado.html" class="drop-item">
+            <div class="drop-item-ic"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="1"/><path d="M5 5h6M5 8h6M5 11h4"/></svg></div>
+            <div><span class="drop-item-title">Papel pintado</span></div>
+          </a>
+          <a href="muebles-medida.html" class="drop-item">
+            <div class="drop-item-ic"><svg viewBox="0 0 16 16"><rect x="3" y="6" width="10" height="7" rx="1"/><path d="M1 6h14M6 6V4Q8 2 10 4v2"/></svg></div>
+            <div><span class="drop-item-title">Muebles a medida</span></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-sep"></div>
+
+      <!-- Visítanos -->
+      <div class="nav-drop">
+        <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" id="btn-visita">
+          Visítanos
+          <svg viewBox="0 0 10 6" fill="none" stroke-width="1.5" stroke-linecap="round"><polyline points="1 1 5 5 9 1"/></svg>
+        </button>
+        <div class="drop-panel" id="panel-visita" role="menu">
+          <div class="drop-panel-head">Estamos en Jaca</div>
+          <a href="showroom.html" class="drop-item">
+            <div class="drop-item-ic">
+              <svg viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="9" rx="1"/><path d="M5 4V2h6v2"/></svg>
+            </div>
+            <div>
+              <span class="drop-item-title">Showroom</span>
+              <span class="drop-item-sub">Ver, tocar y decidir · C/ Domingo Miral, 1</span>
+            </div>
+          </a>
+          <a href="taller.html" class="drop-item">
+            <div class="drop-item-ic">
+              <svg viewBox="0 0 16 16"><circle cx="8" cy="6" r="3"/><path d="M3 14c0-3 10-3 10 0"/><path d="M8 9v3"/></svg>
+            </div>
+            <div>
+              <span class="drop-item-title">Taller</span>
+              <span class="drop-item-sub">Fabricación propia en Jaca</span>
+            </div>
+          </a>
+          <a href="horario-especial.html" class="drop-item">
+            <div class="drop-item-ic">
+              <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5"/><path d="M8 4v4l3 2"/></svg>
+            </div>
+            <div>
+              <span class="drop-item-title">Horario y visita especial</span>
+              <span class="drop-item-sub">¿Fin de semana o festivo? Te llamamos</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- Botones derecha -->
+    <div class="nav-actions">
+      <a href="contacto.html" class="btn-hablanos">Háblanos</a>
+      <a href="horario-especial.html" class="btn-agendar">Agendar cita</a>
+      <button class="nav-toggle" id="navToggle"
+              aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ════════════ MENÚ MÓVIL ════════════ -->
+<nav class="mobile-drawer" id="mobileDrawer" aria-label="Menú móvil">
+
+  <div class="drawer-section">
+    <span class="drawer-section-label">¿Nos necesitas?</span>
+    <a href="profesionales.html" class="drawer-link">Profesionales</a>
+    <a href="viviendas.html"     class="drawer-link">Particulares</a>
+    <a href="negocios.html"      class="drawer-link">Negocios</a>
+  </div>
+
+  <div class="drawer-sep"></div>
+
+  <div class="drawer-section">
+    <span class="drawer-section-label">Nuestra especialidad</span>
+    <a href="cortinas.html"          class="drawer-link-sm">Cortinas y estores</a>
+    <a href="tapiceria.html"         class="drawer-link-sm">Tapicería y sofás</a>
+    <a href="papel-pintado.html"     class="drawer-link-sm">Papel pintado</a>
+    <a href="muebles-medida.html"    class="drawer-link-sm">Muebles a medida</a>
+    <a href="proyecto-integral.html" class="drawer-link-sm">Proyecto integral</a>
+  </div>
+
+  <div class="drawer-sep"></div>
+
+  <div class="drawer-section">
+    <span class="drawer-section-label">Visítanos</span>
+    <a href="showroom.html" class="drawer-link-sm">Showroom · C/ Domingo Miral, 1</a>
+    <a href="taller.html"   class="drawer-link-sm">Taller · Fabricación propia</a>
+  </div>
+
+  <div class="drawer-sep"></div>
+
+  <a href="horario-especial.html" class="drawer-cta">Agendar cita</a>
+
+</nav>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="inicio" class="hero">
+
+  <div class="hero-left">
+    <p class="hero-tag">Jaca · Pirineo Aragonés</p>
+
+    <h1 class="t-hero hero-h1">
+      Textil<br>
+      a medida para<br>
+      <span class="accent">tu espacio.</span>
+    </h1>
+
+    <p class="hero-desc">
+      Diseñamos, fabricamos e instalamos proyectos de cortinas,
+      tapicería, papel pintado y muebles a medida desde nuestro
+      taller en Jaca.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#proyectos" class="btn btn-gold">Ver proyectos</a>
+      <a href="#contacto"  class="btn btn-outline">Contactar</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <img class="hero-main-img" src="images/hero-curtain.jpg"
+         alt="Cortinas de lino a medida instaladas por Habitat & Decor en Jaca">
+    <div class="hero-project-tag">
+      <i class="fas fa-award" style="font-size:.6rem"></i>
+      Proyecto real · Jaca
+    </div>
+  </div>
+
+  <div class="hero-bar">
+    <div class="hero-bar-inner">
+      <div class="info-cell">
+        <i class="fas fa-ruler-combined"></i>
+        <div>
+          <strong>Taller propio</strong>
+          <span>Fabricación a medida en Jaca</span>
+        </div>
+      </div>
+      <div class="info-cell">
+        <i class="fas fa-store"></i>
+        <div>
+          <strong>Showroom</strong>
+          <span>Calle Domingo Miral, 1</span>
+        </div>
+      </div>
+      <div class="info-cell">
+        <i class="fas fa-phone"></i>
+        <div>
+          <strong>+34 974 288 787</strong>
+          <span>Lun–Sáb · 10:30–13:30 / 17:00–20:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════
+     ESTADÍSTICAS DE CONFIANZA
+════════════════════════════════════════ -->
+<section class="stats-band">
+  <div class="stats-band-bg"></div>
+  <div class="stats-band-overlay"></div>
+  <div class="wrap">
+    <div class="stats-grid">
+
+      <div class="stat-item reveal">
+        <span class="stat-num" data-target="160" data-suffix="+">0</span>
+        <span class="stat-label">Muestras en showroom</span>
+      </div>
+
+      <div class="stat-item reveal" style="transition-delay:.1s">
+        <span class="stat-phrase">Nos desplazamos</span>
+        <span class="stat-phrase-sub">A cualquier punto<br>del Pirineo aragonés</span>
+      </div>
+
+      <div class="stat-item reveal" style="transition-delay:.2s">
+        <span class="stat-num" data-target="100" data-suffix="%">0</span>
+        <span class="stat-label">Fabricación propia en Jaca</span>
+      </div>
+
+      <div class="stat-item reveal" style="transition-delay:.3s">
+        <span class="stat-phrase">Marcas exclusivas</span>
+        <span class="stat-phrase-sub">Colecciones que no<br>encontrarás en otro sitio</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     AUDIENCIAS
+════════════════════════════════════════ -->
+<section class="audiences">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">Tu proyecto, nuestra prioridad</p>
+      <div class="rule"></div>
+      <h2 class="t-section">¿Cuál es tu proyecto?</h2>
+      <p class="body-p" style="margin-top:.65rem; max-width:520px;">
+        Sea cual sea, lo atendemos con el mismo nivel de exigencia.
+      </p>
+    </div>
+
+    <div class="aud-grid">
+
+      <a href="profesionales.html" class="aud-card featured reveal">
+        <div class="aud-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>Profesionales</h3>
+        <p>Decoradores, interioristas, arquitectos y empresas de reformas.
+           Presupuesto rápido, muestras físicas en 24 h y plazos cumplidos.
+           Condiciones específicas para colaboraciones continuadas.</p>
+        <div class="aud-cta">
+          Soy profesional <i class="fas fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <a href="viviendas.html" class="aud-card reveal" style="transition-delay:.1s">
+        <div class="aud-icon"><i class="fas fa-mountain"></i></div>
+        <h3>Viviendas y<br>segundas residencias</h3>
+        <p>Reformas de hogar y casas de montaña. Te asesoramos en el
+           showroom o en tu domicilio para elegir tejidos y soluciones
+           adaptadas al entorno del Pirineo.</p>
+        <div class="aud-cta">
+          Es mi vivienda <i class="fas fa-arrow-right"></i>
+        </div>
+      </a>
+
+      <a href="negocios.html" class="aud-card reveal" style="transition-delay:.2s">
+        <div class="aud-icon"><i class="fas fa-hotel"></i></div>
+        <h3>Hoteles<br>y negocios</h3>
+        <p>Hoteles, casas rurales y apartamentos turísticos. Acabados de
+           contrato y tiempos de instalación ajustados para no interrumpir
+           la actividad.</p>
+        <div class="aud-cta">
+          Es mi negocio <i class="fas fa-arrow-right"></i>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SERVICIOS
+════════════════════════════════════════ -->
+<section id="servicios" class="services">
+  <div class="wrap">
+
+    <div class="section-head center reveal">
+      <p class="eyebrow">Lo que hacemos</p>
+      <div class="rule center"></div>
+      <h2 class="t-section">Servicios</h2>
+      <p class="body-p" style="margin-top:.65rem; max-width:560px; margin-left:auto; margin-right:auto;">
+        Cada producto sale de nuestro taller. Sin intermediarios.
+      </p>
+    </div>
+
+    <div class="svc-grid">
+
+      <div class="svc-item reveal">
+        <div class="svc-img" style="background-image:url('images/svc-01-cortinas.jpg')"></div>
+        <span class="svc-num">01</span>
+        <div class="svc-content">
+          <h4>Cortinas y estores</h4>
+        </div>
+        <div class="svc-hover">
+          <span class="svc-num-hover">01</span>
+          <div class="svc-hover-line"></div>
+          <h4>Cortinas y estores</h4>
+          <p>Confección a medida: tela, estores enrollables, panel japonés, venecianas y estores plisados. Instalación incluida.</p>
+        </div>
+      </div>
+
+      <div class="svc-item reveal" style="transition-delay:.06s">
+        <div class="svc-img" style="background-image:url('images/svc-02-tapiceria.jpg')"></div>
+        <span class="svc-num">02</span>
+        <div class="svc-content">
+          <h4>Tapicería y sofás</h4>
+        </div>
+        <div class="svc-hover">
+          <span class="svc-num-hover">02</span>
+          <div class="svc-hover-line"></div>
+          <h4>Tapicería y sofás</h4>
+          <p>Fabricación de sofás personalizados y retapizado. Telas de contrato y tejidos premium de alta durabilidad.</p>
+        </div>
+      </div>
+
+      <div class="svc-item reveal" style="transition-delay:.12s">
+        <div class="svc-img" style="background-image:url('images/svc-03-papel.jpg')"></div>
+        <span class="svc-num">03</span>
+        <div class="svc-content">
+          <h4>Papel pintado</h4>
+        </div>
+        <div class="svc-hover">
+          <span class="svc-num-hover">03</span>
+          <div class="svc-hover-line"></div>
+          <h4>Papel pintado</h4>
+          <p>Selección, suministro y colocación profesional de papel pintado, vinílicos y murales a medida.</p>
+        </div>
+      </div>
+
+      <div class="svc-item reveal" style="transition-delay:.06s">
+        <div class="svc-img" style="background-image:url('images/svc-04-muebles.jpg')"></div>
+        <span class="svc-num">04</span>
+        <div class="svc-content">
+          <h4>Muebles auxiliares</h4>
+        </div>
+        <div class="svc-hover">
+          <span class="svc-num-hover">04</span>
+          <div class="svc-hover-line"></div>
+          <h4>Muebles auxiliares</h4>
+          <p>Mesas, cabeceros, baúles y complementos tapizados o lacados a medida, coordinados con el proyecto.</p>
+        </div>
+      </div>
+
+      <div class="svc-item reveal" style="transition-delay:.12s">
+        <div class="svc-img" style="background-image:url('images/svc-05-colchones.jpg')"></div>
+        <span class="svc-num">05</span>
+        <div class="svc-content">
+          <h4>Colchones</h4>
+        </div>
+        <div class="svc-hover">
+          <span class="svc-num-hover">05</span>
+          <div class="svc-hover-line"></div>
+          <h4>Colchones</h4>
+          <p>Gama viscoelástica, muelles ensacados y látex. Asesoramiento personalizado en tienda.</p>
+        </div>
+      </div>
+
+      <div class="svc-item reveal" style="transition-delay:.18s">
+        <div class="svc-img" style="background-image:url('images/svc-06-diseno.jpg')"></div>
+        <span class="svc-num">06</span>
+        <div class="svc-content">
+          <h4>Diseño e instalación</h4>
+        </div>
+        <div class="svc-hover">
+          <span class="svc-num-hover">06</span>
+          <div class="svc-hover-line"></div>
+          <h4>Diseño e instalación</h4>
+          <p>Visita de asesoramiento, propuesta de proyecto y montaje final. Gestionamos todo el proceso de principio a fin.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     TALLER / SHOWROOM
+════════════════════════════════════════ -->
+<section id="nosotros" class="split-sec">
+
+  <div class="split-panel">
+    <div class="sp-bg" style="background-image:url('images/H_D_image4.jpg')"></div>
+    <div class="sp-scrim"></div>
+    <div class="sp-body reveal">
+      <span class="eyebrow">Taller en Jaca</span>
+      <h3>Fabricación<br>propia</h3>
+      <p>Todo se diseña y confecciona en nuestro taller. Controlamos
+         cada fase del proceso para garantizar acabados de primera.</p>
+      <a href="taller.html" class="btn btn-outline"
+         style="color:#fff; border-color:rgba(255,255,255,.38);">
+        Conoce el taller
+      </a>
+    </div>
+  </div>
+
+  <div class="split-panel split-panel--light">
+    <div class="sp-bg" style="background-image:url('images/collage_cada_detalle.jpg')"></div>
+    <div class="sp-scrim sp-scrim--light"></div>
+    <div class="sp-body sp-body--light reveal">
+      <span class="eyebrow">Proyectos integrales</span>
+      <h3>Cada detalle<br>cuenta</h3>
+      <p>Papel pintado, tapicería, cortinas y muebles coordinados.
+         Lo diseñamos, fabricamos e instalamos todo desde nuestro
+         taller en Jaca.</p>
+      <a href="showroom.html" class="btn btn-outline">
+        Ver el showroom
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════
+     PROYECTOS
+════════════════════════════════════════ -->
+<section id="proyectos" class="projects">
+  <div class="wrap">
+
+    <div class="proj-head reveal">
+      <div>
+        <p class="eyebrow">Nuestro trabajo</p>
+        <div class="rule" style="margin-top:.7rem"></div>
+        <h2 class="t-section" style="margin-top:.2rem">Proyectos</h2>
+      </div>
+      <a href="https://photos.app.goo.gl/HNtpZNyYrDLnJHvP9"
+         target="_blank" rel="noopener" class="btn btn-outline">
+        Ver galería completa
+        <i class="fas fa-arrow-up-right-from-square" style="font-size:.55rem"></i>
+      </a>
+    </div>
+
+    <div class="proj-grid reveal">
+
+      <!-- 1: Biescas — col 1, span 2 filas -->
+      <div class="proj-item">
+        <img src="images/proyecto_Biescas.jpeg"
+             alt="Salón con cortinas de gasa blanca y visillos terracota en Biescas." loading="lazy">
+        <div class="proj-over">
+          <div><span>Proyecto particular</span><h4>Biescas</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Proyecto particular</span>
+          <div class="proj-hover-line"></div>
+          <h4>Biescas</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>Más que un servicio, una experiencia tan excepcional que transformó mi hogar y me inspiró a compartir vuestro talento con todo el vecindario, ¡gracias por la dedicación y el resultado impecable!</p>
+          <span class="proj-hover-author">Cliente particular · Biescas</span>
+        </div>
+      </div>
+
+      <!-- 2: Sofá Jaca — col 2, fila 1 -->
+      <div class="proj-item">
+        <img src="images/Sofa_cama_sistema_italiano.jpg"
+             alt="Sofá cama sistema italiano en salón con papel pintado tipográfico, Jaca." loading="lazy">
+        <div class="proj-over">
+          <div><span>Compra e instalación</span><h4>Sofá · Jaca</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Compra e instalación en domicilio</span>
+          <div class="proj-hover-line"></div>
+          <h4>Sofá · Jaca</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>En un mundo de grandes superficies, vuestro negocio es un refugio de confianza donde la calidad de los estores y la comodidad del sofá solo se comparan con la calidez de vuestro trato. Apostar por vosotros es apostar por el éxito seguro.</p>
+          <span class="proj-hover-author">Cliente · Jaca</span>
+        </div>
+      </div>
+
+      <!-- 3: Silla butaquilla — col 3, fila 1 -->
+      <div class="proj-item">
+        <img src="images/silla_butaquilla.jpg"
+             alt="Silla butaquilla tapizada en verde con cojín estampado paisley rojo, showroom Jaca." loading="lazy">
+        <div class="proj-over">
+          <div><span>Venta en showroom</span><h4>Silla escritorio · Jaca</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Venta con montaje en domicilio</span>
+          <div class="proj-hover-line"></div>
+          <h4>Silla escritorio · Jaca</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>Compré una silla de escritorio y vinieron a mi casa a hacer el montaje. Trabajo y atención de 10.</p>
+          <span class="proj-hover-author">Clienta · Jaca</span>
+        </div>
+      </div>
+
+      <!-- 4: Cortinas aulas centro educativo — col 2, fila 2 -->
+      <div class="proj-item">
+        <img src="images/cortinas_aulas.jpeg"
+             alt="Instalación de cortinas opacas en aula de centro educativo, Jaca." loading="lazy"
+             style="object-position:center 30%;">
+        <div class="proj-over">
+          <div><span>Proyecto institucional</span><h4>Centro educativo · Jaca</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Instalación institucional</span>
+          <div class="proj-hover-line"></div>
+          <h4>Centro educativo · Jaca</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>Cortinas opacas instaladas en todas las aulas cumpliendo con los estándares de calidad y seguridad del centro, coordinando cada intervención con los horarios lectivos para no interrumpir ni un minuto de clase.</p>
+          <span class="proj-hover-author">Centro educativo · Jaca</span>
+        </div>
+      </div>
+
+      <!-- 5: Sillas oficina — col 3, fila 2 -->
+      <div class="proj-item">
+        <img src="images/sillas_retapizadas.jpg"
+             alt="Sillas apilables de oficina en el showroom de Habitat &amp; Decor, Jaca." loading="lazy">
+        <div class="proj-over">
+          <div><span>Renovación de mobiliario</span><h4>Despacho · Jaca</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Renovación mobiliario de oficina</span>
+          <div class="proj-hover-line"></div>
+          <h4>Despacho · Jaca</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star empty"></i>
+          </div>
+          <p>Renovamos todas las sillas del despacho en un tiempo récord, sin interrumpir ni un solo día de atención a nuestros clientes. Gestión impecable de principio a fin.</p>
+          <span class="proj-hover-author">Despacho profesional · Jaca</span>
+        </div>
+      </div>
+
+      <!-- 6: Cortinas chalet Valle de Tena — col 1, fila 3 -->
+      <div class="proj-item proj-cortinas">
+        <img src="images/cortina_dormitorio.jpg"
+             alt="Cortinas de lino gris con visillo blanco en dormitorio de chalet, Valle de Tena."
+             loading="lazy" style="object-position:center top;">
+        <div class="proj-over">
+          <div><span>Cortinas · visillos · estores</span><h4>Chalet · Valle de Tena</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Proyecto textil integral · chalet</span>
+          <div class="proj-hover-line"></div>
+          <h4>Chalet · Valle de Tena</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>Cortinas, visillos y estores coordinados en todas las estancias del chalet. La clave: una coordinación impecable con propietarios no residentes fijos en la zona, resolviendo cada detalle desde la distancia.</p>
+          <span class="proj-hover-author">Propietario · Valle de Tena</span>
+        </div>
+      </div>
+
+      <!-- 7: Camping Valle de Aragón — cols 2-3, fila 3 -->
+      <div class="proj-item proj-full">
+        <img src="images/camping_valle_aragon.jpg"
+             alt="Bungalow en Camping Valle de Aragón: dormitorio con cabecero tapizado y sala de estar retapizada." loading="lazy">
+        <div class="proj-over">
+          <div><span>Proyecto de negocio · tapicería completa</span><h4>Camping · Valle de Aragón</h4></div>
+        </div>
+        <div class="proj-hover">
+          <span class="proj-hover-eyebrow">Tapicería integral · bungalow</span>
+          <div class="proj-hover-line"></div>
+          <h4>Camping · Valle de Aragón</h4>
+          <div class="proj-hover-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>Sofás, butacas y cabecero tapizado del dormitorio principal renovados por completo. La satisfacción fue máxima — ya nos han llamado para el siguiente bungalow.</p>
+          <span class="proj-hover-author">Camping · Valle de Aragón</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CÓMO TRABAJAMOS
+════════════════════════════════════════ -->
+<section id="proceso" class="proceso">
+  <div class="wrap">
+
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="color:var(--c-sand); font-size:.75rem; letter-spacing:.28em;">Nuestro proceso</p>
+      <div class="rule center" style="background:var(--c-gold); width:48px; height:2px;"></div>
+      <h2 class="t-section" style="color:var(--c-white); font-size:clamp(2.2rem,3.5vw,3.4rem); margin-top:.3rem;">Cómo trabajamos</h2>
+      <p class="body-p" style="margin-top:.85rem; max-width:540px; margin-left:auto; margin-right:auto;
+         color:rgba(242,239,236,.72); font-size:.97rem; line-height:1.85;">
+        De la primera conversación a la instalación final, nos ocupamos de todo.
+        Sin sorpresas, con plazos confirmados desde el inicio.
+      </p>
+    </div>
+
+    <div class="proceso-grid">
+
+      <div class="proceso-step reveal">
+        <span class="proceso-num">01</span>
+        <div class="proceso-icon"><i class="fas fa-comments"></i></div>
+        <h4>Escucha y diagnóstico</h4>
+        <p>Analizamos tu espacio, tus necesidades de luz, confort,
+           estilo y mantenimiento — en el showroom o en tu domicilio.</p>
+      </div>
+
+      <div class="proceso-step reveal" style="transition-delay:.1s">
+        <span class="proceso-num">02</span>
+        <div class="proceso-icon"><i class="fas fa-swatchbook"></i></div>
+        <h4>Propuesta y tejidos</h4>
+        <p>Definimos el proyecto por estancias, elegemos tejidos y
+           soluciones técnicas, y te presentamos presupuesto detallado.</p>
+      </div>
+
+      <div class="proceso-step reveal" style="transition-delay:.2s">
+        <span class="proceso-num">03</span>
+        <div class="proceso-icon"><i class="fas fa-cut"></i></div>
+        <h4>Taller y fabricación</h4>
+        <p>Confeccionamos en nuestro propio taller, cuidando remates
+           y detalles. Plazos confirmados desde el primer día.</p>
+      </div>
+
+      <div class="proceso-step reveal" style="transition-delay:.3s">
+        <span class="proceso-num">04</span>
+        <div class="proceso-icon"><i class="fas fa-tools"></i></div>
+        <h4>Instalación y seguimiento</h4>
+        <p>Instalamos en la fecha acordada, ajustamos sobre el terreno
+           y te acompañamos en futuras renovaciones.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CONTACTO
+════════════════════════════════════════ -->
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Información -->
+      <div class="c-block reveal">
+        <p class="eyebrow">Habla con nosotros</p>
+        <div class="rule" style="margin-top:.7rem"></div>
+        <h2>Pide cita o<br>pásate por el showroom.</h2>
+        <p class="body-p">
+          Estamos en Jaca. Puedes venir directamente, llamarnos o escribirnos.
+          También hacemos visitas a domicilio para tomar medidas y asesorarte
+          en tu espacio.
+        </p>
+
+        <div class="c-details">
+          <div class="c-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="c-label">Dirección</span>
+              <p>Calle Domingo Miral, 1<br>22700 Jaca, Aragón</p>
+            </div>
+          </div>
+          <div class="c-row">
+            <i class="fas fa-phone"></i>
+            <div>
+              <span class="c-label">Teléfono</span>
+              <p>
+                <a href="tel:+34974288787">+34 974 288 787</a><br>
+                <a href="tel:+34630908883">+34 630 908 883</a>
+              </p>
+            </div>
+          </div>
+          <div class="c-row">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <span class="c-label">WhatsApp</span>
+              <p><a href="https://wa.me/34630908883" target="_blank" rel="noopener">+34 630 908 883</a></p>
+            </div>
+          </div>
+          <div class="c-row">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="c-label">Email</span>
+              <p><a href="mailto:tienda@habitatdecor.es">tienda@habitatdecor.es</a></p>
+            </div>
+          </div>
+          <div class="c-row">
+            <i class="fas fa-clock"></i>
+            <div>
+              <span class="c-label">Horario</span>
+              <p>Lun–Sáb: 10:30–13:30 y 17:00–20:00<br>Domingos: cerrado</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2938.349593787095!2d-0.553763325485967!3d42.56910172187165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5781004e5898db%3A0xa5d6492520a43d7a!2sHabitat%20%26%20Decor!5e0!3m2!1ses!2ses!4v1762104805578!5m2!1ses!2ses"
+            width="100%" height="230" style="border:0; display:block;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Habitat & Decor en Jaca"></iframe>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="c-form reveal" style="transition-delay:.15s">
+        <h3>Envíanos un mensaje</h3>
+
+        <div class="form-notice" id="formResponse">
+          <p id="responseMessage"></p>
+        </div>
+
+        <form id="contactForm" action="procesar-formulario.php" method="POST" novalidate>
+          <div class="form-row">
+            <div class="fg">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre"
+                     placeholder="Tu nombre" required autocomplete="name">
+            </div>
+            <div class="fg">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email"
+                     placeholder="tu@email.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="servicio">¿En qué podemos ayudarte?</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Selecciona un servicio</option>
+              <option value="Cortinas">Cortinas y estores</option>
+              <option value="Tapizados">Tapicería y sofás</option>
+              <option value="Papel pintado">Papel pintado</option>
+              <option value="Colchones">Colchones</option>
+              <option value="Muebles">Muebles a medida</option>
+              <option value="Proyecto integral">Proyecto integral</option>
+              <option value="Otros">Otros</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5"
+                      placeholder="Cuéntanos tu proyecto o consulta..."
+                      required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold"
+                  style="width:100%; justify-content:center;">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Habitat &amp; Decor</span>
+        <p>Taller y showroom de proyectos textiles integrales en Jaca.
+           Cortinas, tapicería, papel pintado y muebles a medida
+           desde el Pirineo aragonés.</p>
+        <div class="f-social">
+          <a href="https://www.facebook.com/profile.php?id=61575292613905"
+             aria-label="Facebook" rel="noopener" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/habitatdecorjaca/"
+             aria-label="Instagram" rel="noopener" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://es.pinterest.com/HabitatDecorJaca"
+             aria-label="Pinterest" rel="noopener" target="_blank">
+            <i class="fab fa-pinterest-p"></i>
+          </a>
+          <a href="https://wa.me/34630908883"
+             aria-label="WhatsApp" rel="noopener" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Clientes</h5>
+        <ul>
+          <li><a href="profesionales.html">Profesionales</a></li>
+          <li><a href="viviendas.html">Viviendas</a></li>
+          <li><a href="negocios.html">Hoteles y negocios</a></li>
+          <li><a href="showroom.html">Showroom</a></li>
+          <li><a href="taller.html">Taller</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="footerYear">2026</span>
+        Habitat &amp; Decor — Textil Deco Asociados, S.L.
+        Todos los derechos reservados.
+      </p>
+      <nav class="f-legal" aria-label="Legal">
+        <a href="politica-privacidad-habitatdecor.html" target="_blank">Privacidad</a>
+        <a href="politica-cookies.html" target="_blank">Cookies</a>
+        <a href="aviso-legal.html" target="_blank">Aviso legal</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/34630908883"
+   class="wa-float"
+   target="_blank" rel="noopener"
+   aria-label="Escríbenos por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-label">Escríbenos</span>
+</a>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<!-- SCRIPTS -->
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+
+  var yrEl = document.getElementById('footerYear');
+  if (yrEl) yrEl.textContent = new Date().getFullYear();
+
+  var hdr = document.getElementById('siteHeader');
+  if (hdr) {
+    window.addEventListener('scroll', function() {
+      hdr.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+  }
+
+  var navToggle = document.getElementById('navToggle');
+  var mobileDrawer = document.getElementById('mobileDrawer');
+  if (navToggle && mobileDrawer) {
+    navToggle.addEventListener('click', function() {
+      var isOpen = mobileDrawer.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileDrawer.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileDrawer.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  var dropBtns = document.querySelectorAll('.nav-drop-btn');
+  function closeAll() {
+    document.querySelectorAll('.drop-panel').forEach(function(p) { p.classList.remove('open'); });
+    dropBtns.forEach(function(b) { b.setAttribute('aria-expanded','false'); });
+  }
+  dropBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var pid = btn.id.replace('btn-','panel-');
+      var panel = document.getElementById(pid);
+      if (!panel) return;
+      var wasOpen = panel.classList.contains('open');
+      closeAll();
+      if (!wasOpen) { panel.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+  document.addEventListener('click', closeAll);
+  document.querySelectorAll('.drop-panel').forEach(function(p) {
+    p.addEventListener('click', function(e) { e.stopPropagation(); });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = a.getAttribute('href');
+      if (id === '#') return;
+      var el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      var nh = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - nh, behavior: 'smooth' });
+    });
+  });
+
+  var revObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) { revObs.observe(el); });
+
+  function animateCounter(el, target) {
+    var dur=1800, t0=performance.now(), sfx=el.dataset.suffix||'';
+    function tick(now) {
+      var p=Math.min((now-t0)/dur,1), ease=1-Math.pow(1-p,3);
+      el.textContent=Math.round(ease*target).toLocaleString('es')+sfx;
+      if(p<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var cObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { animateCounter(e.target, parseInt(e.target.dataset.target)); cObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.stat-num[data-target]').forEach(function(el) { cObs.observe(el); });
+
+  /* ── Formulario de contacto ── */
+  var form = document.getElementById('contactForm');
+  if (form) {
+    var resBox = document.getElementById('formResponse');
+    var resMsg = document.getElementById('responseMessage');
+
+    function showMsg(text, type) {
+      if (!resMsg || !resBox) return;
+      resMsg.textContent = text;
+      resBox.className = 'form-notice ' + type;
+      resBox.style.display = 'block';
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      /* Validación visual */
+      var valid = true;
+      form.querySelectorAll('[required]').forEach(function(f) {
+        var empty = !f.value.trim();
+        f.style.borderColor = empty ? '#c0392b' : '';
+        if (empty) valid = false;
+      });
+      if (!valid) { showMsg('Completa todos los campos obligatorios.', 'error'); return; }
+
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+      showMsg('Enviando…', 'info');
+
+      /* FormData — misma estructura que procesar-formulario.php */
+      fetch('/formulario-backend.php', {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(function(r) {
+        return r.json().catch(function() {
+          return { success: r.ok, message: r.ok ? 'Mensaje enviado.' : 'Error al enviar.' };
+        });
+      })
+      .then(function(d) {
+        showMsg(d.message || (d.success ? 'Consulta enviada. Te respondemos en menos de 24 h.' : 'Error al enviar.'), d.success ? 'success' : 'error');
+        if (d.success) { form.reset(); form.querySelectorAll('[required]').forEach(function(f){ f.style.borderColor=''; }); }
+      })
+      .catch(function() {
+        showMsg('Error de conexión. Llámanos al 974 288 787.', 'error');
+      })
+      .finally(function() {
+        if (btn) { btn.disabled = false; btn.textContent = 'Enviar mensaje'; }
+      });
+    });
+  }
+
+});
+</script>
+
+<script id="hd-cookie-script">
+  (function() {
+
+    /* ── Claves de almacenamiento ── */
+    var STORAGE_KEY   = 'hd_cookie_consent';
+    var STORAGE_DATE  = 'hd_cookie_date';
+    var EXPIRE_DAYS   = 365;
+
+    /* ── Referencias DOM ── */
+    var overlay      = document.getElementById('hd-cookie-overlay');
+    var tabs         = document.querySelectorAll('.ck-tab');
+    var panes        = document.querySelectorAll('.ck-pane');
+    var accordions   = document.querySelectorAll('[data-accordion]');
+    var btnDeny      = document.getElementById('ck-btn-deny');
+    var btnSelection = document.getElementById('ck-btn-selection');
+    var btnAccept    = document.getElementById('ck-btn-accept');
+    var toast        = document.getElementById('hd-cookie-toast');
+    var toastMsg     = document.getElementById('hd-cookie-toast-msg');
+    var manageBtn    = document.getElementById('hd-cookie-manage-btn');
+
+    var chkPrefs     = document.getElementById('ck-preferences');
+    var chkAnalytics = document.getElementById('ck-analytics');
+
+    /* ── Leer / escribir consentimiento ── */
+    function saveConsent(obj) {
+      try {
+        obj.date = new Date().toISOString();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
+      } catch(e) {}
+    }
+
+    function readConsent() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        var obj = JSON.parse(raw);
+        /* Comprobar expiración */
+        if (obj.date) {
+          var saved = new Date(obj.date).getTime();
+          var now   = Date.now();
+          if (now - saved > EXPIRE_DAYS * 864e5) {
+            localStorage.removeItem(STORAGE_KEY);
+            return null;
+          }
+        }
+        return obj;
+      } catch(e) { return null; }
+    }
+
+    /* API pública: obtener estado actual */
+    window.hdCookieGetConsent = function() { return readConsent(); };
+
+    /* API pública: resetear (para testing) */
+    window.hdCookieReset = function() {
+      localStorage.removeItem(STORAGE_KEY);
+      if (chkAnalytics) chkAnalytics.checked = false;
+      if (chkPrefs)     chkPrefs.checked     = false;
+      showBanner();
+    };
+
+    /* ── Mostrar / ocultar banner ── */
+    function showBanner() {
+      if (!overlay) return;
+      overlay.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideBanner() {
+      if (!overlay) return;
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Toast de confirmación ── */
+    function showToast(msg) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg || 'Preferencias guardadas';
+      toast.classList.add('show');
+      setTimeout(function() { toast.classList.remove('show'); }, 3000);
+    }
+
+    /* ── Cargar Google Analytics condicionalmente ── */
+    function loadGA() {
+      /* Reemplaza G-XXXXXXXXXX con tu ID real de Google Analytics */
+      var GA_ID = 'G-XXXXXXXXXX';
+      if (document.getElementById('hd-ga-script')) return;
+      var s1 = document.createElement('script');
+      s1.id  = 'hd-ga-script';
+      s1.async = true;
+      s1.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s1);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_ID, { anonymize_ip: true });
+    }
+
+    /* ── Aplicar consentimiento guardado ── */
+    function applyConsent(consent) {
+      if (!consent) return;
+      /* Sincronizar toggles */
+      if (chkAnalytics) chkAnalytics.checked = !!consent.analytics;
+      if (chkPrefs)     chkPrefs.checked     = !!consent.preferences;
+      /* Cargar scripts si procede */
+      if (consent.analytics) loadGA();
+    }
+
+    /* ── Guardar y cerrar ── */
+    function acceptAll() {
+      var consent = { necessary:true, preferences:true, analytics:true, marketing:false };
+      if (chkAnalytics) chkAnalytics.checked = true;
+      if (chkPrefs)     chkPrefs.checked     = true;
+      saveConsent(consent);
+      applyConsent(consent);
+      hideBanner();
+      showToast('Todas las cookies aceptadas');
+    }
+
+    function denyAll() {
+      var consent = { necessary:true, preferences:false, analytics:false, marketing:false };
+      if (chkAnalytics) chkAnalytics.checked = false;
+      if (chkPrefs)     chkPrefs.checked     = false;
+      saveConsent(consent);
+      hideBanner();
+      showToast('Solo cookies necesarias activadas');
+    }
+
+    function saveSelection() {
+      var consent = {
+        necessary:   true,
+        preferences: chkPrefs     ? chkPrefs.checked     : false,
+        analytics:   chkAnalytics ? chkAnalytics.checked : false,
+        marketing:   false
+      };
+      saveConsent(consent);
+      applyConsent(consent);
+      hideBanner();
+      showToast('Selección guardada');
+    }
+
+    /* ── Tabs ── */
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var target = this.dataset.tab;
+        tabs.forEach(function(t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected','false');
+        });
+        panes.forEach(function(p) { p.classList.remove('active'); });
+        this.classList.add('active');
+        this.setAttribute('aria-selected','true');
+        var pane = document.getElementById('ck-pane-' + target);
+        if (pane) pane.classList.add('active');
+      }.bind(tab));
+    });
+
+    /* ── Acordeón de detalles ── */
+    accordions.forEach(function(header) {
+      header.addEventListener('click', function() {
+        var row = this.closest('.ck-detail-row');
+        if (row) row.classList.toggle('open');
+      });
+    });
+
+    /* ── Botones ── */
+    if (btnAccept)    btnAccept.addEventListener('click',    acceptAll);
+    if (btnDeny)      btnDeny.addEventListener('click',      denyAll);
+    if (btnSelection) btnSelection.addEventListener('click', saveSelection);
+
+    /* ── Botón "Gestionar cookies" en footer ── */
+    if (manageBtn) {
+      manageBtn.addEventListener('click', function() {
+        var c = readConsent();
+        if (c) {
+          if (chkAnalytics) chkAnalytics.checked = !!c.analytics;
+          if (chkPrefs)     chkPrefs.checked     = !!c.preferences;
+        }
+        showBanner();
+      });
+    }
+
+    /* ── Cerrar con Escape ── */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay && overlay.classList.contains('visible')) {
+        denyAll();
+      }
+    });
+
+    /* ── Inicialización ── */
+    var saved = readConsent();
+    if (saved) {
+      applyConsent(saved);
+      /* Banner ya decidido: no mostrar */
+    } else {
+      /* Primera visita: mostrar banner con ligero retardo */
+      setTimeout(showBanner, 600);
+    }
+
+  })();
+  </script>
+</body>
+</html>

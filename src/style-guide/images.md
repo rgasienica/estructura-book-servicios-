@@ -1,0 +1,3 @@
+# Imágenes
+
+Dirección fotográfica.
