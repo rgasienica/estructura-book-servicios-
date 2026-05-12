@@ -4,6 +4,7 @@ build/
 *.log
 .DS_Store
 Thumbs.db
+.gitignore
 
 # Configuración local del asistente/IDE
 .claude/
