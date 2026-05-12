@@ -4,3 +4,18 @@ build/
 *.log
 .DS_Store
 Thumbs.db
+
+# Configuración local del asistente/IDE
+.claude/
+.vscode/
+.github/skills/
+
+# Documentos internos del proyecto
+CLAUDE.md
+SESION_SIGUIENTE.md
+
+# Herramientas locales con rutas del disco
+tools/
+
+# Node - solo package.json es necesario
+package-lock.json
